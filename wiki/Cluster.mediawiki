@@ -9,14 +9,11 @@ Our machines are named after characters in Science-Fiction works. Flavio Martins
 
 Hostname: ariadne
 
-Motherboard: Intel® DX58SO
+MB: Intel® DX58SO
 
 CPU: Intel® Core™ i7-920 Processor (8M Cache, 2.66 GHz, 4.80 GT/s Intel® QPI)
 
 RAM: 12 GB DDR3 (1066Mhz)
-
-
-
 
 === Computing nodes ===
 

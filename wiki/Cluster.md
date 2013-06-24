@@ -23,7 +23,7 @@ Christopher Nolan movie "Inception".
 
 Hostname: ariadne
 
-Motherboard: Intel® DX58SO
+MB: Intel® DX58SO
 
 CPU: Intel® Core™ i7-920 Processor (8M Cache, 2.66 GHz, 4.80 GT/s Intel®
 QPI)
