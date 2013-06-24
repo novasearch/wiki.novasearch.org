@@ -21,6 +21,13 @@ framework specific library and is tasked with negotiating resources from
 the ResourceManager and working with the NodeManager(s) to execute and
 monitor the tasks.
 
+### Running a bundled example
+
+$ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar pi
+-Dmapreduce.clientfactory.class.name=org.apache.hadoop.mapred.YarnClientFactory
+-libjars /usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-jobclient.jar
+16 10000
+
 HDFS
 ----
 
