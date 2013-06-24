@@ -30,9 +30,9 @@ Master node
 
 ### Network
 
-Host: ariadne.imtv.me
+Host: ariadne.imtv.me (193.136.122.72)
 
-ariadne.novasearch.org
+Internal: ariadne.novasearch.org (192.168.1.1)
 
 ### Software
 
