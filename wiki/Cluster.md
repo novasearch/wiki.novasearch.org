@@ -21,7 +21,14 @@ Master node
 
 Hostname: ariadne
 
-### Main Specs
+### Software
+
+Ubuntu 12.04.2 LTS + 12.10 Hardware Enablement Stack
+
+The Hardware Enablement Stack contains backported kernels and Xorg
+packages from Ubuntu 12.10.
+
+### Hardware
 
 |     |                                                                                      |
 |-----|--------------------------------------------------------------------------------------|
@@ -34,7 +41,14 @@ Computing nodes
 
 Hostname: arthur, cobb, mal, saito
 
-### Main Specs
+### Software
+
+Ubuntu 12.04.2 LTS + 12.10 Hardware Enablement Stack
+
+The Hardware Enablement Stack contains backported kernels and Xorg
+packages from Ubuntu 12.10.
+
+### Hardware
 
 |     |                                                                                         |
 |-----|-----------------------------------------------------------------------------------------|
