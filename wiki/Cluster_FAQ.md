@@ -8,7 +8,11 @@ layout: wiki
 
 Tem 5 máquinas:
 
-adriadne: 193.136.122.72:12034 saito arthur cobb mal
+-   adriadne: 193.136.122.72:12034
+-   arthur
+-   cobb
+-   mal
+-   saito
 
 A adriadne é o ponto de entrada e deve ser só para servir sessões X,
 compilar e pequenos testes. As outras 4 máquinas são para tarefas \*as\*
