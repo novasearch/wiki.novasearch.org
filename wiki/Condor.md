@@ -4,7 +4,7 @@ permalink: wiki/Condor/
 layout: wiki
 ---
 
-condor is an workload management system for compute-intensive tasks. It
+Condor is an workload management system for compute-intensive tasks. It
 is used in production environments for more than 15 years, so it is
 considered a stable and mature project.
 
