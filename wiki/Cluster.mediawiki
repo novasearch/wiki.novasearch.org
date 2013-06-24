@@ -21,6 +21,6 @@ Hostnames: arthur, cobb, mal, saito
 
 MB: ASUSTeK COMPUTER INC. P9X79 PRO
 
-CPU: Intel® Core™ i7-3930K Processor (12M Cache, up to 3.80 GHz)
+CPU: Intel® Core™ i7-3930K Processor (12M Cache, 3.2 GHz, up to 3.80 GHz)
 
 RAM: 32 GB DDR3 (1333Mhz)
