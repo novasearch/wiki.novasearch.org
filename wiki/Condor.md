@@ -8,6 +8,15 @@ Condor is an workload management system for compute-intensive tasks. It
 is used in production environments for more than 15 years, so it is
 considered a stable and mature project.
 
+Condor Components
+-----------------
+
+-   Job queuing
+-   Scheduling policy
+-   Priority mechanism
+-   Resource monitoring
+-   Resource management
+
 Usage
 -----
 
