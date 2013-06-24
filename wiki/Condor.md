@@ -8,6 +8,12 @@ Condor is an workload management system for compute-intensive tasks. It
 is used in production environments for more than 15 years, so it is
 considered a stable and mature project.
 
+Highlights
+----------
+
+-   Preserves user environment on remote machine
+-   Users need not make files available or have access to remote machine
+
 Condor Components
 -----------------
 
