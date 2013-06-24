@@ -31,7 +31,7 @@ RAM: 12 GB DDR3 (1066Mhz)
 
 ### Computing nodes
 
-Hostnames: arthur, cobb, mal, saito
+Hostname: arthur, cobb, mal, saito
 
 MB: ASUS P9X79 PRO
 
