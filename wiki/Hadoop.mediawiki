@@ -11,3 +11,7 @@ $ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar pi -Dmapred
 === Create your home directory ===
 
 $ hdfs hadoop fs -mkdir  /user/<user>
+
+=== Uploading a file ===
+
+$ hdfs hadoop -put <localsrc> ... <dst>

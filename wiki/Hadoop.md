@@ -34,3 +34,7 @@ HDFS
 ### Create your home directory
 
 $ hdfs hadoop fs -mkdir /user/<user>
+
+### Uploading a file
+
+$ hdfs hadoop -put <localsrc> ... <dst>
