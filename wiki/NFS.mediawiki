@@ -1,0 +1,3 @@
+== Tips ==
+
+* If an IO operation (e.g.: listing directory contents) hangs your Kerberos ticket might have expired. Please use another terminal and reconnect to the node you need to renew the ticket. The IO operation will be executed then.
