@@ -74,3 +74,5 @@ Ctrl-a ! - Toggle key bindings on and off
 Ctrl-a k - Kill the current window
 
 Ctrl-a \~ - Save the current window's scrollback buffer
+
+From <http://manpages.ubuntu.com/manpages/oneiric/en/man1/byobu.1.html>
