@@ -25,8 +25,7 @@ Hostname: ariadne
 
 MB: Intel® DX58SO
 
-CPU: Intel® Core™ i7-920 Processor (8M Cache, 2.66 GHz, 4.80 GT/s Intel®
-QPI)
+CPU: Intel® Core™ i7-920 Processor (8M Cache, 2.66 GHz, up to 2.93 GHz)
 
 RAM: 12 GB DDR3 (1066Mhz)
 
