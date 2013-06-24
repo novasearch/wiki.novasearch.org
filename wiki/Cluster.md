@@ -52,7 +52,15 @@ packages from Ubuntu 12.10.
 Computing nodes
 ---------------
 
-Hostname: arthur, cobb, mal, saito
+### Network
+
+arthur (192.168.1.10)
+
+cobb (192.168.1.20)
+
+mal (192.168.1.30)
+
+saito (192.168.1.40)
 
 ### Software
 
