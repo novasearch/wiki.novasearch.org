@@ -33,3 +33,9 @@ RAM: 12 GB DDR3 (1066Mhz)
 ### Computing nodes
 
 Hostnames: arthur, cobb, mal, saito
+
+MB: ASUSTeK COMPUTER INC. P9X79 PRO
+
+CPU: Intel(R) Core(TM) i7-3930K CPU @ 3.20GHz
+
+RAM: 32 GB DDR3 (1333Mhz)
