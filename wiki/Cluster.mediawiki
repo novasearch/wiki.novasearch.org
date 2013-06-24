@@ -39,3 +39,11 @@ Hostname: arthur, cobb, mal, saito
 | GPU
 | 2 x AMD Radeon HD 7950 3 GB
 |}
+
+== Security ==
+
+The cluster has Single Sign-On configured using a combination of LDAP and Kerberos. User account and groups management is handled by LDAP on the master node.
+
+Kerberos allows users who authenticate with the master node to obtain tickets to access other all the other nodes with SSH.
+
+Users homes are also mounted on all the computing nodes with NFS allowing you to have access to your files on any node. Do however take in mind that if you're doing any intensive IO work it is always better to use a local folder on the computing node. Usually the norm is to use the root directory /tmp however all the files in this directory are removed upon reboot, so consider creating a new folder with your username inside the root directory /localstore and use that instead if you want your data to persist.
