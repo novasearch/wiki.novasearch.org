@@ -28,7 +28,11 @@ switch.
 Master node
 -----------
 
-Hostname: ariadne
+### Network
+
+Host: ariadne.imtv.me
+
+ariadne.novasearch.org
 
 ### Software
 

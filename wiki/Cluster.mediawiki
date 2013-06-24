@@ -10,7 +10,11 @@ All the nodes are interconnected using a high-performance Gigabit switch.
 
 == Master node ==
 
-Hostname: ariadne
+=== Network ===
+
+Host: ariadne.imtv.me
+
+ariadne.novasearch.org
 
 === Software ===
 
