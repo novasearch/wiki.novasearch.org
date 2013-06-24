@@ -12,33 +12,33 @@ used for issuing jobs or tasks, to be processed in the cluster, and for
 management, coordination and distribution of said jobs or tasks. It is
 also used occasionally to host internet-facing demos of our work.
 
-Nodes
------
-
 Our nodes are named after characters in Science-Fiction works. Flavio
 Martins unilaterally decided to start with the characters from the
 Christopher Nolan movie "Inception".
 
-### Master node
+Master node
+-----------
 
 Hostname: ariadne
 
-MB: Intel DX58SO
+### Main Specs
 
-CPU: Intel Core i7-920 Processor (4 cores, 8 threads, 8M Cache, 2.66
-GHz, up to 2.93 GHz)
+|     |                                                                                      |
+|-----|--------------------------------------------------------------------------------------|
+| MB  | Intel DX58SO                                                                         |
+| CPU | Intel Core i7-920 Processor (4 cores, 8 threads, 8M Cache, 2.66 GHz, up to 2.93 GHz) |
+| RAM | 12 GB DDR3 (1066Mhz)                                                                 |
 
-RAM: 12 GB DDR3 (1066Mhz)
-
-### Computing nodes
+Computing nodes
+---------------
 
 Hostname: arthur, cobb, mal, saito
 
-MB: ASUS P9X79 PRO
+### Main Specs
 
-CPU: Intel Core i7-3930K Processor (6 cores, 12 threads, 12M Cache, 3.2
-GHz, up to 3.80 GHz)
-
-RAM: 32 GB DDR3 (1333Mhz)
-
-GPU: 2 x AMD Radeon HD 7950 3 GB
+|     |                                                                                         |
+|-----|-----------------------------------------------------------------------------------------|
+| MB  | ASUS P9X79 PRO                                                                          |
+| CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M Cache, 3.2 GHz, up to 3.80 GHz) |
+| RAM | 32 GB DDR3 (1333Mhz)                                                                    |
+| GPU | 2 x AMD Radeon HD 7950 3 GB                                                             |
