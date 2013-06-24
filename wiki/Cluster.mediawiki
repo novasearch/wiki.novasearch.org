@@ -8,7 +8,6 @@ To access the cluster you need to log on to the SSH server on ariadne.imtv.me (1
 
 All the nodes are interconnected using a high-performance Gigabit switch.
 
-
 == Master node ==
 
 Hostname: ariadne
