@@ -12,10 +12,10 @@ used for issuing jobs or tasks, to be processed in the cluster, and for
 management, coordination and distribution of said jobs or tasks. It is
 also used occasionally to host internet-facing demos of our work.
 
-Machines
---------
+Nodes
+-----
 
-Our machines are named after characters in Science-Fiction works. Flavio
+Our nodes are named after characters in Science-Fiction works. Flavio
 Martins unilaterally decided to start with the characters from the
 Christopher Nolan movie "Inception".
 
