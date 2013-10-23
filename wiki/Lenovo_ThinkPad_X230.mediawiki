@@ -132,4 +132,4 @@ Then you must give the partition a specific id as to be recognized by the hardwa
 
 A number of Bluetooth profiles won't work until the firmware is loaded.
 
-Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}}
+Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}} (all lowercase)
