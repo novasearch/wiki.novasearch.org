@@ -56,6 +56,12 @@ the computer if you want your login keyring to be unlocked.
 
 #### Kernel
 
+The following enables the new P-state Intel CPU scheduler and some power
+saving options.
+
+The following forces some power saving options for the Intel graphics
+cards.
+
 #### TrackPoint
 
 You can change the default speed and sensitivity of the TrackPoint.
