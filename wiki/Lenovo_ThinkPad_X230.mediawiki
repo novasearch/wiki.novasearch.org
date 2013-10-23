@@ -1,6 +1,6 @@
 ThinkPad is one of the first options for many geeks, students and Linux users. It is the standard option available in Lenovo's X Series under 12-13 inches display category.
 
-[[File:ThinkPadX230.png]]
+[[File:ThinkPadX230.png|right|300px|ThinkPad X230]]
 
 === Hardware ===
 Below is the short list for this setup. ''After-market SSDs were bought'' because Lenovo is charging a lot for these.
