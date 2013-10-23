@@ -98,3 +98,20 @@ If your using and SSD you should enable TRIM to always get the best performance.
 /dev/mapper/ubuntu--vg-root / ext4 errors=remount-ro,relatime,discard 0 1
 </nowiki>
 }}
+
+==== Intel Rapid Start Technology ====
+
+The Intel chipset supports Intel Rapid Start, a technology that allows the laptop to go into a deeper sleep ACPI S4 (hibernate) from ACPI S3 (standby) after some period of time.
+
+This type of hibernation is directly supported in the hardware, so you will not see any traditional OS boot sequences during wake up from a hibernated machine as before.
+
+To setup Intel Rapid Start you need:
+
+ * an SSD
+ * a BIOS that supports Intel Rapid Start Technology
+ * a partition (primary/logical) >= than the laptop's physical memory
+
+Then you must give the partition a specific id as to be recognized by the hardware. According to Intel, it must be:
+
+ * in fdisk, id: 84, or
+ * in gdisk, guid: D3BFE2DE-3DAF-11DF-BA40-E3A556D89593
