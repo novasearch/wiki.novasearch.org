@@ -136,4 +136,6 @@ Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c
 
 ==== Zram/Compcache ====
 
-If you are low on memory you can always compress your data in RAM. Just issue {{ic|apt-get install zram-config}}
+If you are low on memory you can always compress your data in RAM.
+
+Just issue {{ic|apt-get install zram-config}} and check if it worked with {{ic|cat /proc/swaps}}
