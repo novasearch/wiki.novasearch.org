@@ -50,3 +50,5 @@ Everything works out-of-the-box except the integrated fingerprint
 scanner. To enable it you need to install some extra packages.
 
 ### System Configuration
+
+#### Kernel

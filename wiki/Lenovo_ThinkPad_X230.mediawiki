@@ -65,3 +65,10 @@ Below is the short list for this setup. ''After-market SSDs were bought'' becaus
 Everything works out-of-the-box except the integrated fingerprint scanner. To enable it you need to install some extra packages.
 
 === System Configuration ===
+
+==== Kernel ====
+
+{{hc|/etc/default/grub|2=<nowiki>
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=enable pcie_aspm=force drm.vblankoffdelay=1"
+</nowiki>
+}}
