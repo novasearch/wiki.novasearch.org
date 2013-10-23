@@ -29,6 +29,8 @@ because Lenovo is charging a lot for these.
 | Bluetooth                              | Broadcom BCM20702 Bluetooth 4.0                                                             |
 | ExpressCard/54 slot                    | Yes                                                                                         |
 | SD Card slot                           | Yes                                                                                         |
+| Mini DisplayPort                       | Yes                                                                                         |
+| VGA port                               | Yes                                                                                         |
 | USB 3.0                                | Two on the left                                                                             |
 | USB 2.0                                | One on the right powered (BIOS-selectable: on even when system off, on when suspended, off) |
 | Webcam                                 | 720p HD Integrated camera                                                                   |
