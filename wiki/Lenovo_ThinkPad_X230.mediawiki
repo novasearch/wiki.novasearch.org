@@ -62,7 +62,7 @@ Below is the short list for this setup. ''After-market SSDs were bought'' becaus
 
 ==== Compatibility ====
 
-Everything works out-of-the-box except the integrated fingerprint scanner. To enable it you need to install some extra packages.
+Everything works out-of-the-box except the integrated fingerprint scanner. To enable it you need to install some extra packages: {{ic|apt-get install libpam-fprintd}}
 
 === System Configuration ===
 
