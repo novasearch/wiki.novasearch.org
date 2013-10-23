@@ -72,7 +72,7 @@ You can change the default speed and sensitivity of the TrackPoint.
 
 #### SSD
 
-If you are using and SSD enable TRIM to always get the best performance.
+If you are using an SSD enable TRIM to always get the best performance.
 Just add to the mount options. The option avoids some writes on the SSD
 which is also desirable.
 
