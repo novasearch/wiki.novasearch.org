@@ -61,3 +61,7 @@ the computer if you want your login keyring to be unlocked.
 You can change the default speed and sensitivity of the TrackPoint.
 
 #### SSD
+
+If your using and SSD you should enable TRIM to always get the best
+performance. Just add to the mount options. The option avoids some
+writes on the SSD which is also desirable.
