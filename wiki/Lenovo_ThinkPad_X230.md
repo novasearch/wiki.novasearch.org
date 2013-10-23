@@ -107,3 +107,8 @@ A number of Bluetooth profiles won't work until the firmware is loaded.
 
 Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
 (all lowercase)
+
+#### Zram/Compcache
+
+If you are low on memory you can always compress your data in RAM. Just
+issue
