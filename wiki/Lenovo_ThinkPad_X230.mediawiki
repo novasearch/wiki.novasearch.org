@@ -104,6 +104,13 @@ If you are using and SSD enable TRIM to always get the best performance. Just ad
 </nowiki>
 }}
 
+If you use LVM you have to also change a line in the LVM configuration file.
+
+{{hc|/etc/lvm/lvm.conf|2=<nowiki>
+issue_discards = 1
+</nowiki>
+}}
+
 ==== Intel Rapid Start Technology ====
 
 The Intel chipset supports Intel Rapid Start, a technology that allows the laptop to go into a deeper sleep ACPI S4 (hibernate) from ACPI S3 (standby) after some period of time.

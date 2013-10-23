@@ -74,6 +74,9 @@ If you are using and SSD enable TRIM to always get the best performance.
 Just add to the mount options. The option avoids some writes on the SSD
 which is also desirable.
 
+If you use LVM you have to also change a line in the LVM configuration
+file.
+
 #### Intel Rapid Start Technology
 
 The Intel chipset supports Intel Rapid Start, a technology that allows
