@@ -72,3 +72,9 @@ Everything works out-of-the-box except the integrated fingerprint scanner. To en
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=enable pcie_aspm=force drm.vblankoffdelay=1"
 </nowiki>
 }}
+
+
+{{hc|/etc/modprobe.d/i915.conf|2=<nowiki>
+options i915 i915_enable_rc6=7 i915_enable_fbc=1 lvds_downclock=1 semaphores=1
+</nowiki>
+}}
