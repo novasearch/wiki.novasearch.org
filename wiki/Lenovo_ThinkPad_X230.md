@@ -55,3 +55,5 @@ the computer if you want your login keyring to be unlocked.
 ### System Configuration
 
 #### Kernel
+
+#### TrackPoint
