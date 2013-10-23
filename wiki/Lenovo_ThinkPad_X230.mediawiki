@@ -97,7 +97,7 @@ SUBSYSTEM=="serio", DRIVERS=="psmouse", WAIT_FOR="/sys/devices/platform/i8042/se
 
 ==== SSD ====
 
-If your using and SSD you should enable TRIM to always get the best performance. Just add {{ic|relatime,discard}} to the mount options. The {{ic|relatime}} option avoids some writes on the SSD which is also desirable.
+If you are using and SSD enable TRIM to always get the best performance. Just add {{ic|relatime,discard}} to the mount options. The {{ic|relatime}} option avoids some writes on the SSD which is also desirable.
 
 {{hc|/etc/fstab|2=<nowiki>
 /dev/mapper/ubuntu--vg-root / ext4 errors=remount-ro,relatime,discard 0 1
