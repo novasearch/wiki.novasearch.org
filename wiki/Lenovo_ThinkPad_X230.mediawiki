@@ -1,0 +1,57 @@
+ThinkPad is one of the first options for many geeks, students and Linux users. It is the standard option available in Lenovo's X Series under 12-13 inches display category.
+
+=== Hardware ===
+Below is the short list for this setup. ''After-market SSDs were bought'' because Lenovo is charging a lot for these.
+
+==== Tested Configuration ====
+{| class="wikitable sortable"
+! Feature !! Configuration
+|-
+|System||X230 23257MG
+|-
+|CPU||Intel Core i5-3320M (2.60 GHz, 3MB L3, 1600MHz FSB)
+|-
+|Graphics||Intel HD Graphics 4000
+|-
+|RAM||1x4GB PC3-10600 DDR3 memory at 1600MHz (Hynix)
+|-
+|Display||12.5" IPS TFT display HD LED
+|-
+|Disk (2.5" × 7mm hdd bay)||HGST HTS725050A7E630 500GB/7200rpm
+|-
+|MiniPCI Express slot (m)SATA2)||TOSHIBA THNSNH128GMCT 128GB
+|-
+|Ethernet||Intel Gigabit 82579LM 
+|-
+|Wireless||2x2 Intel Centrino Advanced-N 6205 AGN
+|-
+|Bluetooth||Broadcom BCM20702 Bluetooth 4.0
+|-
+|ExpressCard/54 slot||Yes
+|-
+|SD Card slot||Yes
+|-
+|USB 3.0||Two on the left
+|-
+|USB 2.0||One on the right powered (BIOS-selectable: on even when system off, on when suspended, off)
+|-
+|Webcam||720p HD
+|-
+|Stereo digital microphones||Yes
+|-
+|Stereo speakers||Yes
+|-
+|Combined headphone and microphone jack||Yes
+|-
+|UltraNav||Trackpoint and Buttonless Touchpad
+|-
+|Keyboard||Backlit + ThinkLight (Portuguese Layout)
+|-
+|Integrated Fingerprint Reader||Yes
+|-
+|Built-in Battery||6 Cell
+|-
+|Power||65W AC Adapter
+|-
+|Docking Port||Supports ThinkPad UltraBase Series 3, ThinkPad Mini Dock Series 3, etc.
+|}
