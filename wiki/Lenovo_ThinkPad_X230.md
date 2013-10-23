@@ -49,6 +49,9 @@ because Lenovo is charging a lot for these.
 Everything works out-of-the-box except the integrated fingerprint
 scanner. To enable it you need to install some extra packages:
 
+Just make sure you press ESC and login with your password when you boot
+the computer if you want your login keyring to be unlocked.
+
 ### System Configuration
 
 #### Kernel
