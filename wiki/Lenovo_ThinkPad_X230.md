@@ -8,6 +8,8 @@ ThinkPad is one of the first options for many geeks, students and Linux
 users. It is the standard option available in Lenovo's X Series under
 12-13 inches display category.
 
+![](ThinkPadX230.png "ThinkPadX230.png")
+
 ### Hardware
 
 Below is the short list for this setup. *After-market SSDs were bought*
