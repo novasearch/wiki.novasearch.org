@@ -43,3 +43,10 @@ because Lenovo is charging a lot for these.
 | Built-in Battery                       | 6 Cell                                                                                      |
 | Power                                  | 65W AC Adapter                                                                              |
 | Docking Port                           | Supports ThinkPad UltraBase Series 3, ThinkPad Mini Dock Series 3, etc.                     |
+
+#### Compatibility
+
+Everything works out-of-the-box except the integrated fingerprint
+scanner. To enable it you need to install some extra packages.
+
+### System Configuration
