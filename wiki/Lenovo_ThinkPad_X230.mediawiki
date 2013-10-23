@@ -35,7 +35,7 @@ Below is the short list for this setup. ''After-market SSDs were bought'' becaus
 |-
 |USB 2.0||One on the right powered (BIOS-selectable: on even when system off, on when suspended, off)
 |-
-|Webcam||720p HD
+|Webcam||720p HD Integrated camera
 |-
 |Stereo digital microphones||Yes
 |-

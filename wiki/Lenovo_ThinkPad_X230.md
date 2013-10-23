@@ -31,7 +31,7 @@ because Lenovo is charging a lot for these.
 | SD Card slot                           | Yes                                                                                         |
 | USB 3.0                                | Two on the left                                                                             |
 | USB 2.0                                | One on the right powered (BIOS-selectable: on even when system off, on when suspended, off) |
-| Webcam                                 | 720p HD                                                                                     |
+| Webcam                                 | 720p HD Integrated camera                                                                   |
 | Stereo digital microphones             | Yes                                                                                         |
 | Stereo speakers                        | Yes                                                                                         |
 | Combined headphone and microphone jack | Yes                                                                                         |
