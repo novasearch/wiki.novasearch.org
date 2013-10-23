@@ -83,6 +83,8 @@ options i915 i915_enable_rc6=7 i915_enable_fbc=1 lvds_downclock=1 semaphores=1
 
 ==== TrackPoint ====
 
+You can change the default speed and sensitivity of the TrackPoint.
+
 {{hc|/etc/udev/rules.d/10-trackpoint.rules|2=<nowiki>
 SUBSYSTEM=="serio", DRIVERS=="psmouse", WAIT_FOR="/sys/devices/platform/i8042/serio1/serio2/sensitivity", ATTR{sensitivity}="220", ATTR{speed}="110"
 </nowiki>

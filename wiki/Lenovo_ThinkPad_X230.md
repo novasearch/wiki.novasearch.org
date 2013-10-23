@@ -57,3 +57,5 @@ the computer if you want your login keyring to be unlocked.
 #### Kernel
 
 #### TrackPoint
+
+You can change the default speed and sensitivity of the TrackPoint.
