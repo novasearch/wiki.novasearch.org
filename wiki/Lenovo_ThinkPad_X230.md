@@ -70,6 +70,11 @@ cards.
 
 You can change the default speed and sensitivity of the TrackPoint.
 
+#### PulseAudio
+
+Automatically switch to Bluetooth or USB headset by adding the
+following:
+
 #### SSD
 
 If you are using an SSD enable TRIM to always get the best performance.
