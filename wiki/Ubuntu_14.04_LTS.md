@@ -39,7 +39,7 @@ The packages may be installed via package management tools:
 
 `$ sudo apt-get install sublime-text-installer`
 
-#### Videolan 2.1.X
+#### Videolan 2.1+
 
 Add the PPA to your package sources with the commands:
 
