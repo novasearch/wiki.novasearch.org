@@ -84,6 +84,8 @@ If you want to use virtualenvwrapper as well (recommended)
 
 `$ sudo pip install virtualenvwrapper`
 
+Then add the following to the bottom of your .bashrc
+
 ### Better Power Management
 
 Add the TLP-PPA to your package sources with the commands:

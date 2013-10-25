@@ -67,6 +67,15 @@ Sooner or later you have to install this.
 If you want to use virtualenvwrapper as well (recommended)
  $ sudo pip install virtualenvwrapper
 
+Then add the following to the bottom of your .bashrc
+
+{{hc|~/.bashrc|2=<nowiki>
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
+</nowiki>
+}}
+
 === Better Power Management ===
 
 Add the TLP-PPA to your package sources with the commands:
