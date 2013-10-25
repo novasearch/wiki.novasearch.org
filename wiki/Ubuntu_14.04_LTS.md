@@ -8,6 +8,8 @@ layout: wiki
 
 Don't install from the website. Install like this instead:
 
+`$ sudo apt-get install nautilus-dropbox libappindicator1`
+
 ### Fix ugly Windows fonts
 
 Disable embedded bitmaps for Calibri and others.

@@ -2,7 +2,7 @@
 
 Don't install from the website. Install like this instead:
 
-{{ic|sudo apt-get install nautilus-dropbox libappindicator1}}
+ $ sudo apt-get install nautilus-dropbox libappindicator1
 
 === Fix ugly Windows fonts ===
 
