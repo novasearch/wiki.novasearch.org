@@ -12,6 +12,8 @@ Don't install from the website. Install like this instead:
 
 Disable embedded bitmaps for Calibri and others.
 
+`$ mkdir ~/.config/fontconfig/conf.d/`
+
 ### Better Power Management
 
 Add the TLP-PPA to your package sources with the commands:

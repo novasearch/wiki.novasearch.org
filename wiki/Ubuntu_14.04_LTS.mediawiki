@@ -8,7 +8,8 @@ Don't install from the website. Install like this instead:
 
 Disable embedded bitmaps for Calibri and others.
 
-{{ic|mkdir ~/.config/fontconfig/conf.d/}}
+ $ mkdir ~/.config/fontconfig/conf.d/
+
 {{hc|~/.config/fontconfig/conf.d/20-no-embedded.conf|2=<nowiki>
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
