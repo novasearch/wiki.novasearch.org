@@ -4,6 +4,17 @@ permalink: wiki/Ubuntu_14.04_LTS/
 layout: wiki
 ---
 
+### Oracle Java
+
+Add the PPA to your package sources with the commands:
+
+`$ sudo add-apt-repository ppa:webupd8team/java`  
+`$ sudo apt-get update`
+
+The packages may be installed via package management tools:
+
+`$ sudo apt-get install oracle-java7-installer oracle-java7-set-default`
+
 ### Install Dropbox
 
 Don't install from the website. Install like this instead:
