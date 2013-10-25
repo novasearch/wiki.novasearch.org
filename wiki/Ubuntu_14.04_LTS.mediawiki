@@ -1,0 +1,17 @@
+=== Fix ugly Windows fonts ===
+
+Disable embedded bitmaps for Calibri and others.
+
+{{ic|mkdir ~/.config/fontconfig/conf.d/}}
+{{hc|~/.config/fontconfig/conf.d/20-no-embedded.conf|2=<nowiki>
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <match target="font">
+    <edit name="embeddedbitmap" mode="assign">
+      <bool>false</bool>
+    </edit>
+  </match>
+</fontconfig>
+</nowiki>
+}}
