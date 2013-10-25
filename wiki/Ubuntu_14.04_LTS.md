@@ -56,6 +56,23 @@ Don't install from the website. Install like this instead:
 
 `$ sudo apt-get install nautilus-dropbox libappindicator1`
 
+### Development
+
+#### Build Essential
+
+Sooner or later you have to install this.
+
+`$ sudo apt-get install build-essential`
+
+#### Python Virtualenv
+
+`$ sudo apt-get install python-pip`  
+`$ sudo pip install virtualenv`
+
+If you want to use virtualenvwrapper as well (recommended)
+
+`$ sudo pip install virtualenvwrapper`
+
 ### Better Power Management
 
 Add the TLP-PPA to your package sources with the commands:
