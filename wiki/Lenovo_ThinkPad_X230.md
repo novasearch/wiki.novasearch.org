@@ -117,4 +117,4 @@ Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
 
 If you are low on memory you can always compress your data in RAM.
 
-Just issue and check if it worked with
+Just issue and check if it works with
