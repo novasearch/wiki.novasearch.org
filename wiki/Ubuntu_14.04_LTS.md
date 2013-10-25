@@ -34,3 +34,6 @@ ThinkPads require an additional:
 Remove default Ubuntu CPU frequency configuration
 
 `$ sudo update-rc.d -f ondemand remove`
+
+To see how to configure it yourself check
+[1](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#configuration)
