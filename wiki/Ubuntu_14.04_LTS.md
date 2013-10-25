@@ -28,6 +28,17 @@ The packages may be installed via package management tools:
 
 `$ sudo apt-get install zotero-standalone`
 
+#### Sublime Text 3
+
+Add the PPA to your package sources with the commands:
+
+`$ sudo add-apt-repository ppa:webupd8team/sublime-text-3`  
+`$ sudo apt-get update`
+
+The packages may be installed via package management tools:
+
+`$ sudo apt-get install sublime-text-installer`
+
 #### Dropbox
 
 Don't install from the website. Install like this instead:
