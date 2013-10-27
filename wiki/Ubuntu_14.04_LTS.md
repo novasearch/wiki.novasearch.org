@@ -122,3 +122,9 @@ your user and let fontconfig use the better Linux rendering with these
 fonts.
 
 `$ mkdir ~/.config/fontconfig/conf.d/`
+
+#### Zram/Compcache
+
+If you are low on memory you can always compress your data in RAM.
+
+Just issue and check if it works with

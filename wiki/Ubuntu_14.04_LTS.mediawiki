@@ -117,3 +117,10 @@ If you open a document that uses Calibri (or other Windows font) the rendering w
 </fontconfig>
 </nowiki>
 }}
+
+
+==== Zram/Compcache ====
+
+If you are low on memory you can always compress your data in RAM.
+
+Just issue {{ic|apt-get install zram-config}} and check if it works with {{ic|cat /proc/swaps}}
