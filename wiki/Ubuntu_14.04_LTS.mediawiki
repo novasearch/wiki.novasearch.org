@@ -101,7 +101,7 @@ To see how to configure it yourself check the TLP project configuration page[htt
 
 ==== Fix ugly Windows fonts ====
 
-If you open a document that uses Calibri and other windows fonts it will look ugly. To fist it disable embedded bitmaps for your user.
+If you open a document that uses Calibri (or other Windows font) the rendering will look ugly. To fix it disable embedded bitmaps for your user.
 
  $ mkdir ~/.config/fontconfig/conf.d/
 
