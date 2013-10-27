@@ -117,7 +117,8 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
 #### Fix ugly Windows fonts
 
 If you open a document that uses Calibri (or other Windows font) the
-rendering will look ugly. To fix it disable embedded bitmaps for your
-user.
+rendering will look ugly. To fix it disable embedded bitmap fonts for
+your user and let fontconfig use the better Linux rendering with these
+fonts.
 
 `$ mkdir ~/.config/fontconfig/conf.d/`
