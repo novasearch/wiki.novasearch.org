@@ -116,6 +116,7 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
 
 #### Fix ugly Windows fonts
 
-Disable embedded bitmaps for Calibri and others.
+If you open a document that uses Calibri and other windows fonts it will
+look ugly. To fist it disable embedded bitmaps for your user.
 
 `$ mkdir ~/.config/fontconfig/conf.d/`
