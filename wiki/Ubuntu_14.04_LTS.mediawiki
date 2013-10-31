@@ -103,7 +103,7 @@ To see how to configure it yourself check the TLP project configuration page[htt
 
 If you open a document that uses Calibri (or other Windows font) the rendering will look ugly. To fix it disable embedded bitmap fonts for your user and let fontconfig use the better Linux rendering with these fonts.
 
- $ mkdir ~/.config/fontconfig/conf.d/
+ $ mkdir -p ~/.config/fontconfig/conf.d/
 
 {{hc|~/.config/fontconfig/conf.d/20-no-embedded.conf|2=<nowiki>
 <?xml version="1.0"?>

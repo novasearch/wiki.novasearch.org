@@ -121,7 +121,7 @@ rendering will look ugly. To fix it disable embedded bitmap fonts for
 your user and let fontconfig use the better Linux rendering with these
 fonts.
 
-`$ mkdir ~/.config/fontconfig/conf.d/`
+`$ mkdir -p ~/.config/fontconfig/conf.d/`
 
 #### Zram/Compcache
 
