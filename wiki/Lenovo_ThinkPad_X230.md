@@ -108,7 +108,10 @@ the hardware. According to Intel, it must be:
 
 #### Bluetooth
 
-A number of Bluetooth profiles won't work until the firmware is loaded.
+Problem: Bluetooth fails to come up on boot.
+
+Problem: A number of Bluetooth profiles won't work until the firmware is
+loaded.
 
 Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
 (all lowercase)
