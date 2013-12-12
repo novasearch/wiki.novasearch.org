@@ -15,7 +15,7 @@ Add the PPA to your package sources with the commands:
 
 The packages may be installed via package management tools:
 
-`$ sudo apt-get install oracle-java7-installer oracle-java7-set-default`
+`$ sudo apt-get install oracle-java7-installer`
 
 #### Zotero Standalone
 
