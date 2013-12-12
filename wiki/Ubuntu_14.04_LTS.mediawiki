@@ -107,6 +107,11 @@ Some Java apps, and particularly Swing apps such as Intellij IDEA and Netbeans h
  $ sudo apt-get update
  $ sudo apt-get install openjdk-7-jdk
 
+You should also export these environment variables
+
+ $ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+ $ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"
+
 ==== Alternative font rendering (Infinality patches) ====
 
 This works very well with the patched OpenJDK.
