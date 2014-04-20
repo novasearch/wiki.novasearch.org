@@ -139,9 +139,3 @@ Then you must give the partition a specific id as to be recognized by the hardwa
 
  * in fdisk, id: 84, or
  * in gdisk, guid: D3BFE2DE-3DAF-11DF-BA40-E3A556D89593
-
-==== Zram/Compcache ====
-
-If you are low on memory you can always compress your data in RAM.
-
-Just issue {{ic|apt-get install zram-config}} and check if it works with {{ic|cat /proc/swaps}}

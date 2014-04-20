@@ -113,9 +113,3 @@ the hardware. According to Intel, it must be:
 
 `* in fdisk, id: 84, or`  
 `* in gdisk, guid: D3BFE2DE-3DAF-11DF-BA40-E3A556D89593`
-
-#### Zram/Compcache
-
-If you are low on memory you can always compress your data in RAM.
-
-Just issue and check if it works with
