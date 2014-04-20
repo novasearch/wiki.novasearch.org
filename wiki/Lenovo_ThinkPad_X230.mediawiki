@@ -75,14 +75,7 @@ Just make sure you press ESC and login with your password when you boot the comp
 The following enables the new P-state Intel CPU scheduler and some power saving options.
 
 {{hc|/etc/default/grub|2=<nowiki>
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=enable pcie_aspm=force drm.vblankoffdelay=1"
-</nowiki>
-}}
-
-The following forces some power saving options for the Intel graphics cards.
-
-{{hc|/etc/modprobe.d/i915.conf|2=<nowiki>
-options i915 i915_enable_rc6=7 i915_enable_fbc=1 lvds_downclock=1 semaphores=1
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=enable pcie_aspm=force"
 </nowiki>
 }}
 
