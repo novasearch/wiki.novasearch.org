@@ -108,8 +108,6 @@ the hardware. According to Intel, it must be:
 
 #### Bluetooth
 
-Problem: Bluetooth fails to come up on boot.
-
 Problem: A number of Bluetooth profiles won't work until the firmware is
 loaded.
 

@@ -139,13 +139,6 @@ Then you must give the partition a specific id as to be recognized by the hardwa
 
 ==== Bluetooth ====
 
-Problem: Bluetooth fails to come up on boot.
-
-{{hc|/etc/udev/rules.d/10-btusb.rules|2=<nowiki>
-# Set bluetooth power up
-ACTION=="add", KERNEL=="hci0", RUN+="/usr/bin/hciconfig hci0 up"</nowiki>
-}}
-
 Problem: A number of Bluetooth profiles won't work until the firmware is loaded.
 
 Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}} (all lowercase)
