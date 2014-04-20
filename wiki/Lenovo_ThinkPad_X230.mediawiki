@@ -70,7 +70,7 @@ Everything works out-of-the-box except the integrated fingerprint scanner. To en
 
 Just make sure you press ESC and login with your password when you boot the computer if you want your login keyring to be unlocked.
 
-=== Bluetooth ===
+===== Bluetooth =====
 
 Problem: A number of Bluetooth profiles won't work until the firmware is loaded.
 

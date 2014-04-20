@@ -58,7 +58,7 @@ scanner. To enable it you need to install some extra packages:
 Just make sure you press ESC and login with your password when you boot
 the computer if you want your login keyring to be unlocked.
 
-### Bluetooth
+##### Bluetooth
 
 Problem: A number of Bluetooth profiles won't work until the firmware is
 loaded.
