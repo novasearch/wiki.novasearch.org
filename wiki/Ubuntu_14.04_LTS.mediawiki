@@ -93,6 +93,15 @@ To see how to configure it yourself check the TLP project configuration page[htt
 
 === Tips and Tricks ===
 
+==== PulseAudio ====
+
+Automatically switch to Bluetooth or USB headset by adding the following:
+
+{{hc|/etc/pulse/default.pa|2=<nowiki>
+### automatically switch to newly-connected devices
+load-module module-switch-on-connect</nowiki>
+}}
+
 ==== Fix ugly Windows fonts ====
 
 If you open a document that uses Calibri (or other Windows font) the rendering will look ugly. To fix it disable embedded bitmap fonts for your user and let fontconfig use the better Linux rendering with these fonts.

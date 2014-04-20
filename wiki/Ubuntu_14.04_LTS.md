@@ -104,6 +104,11 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-configuration.html)
 
 ### Tips and Tricks
 
+#### PulseAudio
+
+Automatically switch to Bluetooth or USB headset by adding the
+following:
+
 #### Fix ugly Windows fonts
 
 If you open a document that uses Calibri (or other Windows font) the
