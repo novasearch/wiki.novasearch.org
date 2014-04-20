@@ -50,11 +50,21 @@ because Lenovo is charging a lot for these.
 
 #### Compatibility
 
+### Fingerprint reader
+
 Everything works out-of-the-box except the integrated fingerprint
 scanner. To enable it you need to install some extra packages:
 
 Just make sure you press ESC and login with your password when you boot
 the computer if you want your login keyring to be unlocked.
+
+### Bluetooth
+
+Problem: A number of Bluetooth profiles won't work until the firmware is
+loaded.
+
+Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
+(all lowercase)
 
 ### System Configuration
 

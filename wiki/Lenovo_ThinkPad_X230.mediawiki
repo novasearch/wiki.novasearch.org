@@ -64,9 +64,17 @@ Below is the short list for this setup. ''After-market SSDs were bought'' becaus
 
 ==== Compatibility ====
 
+=== Fingerprint reader ===
+
 Everything works out-of-the-box except the integrated fingerprint scanner. To enable it you need to install some extra packages: {{ic|apt-get install libpam-fprintd}}
 
 Just make sure you press ESC and login with your password when you boot the computer if you want your login keyring to be unlocked.
+
+=== Bluetooth ===
+
+Problem: A number of Bluetooth profiles won't work until the firmware is loaded.
+
+Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}} (all lowercase)
 
 === System Configuration ===
 
