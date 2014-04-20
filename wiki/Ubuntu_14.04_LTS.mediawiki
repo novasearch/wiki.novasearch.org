@@ -67,7 +67,9 @@ Then add the following to the bottom of your .bashrc
 {{hc|~/.bashrc|2=<nowiki>
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f "$(which virtualenvwrapper_lazy.sh)" ]; then
+    source $(which virtualenvwrapper_lazy.sh)
+fi
 </nowiki>
 }}
 
