@@ -106,6 +106,9 @@ load-module module-switch-on-connect</nowiki>
 
 ==== SSD ====
 
+'''If you are using Ubuntu 14.04 you can skip these steps since it already runs {{ic|fstrim}} periodically.
+'''
+
 If you are using an SSD enable TRIM to always get the best performance. Just add {{ic|discard}} to the mount options. The {{ic|relatime}} option avoids some writes on the SSD which is also desirable.
 
 {{hc|/etc/fstab|2=<nowiki>
