@@ -1,2 +1,2 @@
 
-Find tips in [[Ubuntu_13.10]]
+Find tips in [[Ubuntu_14.04_LTS]]

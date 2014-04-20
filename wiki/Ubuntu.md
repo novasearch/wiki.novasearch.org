@@ -4,4 +4,4 @@ permalink: wiki/Ubuntu/
 layout: wiki
 ---
 
-Find tips in [Ubuntu\_13.10](/wiki/Ubuntu_13.10 "wikilink")
+Find tips in [Ubuntu\_14.04\_LTS](/wiki/Ubuntu_14.04_LTS "wikilink")
