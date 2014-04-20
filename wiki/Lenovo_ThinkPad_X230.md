@@ -77,7 +77,7 @@ following:
 
 #### SSD
 
-'''If you are using Ubuntu 14.04 you can skip these steps since it
+'''If you are using Ubuntu 14.04 LTS you can skip these steps since it
 already runs periodically. '''
 
 If you are using an SSD enable TRIM to always get the best performance.
