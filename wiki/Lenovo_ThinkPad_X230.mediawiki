@@ -95,15 +95,6 @@ SUBSYSTEM=="serio", DRIVERS=="psmouse", WAIT_FOR="/sys/devices/platform/i8042/se
 </nowiki>
 }}
 
-==== PulseAudio ====
-
-Automatically switch to Bluetooth or USB headset by adding the following:
-
-{{hc|/etc/pulse/default.pa|2=<nowiki>
-### automatically switch to newly-connected devices
-load-module module-switch-on-connect</nowiki>
-}}
-
 ==== SSD ====
 
 '''If you are using Ubuntu 14.04 LTS you can skip these steps since it already runs {{ic|fstrim}} periodically.
