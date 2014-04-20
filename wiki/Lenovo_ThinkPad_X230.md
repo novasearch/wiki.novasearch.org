@@ -17,8 +17,6 @@ users. It is the standard option available in Lenovo's X Series under
 Below is the short list for this setup. *After-market SSDs were bought*
 because Lenovo is charging a lot for these.
 
-#### Tested Configuration
-
 | Feature                                | Configuration                                                                               |
 |----------------------------------------|---------------------------------------------------------------------------------------------|
 | System                                 | X230 23257MG                                                                                |
@@ -48,9 +46,9 @@ because Lenovo is charging a lot for these.
 | Power                                  | 65W AC Adapter                                                                              |
 | Docking Port                           | Supports ThinkPad UltraBase Series 3, ThinkPad Mini Dock Series 3, etc.                     |
 
-#### Compatibility
+### Compatibility
 
-##### Fingerprint reader
+#### Fingerprint reader
 
 Everything works out-of-the-box except the integrated fingerprint
 scanner. To enable it you need to install some extra packages:
@@ -58,7 +56,7 @@ scanner. To enable it you need to install some extra packages:
 Just make sure you press ESC and login with your password when you boot
 the computer if you want your login keyring to be unlocked.
 
-##### Bluetooth
+#### Bluetooth
 
 Problem: A number of Bluetooth profiles won't work until the firmware is
 loaded.
