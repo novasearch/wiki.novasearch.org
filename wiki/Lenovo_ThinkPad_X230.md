@@ -50,7 +50,7 @@ because Lenovo is charging a lot for these.
 
 #### Compatibility
 
-### Fingerprint reader
+##### Fingerprint reader
 
 Everything works out-of-the-box except the integrated fingerprint
 scanner. To enable it you need to install some extra packages:
