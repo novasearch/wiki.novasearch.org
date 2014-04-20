@@ -133,12 +133,6 @@ Then you must give the partition a specific id as to be recognized by the hardwa
  * in fdisk, id: 84, or
  * in gdisk, guid: D3BFE2DE-3DAF-11DF-BA40-E3A556D89593
 
-==== Bluetooth ====
-
-Problem: A number of Bluetooth profiles won't work until the firmware is loaded.
-
-Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}} (all lowercase)
-
 ==== Zram/Compcache ====
 
 If you are low on memory you can always compress your data in RAM.

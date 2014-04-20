@@ -106,14 +106,6 @@ the hardware. According to Intel, it must be:
 `* in fdisk, id: 84, or`  
 `* in gdisk, guid: D3BFE2DE-3DAF-11DF-BA40-E3A556D89593`
 
-#### Bluetooth
-
-Problem: A number of Bluetooth profiles won't work until the firmware is
-loaded.
-
-Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
-(all lowercase)
-
 #### Zram/Compcache
 
 If you are low on memory you can always compress your data in RAM.
