@@ -104,6 +104,20 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-configuration.html)
 
 ### Tips and Tricks
 
+#### Java Ayatana
+
+Unity global menu and HUD support for Java Swing applications (IntelliJ
+IDEA and others).
+
+Add the PPA to your package sources with the commands:
+
+`$ sudo add-apt-repository ppa:danjaredg/jayatana`  
+`$ sudo apt-get update`
+
+The packages may be installed via package management tools:
+
+`$ sudo apt-get install jayatana`
+
 #### PulseAudio
 
 Automatically switch to Bluetooth or USB headset by adding the
