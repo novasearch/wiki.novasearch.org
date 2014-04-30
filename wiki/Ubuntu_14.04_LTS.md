@@ -104,6 +104,11 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-configuration.html)
 
 ### Tips and Tricks
 
+#### PulseAudio
+
+Automatically switch to Bluetooth or USB headset by adding the
+following:
+
 #### Java Ayatana
 
 Unity global menu and HUD support for Java Swing applications (IntelliJ
@@ -118,10 +123,29 @@ The packages may be installed via package management tools:
 
 `$ sudo apt-get install jayatana`
 
-#### PulseAudio
+#### Alternative font rendering (Infinality patches)
 
-Automatically switch to Bluetooth or USB headset by adding the
-following:
+This works very well with the patched OpenJDK.
+
+`$ sudo add-apt-repository ppa:no1wantdthisname/ppa`  
+`$ sudo apt-get update`  
+`$ sudo apt-get upgrade`  
+`$ sudo apt-get install fontconfig-infinality`
+
+#### Fix ugly Java/Swing fonts
+
+Some Java apps, and particularly Swing apps such as Intellij IDEA and
+Netbeans have terrible font rendering in Linux. To fix that install this
+patched OpenJDK and make sure you use it to launch your IDE.
+
+`$ sudo add-apt-repository ppa:no1wantdthisname/openjdk-fontfix`  
+`$ sudo apt-get update`  
+`$ sudo apt-get install openjdk-7-jdk`
+
+You should also export these environment variables
+
+`$ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64`  
+`$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"`
 
 #### Fix ugly Windows fonts
 
