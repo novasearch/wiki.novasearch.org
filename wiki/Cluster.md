@@ -20,7 +20,7 @@ Network
 -------
 
 To access the cluster you need to log on to the SSH server on
-ariadne.imtv.me (193.136.122.72).
+193.136.122.72.
 
 All the nodes are interconnected using a high-performance Gigabit
 switch.
