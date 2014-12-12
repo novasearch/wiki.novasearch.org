@@ -44,7 +44,7 @@ Getting started
 
 -   [Lenovo ThinkPad X230](/wiki/Lenovo_ThinkPad_X230 "wikilink")
 
-### Software
+### OS general info
 
 -   [Ubuntu 13.10](/wiki/Ubuntu_13.10 "wikilink")
 

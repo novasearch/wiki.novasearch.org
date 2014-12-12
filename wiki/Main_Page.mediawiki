@@ -22,7 +22,7 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 === Hardware ===
 *[[ Lenovo ThinkPad X230 ]]
 
-=== Software ===
+=== OS general info ===
 *[[ Ubuntu 13.10 ]]
 
 *[[ Ubuntu 14.04 LTS ]]
