@@ -40,7 +40,7 @@ Getting started
 
 -   [Search Services](/wiki/Search_Services "wikilink")
 
-### Hardware
+### Hardware general info
 
 -   [Lenovo ThinkPad X230](/wiki/Lenovo_ThinkPad_X230 "wikilink")
 

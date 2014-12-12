@@ -19,7 +19,7 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 
 *[[ Search Services ]]
 
-=== Hardware ===
+=== Hardware general info ===
 *[[ Lenovo ThinkPad X230 ]]
 
 === OS general info ===
