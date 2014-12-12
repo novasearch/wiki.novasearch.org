@@ -9,3 +9,5 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 [[ NFS ]]
 
 [[ Sessions ]]
+
+[[ Search Services ]]

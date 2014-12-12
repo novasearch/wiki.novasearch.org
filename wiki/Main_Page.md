@@ -17,3 +17,5 @@ Getting started
 [NFS](/wiki/NFS "wikilink")
 
 [Sessions](/wiki/Sessions "wikilink")
+
+[Search Services](/wiki/Search_Services "wikilink")
