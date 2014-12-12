@@ -11,7 +11,7 @@ layout: wiki
 Overview
 --------
 
-**Nova SearchServices** is a set of APIs that allows the creation of
+**NovaSearchServices** is a set of APIs that allows the creation of
 applications that feature extraction for images and text, indexing and
 retrieval.
 
