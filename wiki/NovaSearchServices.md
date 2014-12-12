@@ -128,9 +128,61 @@ Setup
 -   pugixml
 -   jsoncpp
 
-These libraries are available at Ariadne under
-`/localstore/searchservices/myLibs/`.
+#### Getting the dependencies:
 
-Before compiling and running export the following libraries:
+64 bit versions of these libraries are **available at Ariadne** under
+`/localstore/searchservices/`.
 
-`export LD_LIBRARY_PATH=/localstore/searchservices/myLibs/lib:$LD_LIBRARY_PATH && export LIBRARY_PATH=/localstore/searchservices/myLibs/bin:$LIBRARY_PATH && export C_INCLUDE_PATH=/localstore/searchservices/myLibs/include:$C_INCLUDE_PATH && export CPLUS_INCLUDE_PATH=/localstore/searchservices/myLibs/include:$CPLUS_INCLUDE_PATH && export LD_LIBRARY_PATH=/usr/lib/jvm/java-7-oracle/:$LD_LIBRARY_PATH && export LD_LIBRARY_PATH=/usr/lib/jvm/java-7-oracle/jre/lib/amd64/server/:$LD_LIBRARY_PATH`
+The easiest way to **run framework in local computer** is to:
+
+-   get code from [git](https://bitbucket.org/a_mourao/searchservices)
+-   copy libraries to the same folder on local computer
+-   build using the provided Makefile
+
+**Tested on Ubuntu 13.10/14.04**
+
+**Atention:** there are additional dependencies (e.g. libav), available
+on the default Ubuntu PPA. On **14.10**, the required **libav** version
+is **not available** on the repo and needs to be installed/downloaded
+**manually**.
+
+### Building:
+
+The project is being developed using
+[Codeblocks](http://www.codeblocks.org/). For convenience, developers
+can also generate a Makefile with all possible targets using
+[cbp2make](http://sourceforge.net/projects/cbp2make/) (also available on
+the Ubuntu Repo)
+
+`cbp2make -in searchservices.cbp -out Makefile`
+
+Before compiling and running, you may need to add the following
+libraries folders to the env. vars. Simple example:
+
+`export LD_LIBRARY_PATH=/localstore/searchservices/libs/lib:$LD_LIBRARY_PATH && export LIBRARY_PATH=/localstore/searchservices/libs/bin:$LIBRARY_PATH && export C_INCLUDE_PATH=/localstore/searchservices/libs/include:$C_INCLUDE_PATH && export CPLUS_INCLUDE_PATH=/localstore/searchservices/libs/include:$CPLUS_INCLUDE_PATH && export LD_LIBRARY_PATH=/usr/lib/jvm/java-7-oracle/:$LD_LIBRARY_PATH && export LD_LIBRARY_PATH=/usr/lib/jvm/java-7-oracle/jre/lib/amd64/server/:$LD_LIBRARY_PATH`
+
+#### Build with Makefile:
+
+Simply run `make` on the project root folder Binaries will be deployed
+in `bin/Release` and `bin/Debug`
+
+### Running:
+
+There are 2 main ways to execute code on the framework:
+
+#### Server:
+
+The server runs a REST service that receives requests on a set of
+configurable endpoints.
+
+`./bin/Release/server <config.json>`
+
+The JSON file sets what endpoints to run and their parameters.
+
+#### Other:
+
+In addition to the server, there are two targets for batch execution and
+testing. The main methods are the following:
+
+-   `./bin/Release/runAnalyser`: analyser/Main2.cpp
+-   `./bin/Release/runindexer`: analyser/Main3.cpp
