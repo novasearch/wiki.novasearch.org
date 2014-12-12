@@ -91,7 +91,7 @@ The framework supports feature extractors from "outside" programs through REST a
 * jsoncpp
 
 
-These libraries are available at Ariadne under <code>/localstore/searchservices/myLibs</code>.
+These libraries are available at Ariadne under <code>/localstore/searchservices/myLibs/</code>.
 
 Before compiling and running export the following libraries:
 

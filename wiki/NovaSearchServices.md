@@ -129,7 +129,7 @@ Setup
 -   jsoncpp
 
 These libraries are available at Ariadne under
-`/localstore/searchservices/myLibs`.
+`/localstore/searchservices/myLibs/`.
 
 Before compiling and running export the following libraries:
 
