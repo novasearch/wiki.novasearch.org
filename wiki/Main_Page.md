@@ -18,4 +18,4 @@ Getting started
 
 [Sessions](/wiki/Sessions "wikilink")
 
-[Search Services](/wiki/Search_Services "wikilink")
+[NovaSearchServices](/wiki/NovaSearchServices "wikilink")
