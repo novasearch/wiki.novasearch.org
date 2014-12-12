@@ -30,7 +30,7 @@ Master node
 
 ### Network
 
-Host: ariadne.imtv.me (193.136.122.72)
+Host: 193.136.122.72
 
 Internal: ariadne.novasearch.org (192.168.1.1)
 
