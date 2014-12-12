@@ -12,10 +12,42 @@ information on using the wiki software.
 Getting started
 ---------------
 
-[Cluster](/wiki/Cluster "wikilink")
+### Cluster
 
-[NFS](/wiki/NFS "wikilink")
+-   [Cluster](/wiki/Cluster "wikilink")
 
-[Sessions](/wiki/Sessions "wikilink")
+<!-- -->
 
-[Search Services](/wiki/Search_Services "wikilink")
+-   [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
+
+<!-- -->
+
+-   [Sessions](/wiki/Sessions "wikilink")
+
+<!-- -->
+
+-   [NFS](/wiki/NFS "wikilink")
+
+### Services and frameworks
+
+-   [Condor](/wiki/Condor "wikilink")
+
+<!-- -->
+
+-   [Hadoop](/wiki/Hadoop "wikilink")
+
+<!-- -->
+
+-   [Search Services](/wiki/Search_Services "wikilink")
+
+### Hardware
+
+-   [Lenovo ThinkPad X230](/wiki/Lenovo_ThinkPad_X230 "wikilink")
+
+### Software
+
+-   [Ubuntu 13.10](/wiki/Ubuntu_13.10 "wikilink")
+
+<!-- -->
+
+-   [Ubuntu 14.04 LTS](/wiki/Ubuntu_14.04_LTS "wikilink")

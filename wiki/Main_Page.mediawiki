@@ -3,11 +3,26 @@
 Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
 
 == Getting started ==
+=== Cluster ===
+*[[ Cluster ]]
 
-[[ Cluster ]]
+*[[ Cluster/FAQ ]]
 
-[[ NFS ]]
+*[[ Sessions ]]
 
-[[ Sessions ]]
+*[[ NFS ]]
 
-[[ Search Services ]]
+=== Services and frameworks ===
+*[[ Condor ]]
+
+*[[ Hadoop ]]
+
+*[[ Search Services ]]
+
+=== Hardware ===
+*[[ Lenovo ThinkPad X230 ]]
+
+=== Software ===
+*[[ Ubuntu 13.10 ]]
+
+*[[ Ubuntu 14.04 LTS ]]
