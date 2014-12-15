@@ -21,7 +21,7 @@ exigentes. Cada máquina tem 6 cores, 32GB e 2 GPUs, e oferece 5.5 TFlops
 
 ### Como acedo ao cluster?
 
-193.136.122.72:12034 para a adriadne.
+193.136.122.72:12034 para a ariadne.
 
 Para aceder aos outros tem de ser a partir da adriadne com o nome da
 máquina, e.g., ssh saito
