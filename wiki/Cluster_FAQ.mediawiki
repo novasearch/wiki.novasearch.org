@@ -2,7 +2,7 @@
 
 Tem 5 máquinas:
 
-* adriadne: 193.136.122.72:12034
+* ariadne: 193.136.122.72:12034
 * arthur
 * cobb
 * mal
@@ -10,7 +10,7 @@ Tem 5 máquinas:
 
 
 
-A adriadne é o ponto de entrada e deve ser só para servir sessões X, compilar e pequenos testes. As outras 4 máquinas são para tarefas *as* exigentes. Cada máquina tem 6 cores, 32GB e 2 GPUs, e oferece 5.5 TFlops (float)/ 1.4TFlop (double).
+A ariadne é o ponto de entrada e deve ser só para servir sessões X, compilar e pequenos testes. As outras 4 máquinas são para tarefas *as* exigentes. Cada máquina tem 6 cores, 32GB e 2 GPUs, e oferece 5.5 TFlops (float)/ 1.4TFlop (double).
 
 === Como acedo ao cluster? ===
 
