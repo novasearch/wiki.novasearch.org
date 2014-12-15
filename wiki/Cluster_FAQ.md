@@ -26,7 +26,7 @@ exigentes. Cada máquina tem 6 cores, 32GB e 2 GPUs, e oferece 5.5 TFlops
 Para aceder aos outros tem de ser a partir da adriadne com o nome da
 máquina, e.g., ssh saito
 
-### Quero executar 1000 instâncias do meu programa. Posso usar a adriadne?
+### Quero executar 1000 instâncias do meu programa. Posso usar a ariadne?
 
 !!!NÃO!!! Essa máquina não deve correr simulações porque é partilhada
 por todos e serve as sessões X.
