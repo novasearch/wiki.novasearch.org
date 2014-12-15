@@ -1,4 +1,4 @@
-[[File:NSS.png|300px|thumb|right|Framework diagram]]
+[[File:NSS.png|500px|thumb|right|Framework diagram]]
 
 == Overview ==
 
