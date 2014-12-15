@@ -46,8 +46,4 @@ Getting started
 
 ### OS general info
 
--   [Ubuntu 13.10](/wiki/Ubuntu_13.10 "wikilink")
-
-<!-- -->
-
 -   [Ubuntu 14.04 LTS](/wiki/Ubuntu_14.04_LTS "wikilink")

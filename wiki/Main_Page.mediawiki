@@ -23,6 +23,5 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 *[[ Lenovo ThinkPad X230 ]]
 
 === OS general info ===
-*[[ Ubuntu 13.10 ]]
 
 *[[ Ubuntu 14.04 LTS ]]
