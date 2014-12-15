@@ -23,7 +23,7 @@ exigentes. Cada máquina tem 6 cores, 32GB e 2 GPUs, e oferece 5.5 TFlops
 
 193.136.122.72:12034 para a ariadne.
 
-Para aceder aos outros tem de ser a partir da adriadne com o nome da
+Para aceder aos outros tem de ser a partir da ariadne com o nome da
 máquina, e.g., ssh saito
 
 ### Quero executar 1000 instâncias do meu programa. Posso usar a ariadne?

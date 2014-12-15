@@ -16,7 +16,7 @@ A ariadne é o ponto de entrada e deve ser só para servir sessões X, compilar 
 
 193.136.122.72:12034 para a ariadne.
 
-Para aceder aos outros tem de ser a partir da adriadne com o nome da máquina, e.g., ssh saito
+Para aceder aos outros tem de ser a partir da ariadne com o nome da máquina, e.g., ssh saito
 
 === Quero executar 1000 instâncias do meu programa. Posso usar a ariadne? ===
 
