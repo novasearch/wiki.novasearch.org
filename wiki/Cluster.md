@@ -96,3 +96,19 @@ the root directory /tmp however all the files in this directory are
 removed upon reboot, so consider creating a new folder with your
 username inside the root directory /localstore and use that instead if
 you want your data to persist.
+
+For users using key-based authentication, additional steps must be
+performed to ensure that the tickets are available and renewed on each
+machine:
+
+-   On Ariadne run:
+
+  
+  
+`kinit -r 14d`
+
+-   On the remaining machines run:
+
+  
+  
+`krenew -b -K 120`
