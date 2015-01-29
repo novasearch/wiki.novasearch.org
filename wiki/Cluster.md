@@ -75,7 +75,7 @@ packages from Ubuntu 12.10.
 |-----|-----------------------------------------------------------------------------------------|
 | MB  | ASUS P9X79 PRO                                                                          |
 | CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M Cache, 3.2 GHz, up to 3.80 GHz) |
-| RAM | 32 GB DDR3 (1333Mhz)                                                                    |
+| RAM | 64 GB DDR3 (1333Mhz)                                                                    |
 | GPU | 2 x AMD Radeon HD 7950 3 GB                                                             |
 
 Security
