@@ -26,7 +26,7 @@ Condor Components
 NovaSeach Condor setup
 ----------------------
 
-This page details the Condor setup on our cluster.
+This section details the Condor setup on our cluster.
 
 We have four [nodes](/wiki/Cluster#Hardware "wikilink") with 6 real cores (12
 HT threads).

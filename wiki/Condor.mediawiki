@@ -15,7 +15,7 @@ Condor is an workload management system for compute-intensive tasks. It is used 
 
 == NovaSeach Condor setup ==
 
-This page details the Condor setup on our cluster.
+This section details the Condor setup on our cluster.
 
 We have four [[Cluster#Hardware|nodes]] with 6 real cores (12 HT threads). 
 
