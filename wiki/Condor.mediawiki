@@ -5,7 +5,6 @@ Condor is an workload management system for compute-intensive tasks. It is used 
 * Preserves user environment on remote machine
 * Users need not make files available or have access to remote machine
 
-
 == Condor Components ==
 
 * Job queuing
@@ -13,6 +12,20 @@ Condor is an workload management system for compute-intensive tasks. It is used 
 * Priority mechanism
 * Resource monitoring
 * Resource management
+
+== NovaSeach Condor setup ==
+
+This page details the Condor setup on our cluster.
+
+We have four [[Cluster#Hardware|nodes]] with 6 real cores (12 HT threads). 
+
+All threads are available for condor, meaning we have 48 Condor slots, named slot<number>@<machine>.novasearch.org.
+
+=== Important information ===
+
+Each user has a '''48GB memory limit''' on each machine; each slot has a '''5GB memory limit'''.
+
+You must take these limits into account, so that your jobs don't get killed as you reach the limit.
 
 == Usage ==
 
@@ -91,12 +104,3 @@ Sets the base execution path of the execution. Useful to reference files with re
     Requirements = (Machine == "arthur.novasearch.org")
 
 Restricts the job to run on machines that satisfy the requirement. On this example, the jobs will only be deployed to '''arthur'''.
-
-== Condor setup on our cluster ==
-
-This page details the Condor setup on our cluster.
-We have four [[Cluster#Hardware|nodes]] with 6 real cores (12 HT threads). All threads are available for condor, meaning we have 48 Condor slots, named slot<number>@<machine>.novasearch.org.
-
-== Important information ==
-
-Each user has a 48GB memory limit on each machine; you must take this into account, so that your jobs don't get killed.

@@ -23,6 +23,25 @@ Condor Components
 -   Resource monitoring
 -   Resource management
 
+NovaSeach Condor setup
+----------------------
+
+This page details the Condor setup on our cluster.
+
+We have four [nodes](/wiki/Cluster#Hardware "wikilink") with 6 real cores (12
+HT threads).
+
+All threads are available for condor, meaning we have 48 Condor slots,
+named slot<number>@<machine>.novasearch.org.
+
+### Important information
+
+Each user has a **48GB memory limit** on each machine; each slot has a
+**5GB memory limit**.
+
+You must take these limits into account, so that your jobs don't get
+killed as you reach the limit.
+
 Usage
 -----
 
@@ -108,17 +127,3 @@ with relative paths.
 
 Restricts the job to run on machines that satisfy the requirement. On
 this example, the jobs will only be deployed to **arthur**.
-
-Condor setup on our cluster
----------------------------
-
-This page details the Condor setup on our cluster. We have four
-[nodes](/wiki/Cluster#Hardware "wikilink") with 6 real cores (12 HT threads).
-All threads are available for condor, meaning we have 48 Condor slots,
-named slot<number>@<machine>.novasearch.org.
-
-Important information
----------------------
-
-Each user has a 48GB memory limit on each machine; you must take this
-into account, so that your jobs don't get killed.
