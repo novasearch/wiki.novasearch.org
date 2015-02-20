@@ -67,14 +67,17 @@ If you need to change multiple arguments, you can set the shared parameters at t
     Arguments = a    
     Output = a.out
     Queue
+    
     Arguments = b
     Output = b.out
     Queue
+    
     Arguments = c
     Output = c.out
     Queue
 
 Will execute 3 processes with the selected parameters: sim a, sim b, sim c and will output to a.out, b.out, c.out respectively.
+
 If you have many parameter combinations, we suggest you generate this condor file with a script.
 
 === Other useful parameters ===

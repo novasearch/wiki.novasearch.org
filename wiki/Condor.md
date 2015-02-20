@@ -79,17 +79,20 @@ parameters at the beginning and change the required parameters
 `   Arguments = a    `  
 `   Output = a.out`  
 `   Queue`  
+`   `  
 `   Arguments = b`  
 `   Output = b.out`  
 `   Queue`  
+`   `  
 `   Arguments = c`  
 `   Output = c.out`  
 `   Queue`
 
 Will execute 3 processes with the selected parameters: sim a, sim b, sim
-c and will output to a.out, b.out, c.out respectively. If you have many
-parameter combinations, we suggest you generate this condor file with a
-script.
+c and will output to a.out, b.out, c.out respectively.
+
+If you have many parameter combinations, we suggest you generate this
+condor file with a script.
 
 ### Other useful parameters
 
