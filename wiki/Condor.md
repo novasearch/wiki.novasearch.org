@@ -55,3 +55,55 @@ $ vi sim.submit
 `   Output = sim.$(PROCESS)`  
 `   Log = sim.log`  
 `   Queue 1000`
+
+### Running many processes with different arguments
+
+`   Executable = sim`  
+`   Arguments = $(PROCESS)`  
+`   Input = sim.$(PROCESS)`  
+`   Output = sim.$(PROCESS)`  
+`   Log = sim.log`  
+`   Queue 1000`
+
+Will execute 1000 processes with the process id as a parameter: sim 0,
+sim 1, sim 2, ... , sim 999
+
+If you need to change multiple arguments, you can set the shared
+parameters at the beginning and change the required parameters
+
+`   Executable = sim `  
+`   Input = sim.$(PROCESS)`  
+`   Output = sim.$(PROCESS)`  
+`   Log = sim.log`  
+`   `  
+`   Arguments = a    `  
+`   Output = a.out`  
+`   Queue`  
+`   Arguments = b`  
+`   Output = b.out`  
+`   Queue`  
+`   Arguments = c`  
+`   Output = c.out`  
+`   Queue`
+
+Will execute 3 processes with the selected parameters: sim a, sim b, sim
+c and will output to a.out, b.out, c.out respectively. If you have many
+parameter combinations, we suggest you generate this condor file with a
+script.
+
+### Other useful parameters
+
+`   getenv = True`
+
+This parameter shares the local environmental variables with the remote
+environment. This is useful if you want to share global library paths.
+
+`   initialdir = `<path>
+
+Sets the base execution path of the execution. Useful to reference files
+with relative paths.
+
+`   Requirements = (Machine == "arthur.novasearch.org")`
+
+Restricts the job to run on machines that satisfy the requirement. On
+this example, the jobs will only be deployed to **arthur**.
