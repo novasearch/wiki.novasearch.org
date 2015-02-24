@@ -68,8 +68,7 @@ Download this ![](Fw-0a5c_21e6.hcd "fig:Fw-0a5c_21e6.hcd") and put it at
 
 #### Kernel
 
-The following enables the new P-state Intel CPU scheduler and some power
-saving options.
+The following enables some power saving options.
 
 #### TrackPoint
 
