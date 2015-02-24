@@ -56,11 +56,10 @@ Sooner or later you have to install this.
 
 ==== Python Virtualenv ====
 
- $ sudo apt-get install python-pip
- $ sudo pip install virtualenv
+ $ sudo apt-get install python-virtualenv
 
 If you want to use virtualenvwrapper as well (recommended)
- $ sudo pip install virtualenvwrapper
+ $ sudo apt-get install virtualenvwrapper
 
 Then add the following to the bottom of your .bashrc
 
