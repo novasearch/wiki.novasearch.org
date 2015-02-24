@@ -91,7 +91,7 @@ To see how to configure it yourself check the TLP project configuration page[htt
 Automatically switch to Bluetooth or USB headset by adding the following:
 
 {{hc|/etc/pulse/default.pa|2=<nowiki>
-### automatically switch to newly-connected devices
+# automatically switch to newly-connected devices
 load-module module-switch-on-connect</nowiki>
 }}
 
