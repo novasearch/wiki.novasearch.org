@@ -160,6 +160,8 @@ You should also export these environment variables
 `$ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64`  
 `$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"`
 
+Prefer this repository (optional)
+
 #### Fix bold fonts
 
 If you have problems with the rendering of text in bold try this
