@@ -158,7 +158,7 @@ patched OpenJDK and make sure you use it to launch your IDE.
 You should also export these environment variables
 
 `$ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64`  
-`$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"`
+`$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.xrender=true"`
 
 Prefer this repository (optional)
 
