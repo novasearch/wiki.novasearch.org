@@ -128,6 +128,25 @@ You should also export these environment variables
  $ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
  $ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"
 
+==== Fix bold fonts ====
+
+If you have problems with the rendering of text in bold try this
+
+ $ mkdir -p ~/.config/fontconfig/conf.d/
+
+{{hc|~/.config/fontconfig/conf.d/20-fix-bold.conf|2=<nowiki>
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <match target="pattern">
+    <edit name="dpi" mode="assign">
+      <double>72</double>
+    </edit>
+  </match>
+</fontconfig>
+</nowiki>
+}}
+
 ==== Fix ugly Windows fonts ====
 
 If you open a document that uses Calibri (or other Windows font) the rendering will look ugly. To fix it disable embedded bitmap fonts for your user and let fontconfig use the better Linux rendering with these fonts.

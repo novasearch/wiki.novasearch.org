@@ -140,6 +140,12 @@ You should also export these environment variables
 `$ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64`  
 `$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.xrender=true"`
 
+#### Fix bold fonts
+
+If you have problems with the rendering of text in bold try this
+
+`$ mkdir -p ~/.config/fontconfig/conf.d/`
+
 #### Fix ugly Windows fonts
 
 If you open a document that uses Calibri (or other Windows font) the
