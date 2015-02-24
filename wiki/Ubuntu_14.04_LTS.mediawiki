@@ -124,7 +124,7 @@ Adjust fontconfig files
 Change infinality environment variables
  $ sudo nano /etc/profile.d/infinality-settings.sh
  # Towards the bottom of the file, there's USE_STYLE.
- $ USE_STYLE="UBUNTU"
+ # USE_STYLE="UBUNTU"
  # Logout/Login to take effect
 
 Change hinting/antialiasing
