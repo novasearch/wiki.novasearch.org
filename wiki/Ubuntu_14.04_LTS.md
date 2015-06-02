@@ -93,6 +93,15 @@ page[1](http://linrunner.de/en/tlp/docs/tlp-configuration.html)
 
 ### Tips and Tricks
 
+#### Fix file explorer hangs
+
+Mounting file systems using Nautilus and then suspending/resuming your
+session might cause hangs to the file explorer process. If this affects
+you, the current best solution is to use this script to automatically
+unmount the shares before suspend or hibernate.
+
+</nowiki> }}
+
 #### PulseAudio
 
 Automatically switch to Bluetooth or USB headset by adding the

@@ -82,6 +82,27 @@ To see how to configure it yourself check the TLP project configuration page[htt
 
 === Tips and Tricks ===
 
+==== Fix file explorer hangs  ====
+
+Mounting file systems using Nautilus and then suspending/resuming your session might cause hangs to the file explorer process. If this affects you, the current best solution is to use this script to automatically unmount the shares before suspend or hibernate.
+
+{{hc|/etc/pm/sleep.d/gvfs-unmount|2=<nowiki>
+#!/bin/bash
+
+export DBUS_SESSION_BUS_ADDRESS=$(grep -z "DBUS_SESSION_BUS_ADDRESS" /proc/$(pidof gnome-session)/environ | cut -d= -f2-)
+DBUS_USERNAME=$(grep -z "USER" /proc/$(pidof gnome-session)/environ | cut -d= -f2-)
+
+case "$1" in
+        hibernate|suspend)
+                sudo -E -u $DBUS_USERNAME /bin/bash -c "/usr/bin/gvfs-mount --list | /bin/grep -e '//' | /usr/bin/cut -d ' ' -f4 | /usr/bin/xargs -I {} /usr/bin/gvfs-mount --unmount {}"
+                ;;
+        *) exit
+                ;;
+esac
+}}
+</nowiki>
+}}
+
 ==== PulseAudio ====
 
 Automatically switch to Bluetooth or USB headset by adding the following:
