@@ -100,8 +100,6 @@ session might cause hangs to the file explorer process. If this affects
 you, the current best solution is to use this script to automatically
 unmount the shares before suspend or hibernate.
 
-</nowiki> }}
-
 #### PulseAudio
 
 Automatically switch to Bluetooth or USB headset by adding the
