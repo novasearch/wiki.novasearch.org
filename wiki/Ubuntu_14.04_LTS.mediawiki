@@ -94,7 +94,8 @@ DBUS_USERNAME=$(grep -z "USER" /proc/$(pidof gnome-session)/environ | cut -d= -f
 
 case "$1" in
         hibernate|suspend)
-                sudo -E -u $DBUS_USERNAME /bin/bash -c "/usr/bin/gvfs-mount --list | /bin/grep -e '//' | /usr/bin/cut -d ' ' -f4 | /usr/bin/xargs -I {} /usr/bin/gvfs-mount --unmount {}"
+                sudo -E -u $DBUS_USERNAME /bin/bash -c "/usr/bin/gvfs-mount --unmount-scheme=sftp"
+                sudo -E -u $DBUS_USERNAME /bin/bash -c "/usr/bin/gvfs-mount --unmount-scheme=smb"
                 ;;
         *) exit
                 ;;
