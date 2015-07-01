@@ -36,10 +36,10 @@ Internal: ariadne.novasearch.org (192.168.1.1)
 
 ### Software
 
-Ubuntu 12.04.2 LTS + 12.10 Hardware Enablement Stack
+Ubuntu 12.04.2 LTS + 14.04 Hardware Enablement Stack
 
 The Hardware Enablement Stack contains backported kernels and Xorg
-packages from Ubuntu 12.10.
+packages from Ubuntu 14.04.
 
 ### Hardware
 
