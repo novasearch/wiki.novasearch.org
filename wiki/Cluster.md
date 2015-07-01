@@ -64,7 +64,7 @@ saito (192.168.1.40)
 
 ### Software
 
-Ubuntu 12.04.2 LTS + 14.04 Hardware Enablement Stack
+Ubuntu 12.04.5 LTS + 14.04 Hardware Enablement Stack
 
 The Hardware Enablement Stack contains backported kernels and Xorg
 packages from Ubuntu 14.04.
