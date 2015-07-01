@@ -17,4 +17,4 @@ Tips
 -   To copy data to another machine you can simply put it on your home
     directory and copy it from there. However, if you're copying a
     dataset to a computing node's /localstore directory consider using
-    SCP.
+    SCP/Rsync.
