@@ -146,6 +146,9 @@ on the default Ubuntu PPA. On **14.10**, the required **libav** version
 is **not available** on the repo and needs to be installed/downloaded
 **manually**.
 
+Instructions to build libs manually is available
+[here](/wiki/Build_dependencies_from_source_for_NovaSearchServices "wikilink").
+
 ### Building:
 
 The project is being developed using
