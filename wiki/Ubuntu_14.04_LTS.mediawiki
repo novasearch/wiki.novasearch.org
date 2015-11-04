@@ -114,6 +114,7 @@ load-module module-switch-on-connect</nowiki>
 
 ==== Java Ayatana ====
 
+Not recommended anymore!
 Unity global menu and HUD support for Java Swing applications (IntelliJ IDEA and others).
 
 Add the PPA to your package sources with the commands:

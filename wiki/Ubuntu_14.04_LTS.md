@@ -107,8 +107,8 @@ following:
 
 #### Java Ayatana
 
-Unity global menu and HUD support for Java Swing applications (IntelliJ
-IDEA and others).
+Not recommended anymore! Unity global menu and HUD support for Java
+Swing applications (IntelliJ IDEA and others).
 
 Add the PPA to your package sources with the commands:
 
