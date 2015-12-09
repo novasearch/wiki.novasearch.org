@@ -105,6 +105,8 @@ unmount the shares before suspend or hibernate.
 Automatically switch to Bluetooth or USB headset by adding the
 following:
 
+Can solve some crackling issues with headsets:
+
 #### Java Ayatana
 
 Not recommended anymore! Unity global menu and HUD support for Java

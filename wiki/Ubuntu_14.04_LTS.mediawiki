@@ -112,6 +112,12 @@ Automatically switch to Bluetooth or USB headset by adding the following:
 load-module module-switch-on-connect</nowiki>
 }}
 
+Can solve some crackling issues with headsets:
+
+{{hc|/etc/pulse/daemon.conf|2=<nowiki>
+default-fragment-size-msec = 5</nowiki>
+}}
+
 ==== Java Ayatana ====
 
 Not recommended anymore!
