@@ -158,7 +158,8 @@ patched OpenJDK and make sure you use it to launch your IDE.
 `$ sudo apt-get update`  
 `$ sudo apt-get install openjdk-7-jdk`
 
-You should also export these environment variables
+You should also export these environment variables (Edit: Not
+recommended)
 
 `$ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64`  
 `$ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.xrender=true"`
