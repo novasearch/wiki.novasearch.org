@@ -73,7 +73,7 @@ Just make sure you press ESC and login with your password when you boot the comp
 
 Problem: A number of Bluetooth profiles won't work until the firmware is loaded.
 
-Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/fw-0a5c_21e6.hcd}} (all lowercase)
+Download this [[File:Fw-0a5c 21e6.hcd]] and put it at {{ic|/lib/firmware/brcm/BCM20702A1-0a5c-21e6.hcd}}
 
 === System Configuration ===
 
