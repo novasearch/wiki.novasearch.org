@@ -22,22 +22,22 @@ These features make testing multiple combinations of techniques painless and all
 
 Feature extractors:
 * Global image features (nVector/FeatureExtractor.h)
-** Gabor
-** GIST
-** LBP
-** HSV histograms
-** CEDD
-** FCTH
-** Eigen extractor (PCA)
+** Gabor: [[GaborExtractor|gaborExtractor]]
+** GIST: [[GISTExtractor|gistExtractor]]
+** LBP: [[LBPExtractor|lbpExtractor]]
+** HSV histograms: [[HistogramExtractor|hsvHistogramExtractor]]
+** CEDD: [[LireExtrator|lireExtractor]]
+** FCTH: [[LireExtrator|lireExtractor]]
+** Eigen extractor: [[EigenExtractor|eigenAnalyser]]
 * Keypoint based (nKeypoint/KeypointFeatureExtractor.h)
-** SURF
-** SIFT
-** ORB
+** SIFT: [[SIFTExtractor|sift]]
+** SURF: [[SURFExtractor|surf]]
 
 Object detectors (nRoi/RoiFeatureExtractor.h):
-* Face detection
-* Person detection
-* Generic Haar-based object detector
+* Face detection: [[FaceDetection|faceDetection]]
+* Person detection: [[HaarDetector|haarDetector]]
+* Car detection: [[HaarDetector|haarDetector]]
+* Generic Haar-based object detector: [[HaarDetector|haarDetector]]
 
 Classifiers (nTag/IClassifier.h):
 * Sparse approximation

@@ -42,23 +42,25 @@ classification tasks and challenges.
 Feature extractors:
 
 -   Global image features (nVector/FeatureExtractor.h)
-    -   Gabor
-    -   GIST
-    -   LBP
-    -   HSV histograms
-    -   CEDD
-    -   FCTH
-    -   Eigen extractor (PCA)
+    -   Gabor: [gaborExtractor](/wiki/GaborExtractor "wikilink")
+    -   GIST: [gistExtractor](/wiki/GISTExtractor "wikilink")
+    -   LBP: [lbpExtractor](/wiki/LBPExtractor "wikilink")
+    -   HSV histograms:
+        [hsvHistogramExtractor](/wiki/HistogramExtractor "wikilink")
+    -   CEDD: [lireExtractor](/wiki/LireExtrator "wikilink")
+    -   FCTH: [lireExtractor](/wiki/LireExtrator "wikilink")
+    -   Eigen extractor: [eigenAnalyser](/wiki/EigenExtractor "wikilink")
 -   Keypoint based (nKeypoint/KeypointFeatureExtractor.h)
-    -   SURF
-    -   SIFT
-    -   ORB
+    -   SIFT: [sift](/wiki/SIFTExtractor "wikilink")
+    -   SURF: [surf](/wiki/SURFExtractor "wikilink")
 
 Object detectors (nRoi/RoiFeatureExtractor.h):
 
--   Face detection
--   Person detection
--   Generic Haar-based object detector
+-   Face detection: [faceDetection](/wiki/FaceDetection "wikilink")
+-   Person detection: [haarDetector](/wiki/HaarDetector "wikilink")
+-   Car detection: [haarDetector](/wiki/HaarDetector "wikilink")
+-   Generic Haar-based object detector:
+    [haarDetector](/wiki/HaarDetector "wikilink")
 
 Classifiers (nTag/IClassifier.h):
 
