@@ -151,7 +151,6 @@ To use for Bag-of-words or Fisher vectors, extract the ''features'' array for ea
 
 The ''result'' field will be a an array of JSON fields, each with the rectangle coordinates, size and types: 
 
-
 <pre>
 {
     "result":[
