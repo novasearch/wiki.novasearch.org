@@ -56,9 +56,28 @@ To load mkl on the cluster:
 `module load mkl`
 
 -   Create a configuration file for numpy named `.numpy-site.cfg` in the
-    $HOME folder.
+    $HOME folder:
+
+  
+  
+`touch /home/dsemedo/.numpy-site.cfg`
+
 -   Copy the contents of a sample numpy config file available at
     [3](https://github.com/numpy/numpy/blob/master/site.cfg.example) to
     the created file.
 
 Change the MKL section to:
+
+`# MKL`  
+`# ----`  
+`# MKL is Intel's very optimized yet proprietary implementation of BLAS and`  
+`# Lapack.`  
+`# For recent (9.0.21, for example) mkl, you need to change the names of the`  
+`# lapack library. Assuming you installed the mkl in /opt, for a 32 bits cpu:`  
+`[mkl]`  
+`library_dirs = /opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 `  
+`include_dirs = /opt/intel/composer_xe_2013_sp1.2.144/mkl/include`  
+`mkl_libs = mkl_rt`  
+`lapack_libs =`
+
+After this, scipy installs correctly and MKL is used in Numpy.
