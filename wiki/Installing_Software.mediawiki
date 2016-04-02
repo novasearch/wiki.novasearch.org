@@ -87,6 +87,13 @@ Theano supports CPU and GPU. To select which we want to use the Theano flags mus
 ::<code>echo -e "[global]\nfloatX=float32\ndevice = gpu0\n" > ~/.theanorc</code>
 :With this config, Theano will attempt to use the GPU for computations. If it fails to find a GPU, it will fallback to the CPU.
 
+
+Additionally, we want Theano to also use MKL:
+
+* Modify Theano config file by adding:
+ [blas]
+ ldflags = -lmkl
+
 For more info about Theano flags see[http://deeplearning.net/software/theano/library/config.html].
 
 

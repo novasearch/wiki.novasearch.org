@@ -120,6 +120,13 @@ flags must be set:
 With this config, Theano will attempt to use the GPU for computations.
 If it fails to find a GPU, it will fallback to the CPU.
 
+Additionally, we want Theano to also use MKL:
+
+-   Modify Theano config file by adding:
+
+`[blas]`  
+`ldflags = -lmkl`
+
 For more info about Theano flags
 see[4](http://deeplearning.net/software/theano/library/config.html).
 
