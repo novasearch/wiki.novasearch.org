@@ -28,6 +28,10 @@ Getting started
 
 -   [NFS](/wiki/NFS "wikilink")
 
+<!-- -->
+
+-   [Installing Software](/wiki/Installing_Software "wikilink")
+
 ### Services and frameworks
 
 -   [Condor](/wiki/Condor "wikilink")

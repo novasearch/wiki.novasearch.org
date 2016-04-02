@@ -12,6 +12,8 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 
 *[[ NFS ]]
 
+*[[ Installing Software ]]
+
 === Services and frameworks ===
 *[[ Condor ]]
 
