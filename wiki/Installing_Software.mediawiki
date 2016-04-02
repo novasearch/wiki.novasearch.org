@@ -87,6 +87,9 @@ Theano supports CPU and GPU. To select which we want to use the Theano flags mus
 
 For more info about Theano flags see[http://deeplearning.net/software/theano/library/config.html].
 
+
+
+
 ==== Lasagne ====
 
 Lasagne depends on Theano, therefore it must be installed first. To install Lasagne:
@@ -94,3 +97,14 @@ Lasagne depends on Theano, therefore it must be installed first. To install Lasa
 <code>pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip --user</code>
 
 Lasagne documentation: [http://lasagne.readthedocs.org/en/latest/index.html]
+
+
+
+==== Keras ====
+
+"Keras is a minimalist, highly modular neural networks library, written in Python and capable of running on top of either TensorFlow or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research."
+
+<code>pip install git+git://github.com/Theano/Theano.git --user</code>
+
+
+Keras Documentation: [http://keras.io/]

@@ -128,3 +128,15 @@ install Lasagne:
 
 Lasagne documentation:
 [5](http://lasagne.readthedocs.org/en/latest/index.html)
+
+#### Keras
+
+"Keras is a minimalist, highly modular neural networks library, written
+in Python and capable of running on top of either TensorFlow or Theano.
+It was developed with a focus on enabling fast experimentation. Being
+able to go from idea to result with the least possible delay is key to
+doing good research."
+
+`pip install git+git://github.com/Theano/Theano.git --user`
+
+Keras Documentation: [6](http://keras.io/)
