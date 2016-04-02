@@ -111,3 +111,9 @@ Lasagne documentation: [http://lasagne.readthedocs.org/en/latest/index.html]
 
 
 Keras Documentation: [http://keras.io/]
+
+=== Computer Vision Packages ===
+
+==== scikit-image ====
+
+<code>pip install --upgrade scikit-image --user</code>

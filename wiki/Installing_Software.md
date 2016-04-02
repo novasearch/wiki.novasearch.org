@@ -145,3 +145,9 @@ doing good research."
 `pip install git+git://github.com/Theano/Theano.git --user`
 
 Keras Documentation: [6](http://keras.io/)
+
+### Computer Vision Packages
+
+#### scikit-image
+
+`pip install --upgrade scikit-image --user`
