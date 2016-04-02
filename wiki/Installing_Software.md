@@ -142,6 +142,10 @@ It was developed with a focus on enabling fast experimentation. Being
 able to go from idea to result with the least possible delay is key to
 doing good research."
 
+Dependencies:
+
+-   cv2 -\> `pip install cv2 --user`
+
 `pip install git+git://github.com/Theano/Theano.git --user`
 
 Keras Documentation: [6](http://keras.io/)
