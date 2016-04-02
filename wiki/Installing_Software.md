@@ -90,6 +90,10 @@ After this, Scipy installs correctly and MKL is used in Numpy.
 
 #### Theano
 
+Theano is a Python library that allows the definition, optimization, and
+evaluation of mathematical expressions involving multi-dimensional
+arrays efficiently.
+
 Install the latest version of Theano using the git repository:
 
 `pip install --upgrade `[`https://github.com/Theano/Theano/archive/master.zip`](https://github.com/Theano/Theano/archive/master.zip)` --user`
@@ -121,7 +125,8 @@ see[4](http://deeplearning.net/software/theano/library/config.html).
 
 #### Lasagne
 
-Lasagne depends on Theano, therefore it must be installed first. To
+Lasagne is a lightweight library to build and train neural networks in
+Theano. It depends on Theano, therefore it must be installed first. To
 install Lasagne:
 
 `pip install --upgrade `[`https://github.com/Lasagne/Lasagne/archive/master.zip`](https://github.com/Lasagne/Lasagne/archive/master.zip)` --user`
