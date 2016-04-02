@@ -21,7 +21,7 @@ To upgrade a library we specify the argument <code>--upgrade</code>, like this:
 
 <code>pip install --upgrade <package_name> --user</code>
 
-=== Machine Learning Packages ===
+=== Machine Learning General Packages ===
 
 
 ==== Scipy ====
@@ -36,7 +36,9 @@ However, it is likely that it will fail due to the fact that python isn't able t
 
 To load mkl on the cluster:
 
-<code>module load mkl</code>
+<code>module load mkl lapack</code> (confirm if lapack is needed!)
+
+
 
 * Create a configuration file for numpy named <code>.numpy-site.cfg</code> in the $HOME folder:
 
@@ -58,4 +60,37 @@ Change the MKL section to:
  lapack_libs =
 
 
-After this, scipy installs correctly and MKL is used in Numpy.
+After this, Scipy installs correctly and MKL is used in Numpy.
+
+
+
+==== scikit-learn ====
+
+<code>pip install --upgrade scikit-learn --user</code>
+
+=== Deep Learning Packages ===
+
+==== Theano ====
+
+Install the latest version of Theano using the git repository:
+
+<code>pip install --upgrade https://github.com/Theano/Theano/archive/master.zip --user</code>
+
+Theano supports CPU and GPU. To select which we want to use the Theano flags must be set:
+
+* Setting the flags for each execution:
+::<code>THEANO_FLAGS='floatX=float32,device=gpu0'  python <script>.py</code>
+
+* Alternatively we can create a config file:
+::<code>echo -e "[global]\nfloatX=float32\ndevice = gpu0\n" > ~/.theanorc</code>
+:With this config, Theano will attempt to use the GPU for computations. If it fails to find a GPU, it will fallback to the CPU.
+
+For more info about Theano flags see[http://deeplearning.net/software/theano/library/config.html].
+
+==== Lasagne ====
+
+Lasagne depends on Theano, therefore it must be installed first. To install Lasagne:
+
+<code>pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip --user</code>
+
+Lasagne documentation: [http://lasagne.readthedocs.org/en/latest/index.html]
