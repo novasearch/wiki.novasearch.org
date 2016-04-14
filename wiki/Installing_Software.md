@@ -125,7 +125,7 @@ Additionally, we want Theano to also use MKL:
 -   Modify Theano config file by adding:
 
 `[blas]`  
-`ldflags = -lmkl`
+`ldflags = -L/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lm`
 
 For more info about Theano flags
 see[4](http://deeplearning.net/software/theano/library/config.html).
