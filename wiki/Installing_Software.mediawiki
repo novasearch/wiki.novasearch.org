@@ -36,7 +36,7 @@ However, it is likely that it will fail due to the fact that python isn't able t
 
 To load mkl on the cluster:
 
-<code>module load mkl lapack</code> (confirm if lapack is needed!)
+<code>module load mkl</code> (confirm if lapack is needed!)
 
 
 
@@ -92,7 +92,7 @@ Additionally, we want Theano to also use MKL:
 
 * Modify Theano config file by adding:
  [blas]
- ldflags = -L/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lm
+ ldflags = -L/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 -L/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64 -lmkl_gf_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_gnu_thread -lmkl_core -lmkl_vml_avx -lmkl_def -ldl -lpthread -lm -lmkl_rt -liomp5
 
 For more info about Theano flags see[http://deeplearning.net/software/theano/library/config.html].
 

@@ -53,7 +53,7 @@ we wan't numpy to use.
 
 To load mkl on the cluster:
 
-`module load mkl lapack` (confirm if lapack is needed!)
+`module load mkl` (confirm if lapack is needed!)
 
 -   Create a configuration file for numpy named `.numpy-site.cfg` in the
     $HOME folder:
@@ -125,7 +125,7 @@ Additionally, we want Theano to also use MKL:
 -   Modify Theano config file by adding:
 
 `[blas]`  
-`ldflags = -L/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lm`
+`ldflags = -L/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 -L/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64 -lmkl_gf_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_gnu_thread -lmkl_core -lmkl_vml_avx -lmkl_def -ldl -lpthread -lm -lmkl_rt -liomp5`
 
 For more info about Theano flags
 see[4](http://deeplearning.net/software/theano/library/config.html).
