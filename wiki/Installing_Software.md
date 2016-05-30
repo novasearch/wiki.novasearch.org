@@ -77,8 +77,7 @@ Change the MKL section to:
 `[mkl]`  
 `library_dirs = /opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64 `  
 `include_dirs = /opt/intel/composer_xe_2013_sp1.2.144/mkl/include`  
-`mkl_libs = mkl_rt`  
-`lapack_libs =`
+`mkl_libs = mkl_rt`
 
 After this, Scipy installs correctly and MKL is used in Numpy.
 
