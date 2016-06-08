@@ -183,10 +183,19 @@ Load necessary modules:
 
 Compiling OpenCV:
 
-`cd `<opencv_source>  
-`mkdir build && cd "$_"`  
-`cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=`<install_folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=`<opencv_contrib_dir>`/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON -D BUILD_opencv_python2=ON ..`  
-`make -j12`
+`$ cd `<opencv_source>  
+`$ mkdir build && cd "$_"`  
+`$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=`<install_folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=`<opencv_contrib_dir>`/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON -D BUILD_opencv_python2=ON -D PYTHON_INCLUDE_DIR=/opt/python/include/python2.7 -D PYTHON_LIBRARY=/opt/python/lib/libpython2.7.so  ..`  
+`$ make -j12`  
+`$ make install`  
+`$ ln -s $HOME/opencv_build/lib/python2.7/site-packages/cv2.so $HOME/.local/lib/cv2.so`
+
+To check if it installed correctly:
+
+`$ python`  
+`>>> import cv2`
+
+If the import succeeds then Python-OpenCV is installed.
 
 #### Adding support for FFmpeg
 
