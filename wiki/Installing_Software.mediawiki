@@ -1,4 +1,4 @@
-IN PROGRESS: Some guidelines/tutorials for software installation in the Rocks Cluster.
+WORK IN PROGRESS: Some guidelines/tutorials for software installation in the Rocks Cluster.
 
 == Python Stuff ==
 
@@ -125,3 +125,65 @@ Keras Documentation: [http://keras.io/]
 ==== scikit-image ====
 
 <code>pip install --upgrade scikit-image --user</code>
+
+
+
+
+
+
+
+
+== OpenCV ==
+
+Steps for installing OpenCV 3.1.0 with extra modules (OpenCV contrib). OpenCV will be compiled with support for OpenCL, CUDA and MKL.
+
+Downloading OpenCV: [http://opencv.org/downloads.html]
+
+Extra modules must be downloaded from git.
+
+ $ git clone https://github.com/Itseez/opencv_contrib
+
+
+From now on, let <opencv_contrib_dir> be the the downloaded opencv_contrib folder.
+
+Load necessary modules:
+ $ module load cmake gnutools mkl python eigen hdf5
+Compiling OpenCV:
+ cd <opencv_source>
+ mkdir build && cd "$_"
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=<install_folder> -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=<opencv_contrib_dir>/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON ..
+ make -j5
+
+
+
+ 
+
+
+
+==== Adding support for FFmpeg ====
+
+Assuming that FFmpeg was compiled previously and the build directory is <ffmpeg_build>, the following environmental must be set:
+
+ export LD_LIBRARY_PATH=<ffmpeg_build>/lib/:$LD_LIBRARY_PATH
+ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:<ffmpeg_build>/lib/pkgconfig
+ export PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR:<ffmpeg_build>/lib/
+
+Now, cmake should be able to find FFmpeg.
+
+=== Common Problems ===
+
+==== IPPICV hash mismatch ====
+
+While creating the makefile for compilation, the lib ippicv will be automatically downloaded. The md5 of the downloaded file will not match the hardcoded hash on the cmake.
+
+Instead of changing cmake we can manually download the file. Download URL: [https://raw.githubusercontent.com/Itseez/opencv_3rdparty/81a676001ca8075ada498583e4166079e5744668/ippicv/ippicv_linux_20151201.tgz]
+This file must be placed in the folder <code><opencv_source>/3rdparty/ippicv/downloads/unpack/</code>. 
+Steps:
+
+ $ mkdir <opencv_source>/3rdparty/ippicv/downloads/linux-808b791a6eac9ed78d32a7666804320e && cd "$_"
+ $ wget https://raw.githubusercontent.com/Itseez/opencv_3rdparty/81a676001ca8075ada498583e4166079e5744668/ippicv/ippicv_linux_20151201.tgz
+ $ cd ../../ && mkdir unpack && cd "$_"
+ $ cp ../downloads/linux-808b791a6eac9ed78d32a7666804320e/ippicv_linux_20151201.tgz .
+ $ tar zxvf ippicv_linux_20151201.tgz
+
+Alternatively, one can pass the option <code>-D WITH_IPP=OFF</code> to the cmake call to compile without the IPPICV lib.
