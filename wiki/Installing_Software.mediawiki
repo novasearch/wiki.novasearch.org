@@ -151,8 +151,8 @@ Load necessary modules:
 Compiling OpenCV:
  cd <opencv_source>
  mkdir build && cd "$_"
- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=<install_folder> -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=<opencv_contrib_dir>/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON ..
- make -j5
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=<install_folder> -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=<opencv_contrib_dir>/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON -D BUILD_opencv_python2=ON ..
+ make -j12
 
 
 
@@ -170,14 +170,15 @@ Assuming that FFmpeg was compiled previously and the build directory is <ffmpeg_
 
 Now, cmake should be able to find FFmpeg.
 
+NOTE: FFmpeg must be compiled with the following options: <code>./configure --enable-nonfree --enable-pic --enable-shared</code>
+
 === Common Problems ===
 
 ==== IPPICV hash mismatch ====
 
-While creating the makefile for compilation, the lib ippicv will be automatically downloaded. The md5 of the downloaded file will not match the hardcoded hash on the cmake.
+While creating the makefile for compilation, the lib ippicv will be automatically downloaded. However, the md5sum of the downloaded file will not match the hardcoded hash on the cmake.
 
 Instead of changing cmake we can manually download the file. Download URL: [https://raw.githubusercontent.com/Itseez/opencv_3rdparty/81a676001ca8075ada498583e4166079e5744668/ippicv/ippicv_linux_20151201.tgz]
-This file must be placed in the folder <code><opencv_source>/3rdparty/ippicv/downloads/unpack/</code>. 
 Steps:
 
  $ mkdir <opencv_source>/3rdparty/ippicv/downloads/linux-808b791a6eac9ed78d32a7666804320e && cd "$_"
