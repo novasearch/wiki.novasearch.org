@@ -274,7 +274,7 @@ Leveldb is available on git:
  $ cp -r include/leveldb <install-folder>/include/
 
 
-==== Lmdb ====
+==== lmdb ====
 
 Lmdb is available on git and through pip:
 

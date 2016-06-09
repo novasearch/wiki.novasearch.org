@@ -320,7 +320,7 @@ Leveldb is available on git:
 `$ cp --preserve=links libleveldb.* `<install-folder>`/lib`  
 `$ cp -r include/leveldb `<install-folder>`/include/`
 
-#### Lmdb
+#### lmdb
 
 Lmdb is available on git and through pip:
 
