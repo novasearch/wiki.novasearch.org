@@ -318,7 +318,8 @@ Leveldb is available on git:
 `$ cd leveldb`  
 `$ make`  
 `$ cp --preserve=links libleveldb.* `<install-folder>`/lib`  
-`$ cp -r include/leveldb `<install-folder>`/include/`
+`$ cp -r include/leveldb `<install-folder>`/include/`  
+`$ cp --preserve=links out-shared/libleveldb.so* ~/installed_libs/lib/`
 
 #### lmdb
 
@@ -369,6 +370,12 @@ Makefile.config. We can make the following changes:
 -   Add boost libraries path:
     -   Add /opt/hdf5/gnu/mvapich2\_eth/include to INCLUDE\_DIRS
     -   Add /opt/boost/gnu/mvapich2\_eth/lib to LIBRARY\_DIRS
+-   Add /usr/lib64 to LIBRARY\_DIRS
+
+The result should something like:
+
+`INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /home/dsemedo/installed_libs/include /home/dsemedo/opencv_build/include /opt/hdf5/gnu/mvapich2_eth/include /opt/boost/gnu/mvapich2_eth/include`  
+`LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /home/dsemedo/installed_libs/lib /home/dsemedo/opencv_build/lib /opt/hdf5/gnu/mvapich2_eth/lib /opt/boost/gnu/mvapich2_eth/lib /usr/lib64`
 
 `$ mkdir build && cd "$_"`  
 `$ cmake -DCMAKE_INSTALL_PREFIX=`<install-folder>` ..`  

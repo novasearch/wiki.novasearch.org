@@ -272,6 +272,7 @@ Leveldb is available on git:
  $ make
  $ cp --preserve=links libleveldb.* <install-folder>/lib
  $ cp -r include/leveldb <install-folder>/include/
+ $ cp --preserve=links out-shared/libleveldb.so* ~/installed_libs/lib/
 
 
 ==== lmdb ====
@@ -316,8 +317,13 @@ All the options for compiling Caffe are available in the file Makefile.config. W
 * Add boost libraries path:
 ** Add /opt/hdf5/gnu/mvapich2_eth/include to INCLUDE_DIRS
 ** Add /opt/boost/gnu/mvapich2_eth/lib to LIBRARY_DIRS
+* Add /usr/lib64 to LIBRARY_DIRS
 
 
+The result should something like:
+
+ INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /home/dsemedo/installed_libs/include /home/dsemedo/opencv_build/include /opt/hdf5/gnu/mvapich2_eth/include /opt/boost/gnu/mvapich2_eth/include
+ LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /home/dsemedo/installed_libs/lib /home/dsemedo/opencv_build/lib /opt/hdf5/gnu/mvapich2_eth/lib /opt/boost/gnu/mvapich2_eth/lib /usr/lib64
 
 
  $ mkdir build && cd "$_"
