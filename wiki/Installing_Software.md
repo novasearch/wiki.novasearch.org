@@ -377,14 +377,36 @@ The result should something like:
 `INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /home/dsemedo/installed_libs/include /home/dsemedo/opencv_build/include /opt/hdf5/gnu/mvapich2_eth/include /opt/boost/gnu/mvapich2_eth/include`  
 `LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /home/dsemedo/installed_libs/lib /home/dsemedo/opencv_build/lib /opt/hdf5/gnu/mvapich2_eth/lib /opt/boost/gnu/mvapich2_eth/lib /usr/lib64`
 
-Make was not finding the libsnappy.so so I did the following to solve
-the problem:
-
-`ln -s /usr/lib64/libsnappy.so.1 ~/installed_libs/lib/libsnappy.so`
-
 Compile steps:
 
 `$ mkdir build && cd "$_"`  
 `$ cmake -DCMAKE_INSTALL_PREFIX=`<install-folder>` ..`  
 `$ make`  
 `$ make install`
+
+#### Possible problems
+
+Make was not finding the libsnappy.so so I did the following to solve
+the problem:
+
+`ln -s /usr/lib64/libsnappy.so.1 ~/installed_libs/lib/libsnappy.so`
+
+Make failed due to a missing symbol from the libboost\_python.so.
+Probably the Boost library version available in the cluster was compiled
+with another python version. I compiled boost into a local folder and
+used that version.
+
+Boost
+-----
+
+The Boost library can be downloaded here: [10](http://www.boost.org/).
+After downloading, extract it to some folder.
+
+Compiling boost:
+
+`$ cd `<boost_folder>  
+`$ ./bootstrap.sh --prefix=`<install_folder>  
+`$ ./b2 install  --prefix=`<install_folder>
+
+Add the <install_folder>`/lib` and <install_folder>`/include` to your
+PATH.
