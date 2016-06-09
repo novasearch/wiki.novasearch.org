@@ -214,7 +214,7 @@ Caffe has the following dependencies:
 With some luck, we only need to install glog and gflags, the remaining libraries are already installed
 
 Load necessary modules:
- $ module load cmake gnutools mkl python eigen hdf5 boost
+ $ module load cmake gnutools mkl python eigen hdf5 boost mvapich2_eth
 
 === Installing missing dependencies ===
 
@@ -239,7 +239,85 @@ to
 Compiling glog:
 
  $ mkdir build && cd "$_"
+ $ export CXXFLAGS="-fPIC" &&  cmake -DCMAKE_INSTALL_PREFIX=<install-folder> ..
+ $ make VERBOSE=1
+ $ make
+ $ make install
+
+
+==== gflags ====
+
+Gflags is available on git:
+
+ $ git clone git@github.com:gflags/gflags.git
+ $ cd gflags
+
+
+Compiling gflags:
+
+ $ mkdir build && cd "$_"
+ $ export CXXFLAGS="-fPIC" && cmake -DCMAKE_INSTALL_PREFIX=<install-folder> ..
+ $ make
+ $ make install
+
+Make sure that the install-folder is on your PATH and LD_LIBRARY_PATH variables.
+
+
+==== leveldb ====
+
+Leveldb is available on git:
+
+ $ git clone git@github.com:google/leveldb.git
+ $ cd leveldb
+ $ make
+ $ cp --preserve=links libleveldb.* <install-folder>/lib
+ $ cp -r include/leveldb <install-folder>/include/
+
+
+==== Lmdb ====
+
+Lmdb is available on git and through pip:
+
+ $ pip install lmdb --user
+ $ git clone https://github.com/LMDB/lmdb
+ $ cd lmdb/libraries/liblmdb/
+
+Open the Makefile and find the line <code>prefix  = /usr/local</code>. Change path to your install folder.
+
+ $ make
+ $ make install
+
+
+
+=== Compiling ===
+
+Caffe is available on git:
+
+ $ git clone git@github.com:BVLC/caffe.git
+ $ cd caffe
+ $ cp Makefile.config.example Makefile.config
+
+All the options for compiling Caffe are available in the file Makefile.config. We can make the following changes:
+
+* Use cuDNN on the machine that has an NVIDIA card: Uncomment USE_CUDNN line.
+* If we have OpenCV version >= 3: Uncomment OPENCV_VERSION := 3.
+* Change CUDA dir to /opt/cuda (In a machine with NVIDIA card)
+* Use MKL: set BLAS := mkl
+* BLAS_INCLUDE := /opt/intel/composer_xe_2013_sp1.2.144/mkl/include
+* BLAS_LIB := /opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64
+* PYTHON_INCLUDE := /opt/python/include/python2.7 \
+        /opt/python/lib/python2.7/site-packages/numpy/core/include/numpy/
+* PYTHON_LIB := /opt/python/lib/
+* Add include and lib  gflags and glogs folders to INCLUDE_DIRS and LIBRARY_DIRS.
+* Add include and lib opencv folders to INCLUDE_DIRS and LIBRARY_DIRS.
+* Add hdf5 path:
+** Add /opt/hdf5/gnu/mvapich2_eth/include to INCLUDE_DIRS
+** Add /opt/hdf5/gnu/mvapich2_eth/lib to LIBRARY_DIRS
+
+
+
+
+ $ mkdir build && cd "$_"
  $ cmake -DCMAKE_INSTALL_PREFIX=<install-folder> ..
- $ export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
  $ make
  $ make install
