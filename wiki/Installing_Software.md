@@ -166,7 +166,7 @@ OpenCV
 ------
 
 Steps for installing OpenCV 3.1.0 with extra modules (OpenCV contrib).
-OpenCV will be compiled with support for OpenCL, CUDA and MKL.
+OpenCV will be compiled with support for OpenCL and CUDA.
 
 Downloading OpenCV: [7](http://opencv.org/downloads.html)
 
@@ -237,3 +237,58 @@ Steps:
 
 Alternatively, one can pass the option `-D WITH_IPP=OFF` to the cmake
 call to compile without the IPPICV lib.
+
+Caffe
+-----
+
+Steps for installing the Caffe
+[9](http://caffe.berkeleyvision.org/installation.html). Caffe is a deep
+learning framework made with expression, speed, and modularity in mind.
+
+Caffe has the following dependencies:
+
+-   Cuda Toolkit and cuDNN (For GPU mode)
+-   OpenCV (optional but recommended)
+-   BLAS ( ATLAS, MKL, or OpenBLAS)
+-   Boost \>= 1.55
+-   protobuf, glog, gflags, hdf5
+
+With some luck, we only need to install glog and gflags, the remaining
+libraries are already installed
+
+Load necessary modules:
+
+`$ module load cmake gnutools mkl python eigen hdf5 boost`
+
+### Installing missing dependencies
+
+#### glog
+
+Glog is available on git:
+
+`$ git clone git@github.com:google/glog.git`  
+`$ cd glog`
+
+The automake version on the cluster is different from the one that glog
+is expecting. To fix this:
+
+`$ rm test-driver`  
+`$ ln -s /opt/gnu/share/automake-1.15/test-driver test-driver`
+
+The configure has the aclocal tool version hardcoded aswell (version
+1.14). In the rocks cluster the version 1.15 is available. To fix this
+open the configure file and change the line:
+
+`am__api_version='1.14'`
+
+to
+
+`am__api_version='1.15'`
+
+Compiling glog:
+
+`$ mkdir build && cd "$_"`  
+`$ cmake -DCMAKE_INSTALL_PREFIX=`<install-folder>` ..`  
+`$ export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1`  
+`$ make`  
+`$ make install`
