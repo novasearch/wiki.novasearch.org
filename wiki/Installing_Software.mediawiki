@@ -307,7 +307,7 @@ All the options for compiling Caffe are available in the file Makefile.config. W
 * BLAS_INCLUDE := /opt/intel/composer_xe_2013_sp1.2.144/mkl/include
 * BLAS_LIB := /opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64
 * PYTHON_INCLUDE := /opt/python/include/python2.7 \
-        /opt/python/lib/python2.7/site-packages/numpy/core/include/numpy/
+        /opt/python/lib/python2.7/site-packages/numpy/core/include
 * PYTHON_LIB := /opt/python/lib/
 * Add include and lib  gflags and glogs folders to INCLUDE_DIRS and LIBRARY_DIRS.
 * Add include and lib opencv folders to INCLUDE_DIRS and LIBRARY_DIRS.
@@ -329,11 +329,18 @@ The result should something like:
 
 Compile steps:
 
- $ mkdir build && cd "$_"
- $ cmake -DCMAKE_INSTALL_PREFIX=<install-folder> ..
  $ make
  $ make install
+ $ make test
+ $ make runtest
 
+Compiling python wrappers:
+ $ make pycaffe
+
+Add <caffe_folder>/python to the PYTHONPATH environment variable.
+To verify that it installed correctly:
+ $ python
+ >>> import caffe
 
 ==== Possible problems ====
 

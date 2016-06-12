@@ -357,7 +357,7 @@ Makefile.config. We can make the following changes:
     /opt/intel/composer\_xe\_2013\_sp1.2.144/mkl/lib/intel64
 -   PYTHON\_INCLUDE := /opt/python/include/python2.7 \\
 
-`       /opt/python/lib/python2.7/site-packages/numpy/core/include/numpy/`
+`       /opt/python/lib/python2.7/site-packages/numpy/core/include`
 
 -   PYTHON\_LIB := /opt/python/lib/
 -   Add include and lib gflags and glogs folders to INCLUDE\_DIRS and
@@ -379,10 +379,20 @@ The result should something like:
 
 Compile steps:
 
-`$ mkdir build && cd "$_"`  
-`$ cmake -DCMAKE_INSTALL_PREFIX=`<install-folder>` ..`  
 `$ make`  
-`$ make install`
+`$ make install`  
+`$ make test`  
+`$ make runtest`
+
+Compiling python wrappers:
+
+`$ make pycaffe`
+
+Add <caffe_folder>/python to the PYTHONPATH environment variable. To
+verify that it installed correctly:
+
+`$ python`  
+`>>> import caffe`
 
 #### Possible problems
 
