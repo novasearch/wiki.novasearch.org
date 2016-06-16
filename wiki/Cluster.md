@@ -7,10 +7,14 @@ layout: wiki
 We are very fortunate to have a powerful computing cluster to aid in
 research and development. Currently this cluster is composed by 4
 identical rack-mounted (4u) computing nodes with GPGPU capability and an
-additional tower computer that serves as the master node. The latter is
-used for issuing jobs or tasks, to be processed in the cluster, and for
-management, coordination and distribution of said jobs or tasks. It is
-also used occasionally to host internet-facing demos of our work.
+additional Supermicro head node that serves as the frontend node. The
+latter is used for issuing jobs or tasks, to be processed in the
+cluster, and for management, coordination and distribution of said jobs
+or tasks.
+
+### Software
+
+Rocks Cluster Distribution 6.2 (CentOS 6.7)
 
 Network
 -------
@@ -28,10 +32,6 @@ Master node
 Host: 193.136.122.79
 
 Internal: zarco.novasearch.org (10.1.1.1)
-
-### Software
-
-Rocks Cluster Distribution 6.2 (CentOS 6.7)
 
 ### Hardware
 
