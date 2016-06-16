@@ -81,12 +81,7 @@ packages from Ubuntu 14.04.
 Security
 --------
 
-The cluster has Single Sign-On configured using a combination of LDAP
-and Kerberos. User account and groups management is handled by LDAP on
-the master node.
-
-Kerberos allows users who authenticate with the master node to obtain
-tickets to access other all the other nodes with SSH.
+The cluster uses Rocks and its Single Sign-On solution.
 
 Users homes are also mounted on all the computing nodes with NFS
 allowing you to have access to your files on any node. Do however take
@@ -94,21 +89,5 @@ in mind that if you're doing any intensive IO work it is always better
 to use a local folder on the computing node. Usually the norm is to use
 the root directory /tmp however all the files in this directory are
 removed upon reboot, so consider creating a new folder with your
-username inside the root directory /localstore and use that instead if
-you want your data to persist.
-
-For users using key-based authentication, additional steps must be
-performed to ensure that the tickets are available and renewed on each
-machine:
-
--   On Ariadne run:
-
-  
-  
-`kinit -r 14d`
-
--   On the remaining machines run:
-
-  
-  
-`krenew -b -K 120`
+username inside the root directory /status/partition1 and use that
+instead if you want your data to persist.
