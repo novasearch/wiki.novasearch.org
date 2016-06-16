@@ -12,34 +12,26 @@ used for issuing jobs or tasks, to be processed in the cluster, and for
 management, coordination and distribution of said jobs or tasks. It is
 also used occasionally to host internet-facing demos of our work.
 
-Our nodes are named after characters in Science-Fiction works. Flavio
-Martins unilaterally decided to start with the characters from the
-Christopher Nolan movie "Inception".
-
 Network
 -------
 
 To access the cluster you need to log on to the SSH server on
-193.136.122.72.
+193.136.122.79.
 
-All the nodes are interconnected using a high-performance Gigabit
-switch.
+All the nodes are interconnected using a Gigabit switch.
 
 Master node
 -----------
 
 ### Network
 
-Host: 193.136.122.72
+Host: 193.136.122.79
 
-Internal: ariadne.novasearch.org (192.168.1.1)
+Internal: zarco.novasearch.org (10.1.1.1)
 
 ### Software
 
-Ubuntu 12.04.5 LTS + 14.04 Hardware Enablement Stack
-
-The Hardware Enablement Stack contains backported kernels and Xorg
-packages from Ubuntu 14.04.
+Rocks Cluster Distribution 6.2 (CentOS 6.7)
 
 ### Hardware
 
@@ -54,20 +46,7 @@ Computing nodes
 
 ### Network
 
-arthur (192.168.1.10)
-
-cobb (192.168.1.20)
-
-mal (192.168.1.30)
-
-saito (192.168.1.40)
-
-### Software
-
-Ubuntu 12.04.5 LTS + 14.04 Hardware Enablement Stack
-
-The Hardware Enablement Stack contains backported kernels and Xorg
-packages from Ubuntu 14.04.
+compute-0-{0,1,2,3} (10.1.1.\*)
 
 ### Hardware
 
@@ -89,5 +68,5 @@ in mind that if you're doing any intensive IO work it is always better
 to use a local folder on the computing node. Usually the norm is to use
 the root directory /tmp however all the files in this directory are
 removed upon reboot, so consider creating a new folder with your
-username inside the root directory /status/partition1 and use that
+username inside the root directory /state/partition1 and use that
 instead if you want your data to persist.
