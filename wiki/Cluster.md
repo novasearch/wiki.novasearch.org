@@ -12,7 +12,8 @@ latter is used for issuing jobs or tasks, to be processed in the
 cluster, and for management, coordination and distribution of said jobs
 or tasks.
 
-### Software
+Software
+--------
 
 Rocks Cluster Distribution 6.2 (CentOS 6.7)
 
