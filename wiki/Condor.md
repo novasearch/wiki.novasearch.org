@@ -49,10 +49,12 @@ Usage
 
 $ vi sim.submit
 
+`   getenv = True`  
 `   Executable = sim`  
 `   Input = sim.in`  
 `   Output = sim.out`  
 `   Log = sim.log`  
+`   Error = sim.err`  
 `   Queue`
 
 ### Submit the job

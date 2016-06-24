@@ -32,11 +32,13 @@ You must take these limits into account, so that your jobs don't get killed as y
 === Create a submit file ===
 
 $ vi sim.submit
-
+    
+    getenv = True
     Executable = sim
     Input = sim.in
     Output = sim.out
     Log = sim.log
+    Error = sim.err
     Queue
 
 === Submit the job ===
