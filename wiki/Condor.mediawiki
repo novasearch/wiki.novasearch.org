@@ -59,9 +59,11 @@ The real benefit of Condor comes from managing 1000s of jobs.
 $ vi sim.submit
 
     Executable = sim
+    getenv = True
     Input = sim.$(PROCESS)
     Output = sim.$(PROCESS)
     Log = sim.log
+    Error = sim.err
     Queue 1000
 
 === Running many processes with different arguments ===
