@@ -85,9 +85,11 @@ $ vi sim.submit
 ### Running many processes with different arguments
 
 `   Executable = sim`  
+`   getenv = True`  
 `   Arguments = $(PROCESS)`  
 `   Output = sim.$(PROCESS)`  
 `   Log = sim.log`  
+`   Error = sim.err`  
 `   Queue 1000`
 
 Will execute 1000 processes with the process id as a parameter: sim 0,
@@ -97,8 +99,10 @@ If you need to change multiple arguments, you can set the shared
 parameters at the beginning and change the required parameters
 
 `   Executable = sim `  
+`   getenv = True`  
 `   Output = sim.$(PROCESS)`  
 `   Log = sim.log`  
+`   Error = sim.err`  
 `   `  
 `   Arguments = a    `  
 `   Output = a.out`  
