@@ -457,3 +457,5 @@ Now VLFeat is compiled. To make the Python wrapper work, add the path of
 the python folder to the PYTHONPATH system variable:
 
 `$ export PYTHONPATH="`<something>`/vlfeat/python":$PYTHONPATH`
+
+NOTE: It needs the PIL python library
