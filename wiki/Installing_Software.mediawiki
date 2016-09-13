@@ -361,3 +361,25 @@ Compiling boost:
  $ ./b2 install  --prefix=<install_folder>
 
 Add the <code><install_folder>/lib</code> and <code><install_folder>/include</code> to your PATH.
+
+
+== VLFeat ==
+
+The VLFeat open source library implements popular computer vision algorithms specializing in image understanding and local features extraction and matching. Algorithms include Fisher Vector, VLAD, SIFT, MSER, k-means, hierarchical k-means, agglomerative information bottleneck, SLIC superpixels, quick shift superpixels, large scale SVM training, and many others. It is written in C for efficiency and compatibility, with interfaces in MATLAB for ease of use, and detailed documentation throughout. It supports Windows, Mac OS X, and Linux.
+
+
+Installing VLFeat w/ Python wrapper:
+ $ git clone https://github.com/mmmikael/vlfeat.git
+ $ module load gnutools
+
+The Makefile provided does not compile due to the fact that pthread library is missing.
+
+For linux installation x86/x64 operation systems edit the Makefile and go to the line "# Linux-64". Add "-lpthread" to the CFLAGS line. It should look like this:
+   # Linux-64
+   ifeq ($(ARCH),a64)
+   LDFLAGS += -lm -lpthread -Wl,--rpath,\$$ORIGIN
+Then just run make:
+ $ make
+
+Now VLFeat is compiled. To make the Python wrapper work, add the path of the python folder to the PYTHONPATH system variable:
+ $ export PYTHONPATH="<something>/vlfeat/python":$PYTHONPATH
