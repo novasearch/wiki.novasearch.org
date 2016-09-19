@@ -181,6 +181,10 @@ Load necessary modules:
 
 `$ module load cmake gnutools mkl python eigen hdf5 mvapich2_eth`
 
+GCC must know where the file mpi.h is. When the mvapich2\_eth module is
+loaded the environment variable CPATH is not updated. Update the CPATH
+variable: $ export CPATH=/opt/mvapich2/gnu/eth/include/:$CPATH
+
 Compiling OpenCV:
 
 `$ cd `<opencv_source>  
