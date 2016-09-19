@@ -179,7 +179,7 @@ opencv\_contrib folder.
 
 Load necessary modules:
 
-`$ module load cmake gnutools mkl python eigen hdf5`
+`$ module load cmake gnutools mkl python eigen hdf5 mvapich2_eth`
 
 Compiling OpenCV:
 

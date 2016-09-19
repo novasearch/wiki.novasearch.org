@@ -147,7 +147,7 @@ Extra modules must be downloaded from git.
 From now on, let <opencv_contrib_dir> be the the downloaded opencv_contrib folder.
 
 Load necessary modules:
- $ module load cmake gnutools mkl python eigen hdf5
+ $ module load cmake gnutools mkl python eigen hdf5 mvapich2_eth
 Compiling OpenCV:
  $ cd <opencv_source>
  $ mkdir build && cd "$_"
