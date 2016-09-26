@@ -374,7 +374,7 @@ Makefile.config. We can make the following changes:
     -   Add /opt/hdf5/gnu/mvapich2\_eth/include to INCLUDE\_DIRS
     -   Add /opt/hdf5/gnu/mvapich2\_eth/lib to LIBRARY\_DIRS
 -   Add boost libraries path:
-    -   Add /opt/hdf5/gnu/mvapich2\_eth/include to INCLUDE\_DIRS
+    -   Add /opt/boost/gnu/mvapich2\_eth/include to INCLUDE\_DIRS
     -   Add /opt/boost/gnu/mvapich2\_eth/lib to LIBRARY\_DIRS
 -   Add /usr/lib64 to LIBRARY\_DIRS
 

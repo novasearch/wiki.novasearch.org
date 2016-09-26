@@ -320,7 +320,7 @@ All the options for compiling Caffe are available in the file Makefile.config. W
 ** Add /opt/hdf5/gnu/mvapich2_eth/include to INCLUDE_DIRS
 ** Add /opt/hdf5/gnu/mvapich2_eth/lib to LIBRARY_DIRS
 * Add boost libraries path:
-** Add /opt/hdf5/gnu/mvapich2_eth/include to INCLUDE_DIRS
+** Add /opt/boost/gnu/mvapich2_eth/include to INCLUDE_DIRS
 ** Add /opt/boost/gnu/mvapich2_eth/lib to LIBRARY_DIRS
 * Add /usr/lib64 to LIBRARY_DIRS
 
