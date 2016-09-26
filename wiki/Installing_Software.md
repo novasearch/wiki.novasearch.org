@@ -377,6 +377,9 @@ Makefile.config. We can make the following changes:
     -   Add /opt/boost/gnu/mvapich2\_eth/include to INCLUDE\_DIRS
     -   Add /opt/boost/gnu/mvapich2\_eth/lib to LIBRARY\_DIRS
 -   Add /usr/lib64 to LIBRARY\_DIRS
+-   Add MPI path:
+    -   Add /opt/mvapich2/gnu/eth/include to INCLUDE\_DIRS
+    -   Add /opt/mvapich2/gnu/eth/bin to LIBRARY\_DIRS
 
 The result should something like:
 
