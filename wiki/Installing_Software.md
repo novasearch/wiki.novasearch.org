@@ -268,6 +268,13 @@ Load necessary modules:
 
 `$ module load cmake gnutools mkl python eigen hdf5 boost mvapich2_eth`
 
+First of all, in order to make sure that Make/CMake use the correct
+compiler set the following environment variables on your current shell
+session:
+
+`$ export CC=/opt/gnu/gcc/bin/gcc`  
+`$ export CXX=/opt/gnu/gcc/bin/g++`
+
 ### Installing missing dependencies
 
 #### glog
