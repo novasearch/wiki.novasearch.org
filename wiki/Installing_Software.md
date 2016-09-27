@@ -259,8 +259,9 @@ Caffe has the following dependencies:
 -   Boost \>= 1.55
 -   protobuf, glog, gflags, hdf5
 
-With some luck, we only need to install glog and gflags, the remaining
-libraries are already installed
+Recently (checked on 27-09-16) caffe compilation files structure
+changed. These notes have been updated to cope with the new compilation
+files.
 
 Load necessary modules:
 
@@ -339,6 +340,20 @@ Open the Makefile and find the line `prefix = /usr/local`. Change path
 to your install folder.
 
 `$ make`  
+`$ make install`
+
+#### protobuf
+
+Lmdb is available on git and through pip:
+
+`$ git clone `[`https://github.com/google/protobuf.git`](https://github.com/google/protobuf.git)  
+`$ cd protobuf`
+
+Compiling:
+
+`$ ./configure --prefix=`<install_folder>  
+`$ make`  
+`$ make check`  
 `$ make install`
 
 ### Compiling
