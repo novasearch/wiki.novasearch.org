@@ -261,7 +261,8 @@ Caffe has the following dependencies:
 
 Recently (checked on 27-09-16) caffe compilation files structure
 changed. These notes have been updated to cope with the new compilation
-files.
+files. Furthermore, instructions for compiling with cmake (which should
+be easier) were added.
 
 Load necessary modules:
 
@@ -413,6 +414,33 @@ Compiling python wrappers:
 `$ make pycaffe`
 
 Add <caffe_folder>/python to the PYTHONPATH environment variable. To
+verify that it installed correctly:
+
+`$ python`  
+`>>> import caffe`
+
+### Compiling with CMake
+
+With cmake it is easier to specify which libraries (i.e. which library
+files) we want to use for compilation. This is crucial to avoid problems
+related to linking with different library versions.
+
+Steps:
+
+`$ mkdir `<caffe_folder>`/build`  
+`$ cmake -D CMAKE_INSTALL_PREFIX=`<install_folder>` -D CMAKE_PREFIX_PATH=/home/dsemedo/opencv_build -D GFLAGS_LIBRARY=/home/dsemedo/installed_libs/lib/libgflags.a -D GFLAGS_INCLUDE_DIR=/home/dsemedo/installed_libs/include -D GLOG_LIBRARY=/home/dsemedo/installed_libs/lib/libglog.a -D GLOG_INCLUDE_DIR=/home/dsemedo/installed_libs/include -D LMDB_LIBRARIES=/home/dsemedo/installed_libs/lib -D LMDB_INCLUDE_DIR=/home/dsemedo/installed_libs/include -D LevelDB_LIBRARY=/home/dsemedo/installed_libs/lib/libleveldb.so -D LevelDB_INCLUDE=/home/dsemedo/installed_libs/include -D Snappy_LIBRARIES=/home/dsemedo/installed_libs/lib/libsnappy.so -D Snappy_INCLUDE_DIR=/home/dsemedo/installed_libs/include -D BLAS=mkl -DPYTHON_LIBRARY=/opt/python/lib/libpython2.7.so -D NUMPY_INCLUDE_DIR=/opt/python/lib/python2.7/site-packages/numpy/core/include -D LMDB_LIBRARIES=/home/dsemedo/installed_libs/lib/liblmdb.so -D LMDB_INCLUDE_DIR=/home/dsemedo/installed_libs/include -D PROTOBUF_LIBRARY=/home/dsemedo/installed_libs/lib/libprotobuf.so -D PROTOBUF_PROTOC_EXECUTABLE=/home/dsemedo/installed_libs/bin/protoc  ..`  
+`$ make all -j 12`  
+`$ make install`  
+`$ make runtest`
+
+The second command is huge and looks very complicated, however, it is
+only specifying manually which library version we want to use. The
+CMAKE\_INSTALL\_PREFIX sets the path installation folder and should be
+defined. To adapt this command, just change the libraries location and
+include dirs paths and set the installation path.
+
+As with make, in order to get pycaffe working, add
+<install_folder>/python to the PYTHONPATH environment variable. To
 verify that it installed correctly:
 
 `$ python`  
