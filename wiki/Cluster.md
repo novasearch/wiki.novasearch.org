@@ -30,7 +30,7 @@ Master node
 
 ### Network
 
-Host: 193.136.122.79
+Host: 193.136.122.132
 
 Internal: zarco.novasearch.org (10.1.1.1)
 
