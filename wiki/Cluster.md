@@ -36,11 +36,11 @@ Internal: zarco.novasearch.org (10.1.1.1)
 
 ### Hardware
 
-|     |                                                                                      |
-|-----|--------------------------------------------------------------------------------------|
-| MB  | Intel DX58SO                                                                         |
-| CPU | Intel Core i7-920 Processor (4 cores, 8 threads, 8M Cache, 2.66 GHz, up to 2.93 GHz) |
-| RAM | 12 GB DDR3 (1066Mhz)                                                                 |
+|     |                                                                                    |
+|-----|------------------------------------------------------------------------------------|
+| MB  | Supermicro X9 Series                                                               |
+| CPU | Intel Xeon E5-2620v2 CPU @ (6 cores, 12 threads, 15M cache 2.10GHz, up to 2.6 GHz) |
+| RAM | 32 GB DDR3 ECC (1600Mhz)                                                           |
 
 Computing nodes
 ---------------
