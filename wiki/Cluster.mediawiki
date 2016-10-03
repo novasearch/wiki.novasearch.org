@@ -6,7 +6,7 @@ Rocks Cluster Distribution 6.2 (CentOS 6.7)
 
 == Network ==
 
-To access the cluster you need to log on to the SSH server on 193.136.122.79.
+To access the cluster you need to log on to the SSH server on 193.136.122.132.
 
 All the nodes are interconnected using a Gigabit switch.
 
