@@ -127,8 +127,37 @@ Keras Documentation: [http://keras.io/]
 <code>pip install --upgrade scikit-image --user</code>
 
 
+== FFmpeg ==
+
+Steps for installing FFmpeg [https://ffmpeg.org/download.html link].
+
+Follow this tutorial: [https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu Link]. The instructions below introduce some modifications required for correct compilation on the Rocks cluster, thus they should be taken into account.
+
+Configure command to compile x264:
+
+ $ PATH="$HOME/<bins folder>:$PATH" ./configure --prefix="$HOME/<build folder>" --bindir="$HOME/<bins folder>" --enable-static --disable-opencl --enable-pic --enable-shared
+
+Configure command to compile x265:
+ $ PATH="$HOME/<bins folder>:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/<build folder>"  -DENABLE_SHARED:bool=on ../../source
+
+Configure command to compile libfdk-aac:
+ $ ./configure --prefix="$HOME/<build folder>" --enable-shared
+
+Configure command to compile libmp3lame:
+ $ LIBS=-ltinfo ./configure --prefix="$HOME/<build folder>" --enable-nasm --enable-shared 
+
+Configure command to compile libopus:
+ $ ./configure https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz --enable-shared
 
 
+The configure of FFmpeg will complain about libass. Then libass will complain fribidi and freetype2. Download, compile and install fribidi and then libass libraries. Remember to set the --prefix of every library to the build folder. For freetype2, we only need to export to PKG_CONFIG_PATH variable the freetype2.pc file:
+ $ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig/:$PKG_CONFIG_PATH
+
+Then it will complain about libtheora [https://www.theora.org/downloads/ link]. Download libtheora from the provided link. When compiling libtheora take into account the dependencies mentioned in the website.
+
+
+Configure command to compile FFmpeg:
+ $ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/builds/ffmpeg/lib/pkgconfig/":$PKG_CONFIG_PATH ./configure   --prefix="$HOME/builds/ffmpeg/"   --pkg-config-flags="--static"   --extra-cflags="-I$HOME/builds/ffmpeg/include"   --extra-ldflags="-L$HOME/builds/ffmpeg/lib"   --bindir="$HOME/bin"   --enable-gpl   --enable-libass   --enable-libfdk-aac   --enable-libfreetype   --enable-libmp3lame   --enable-libopus   --enable-libtheora   --enable-libvorbis   --enable-libvpx   --enable-libx264   --enable-libx265 --enable-nonfree
 
 
 
