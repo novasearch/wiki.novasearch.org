@@ -248,20 +248,13 @@ variable:
 
 `$ export CPATH=/opt/mvapich2/gnu/eth/include/:$CPATH`
 
-Compiling OpenCV:
+One of opencv contrib files has a wrong include. Edit the following
+file:
 
-`$ cd `<opencv_source>  
-`$ mkdir build && cd "$_"`  
-`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/`<build folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/dsemedo/libs/opencv_contrib/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so.1.0 PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m/  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include/numpy -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/bin/python3.5 -D PYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/  -DGLOG_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGFLAGS_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGLOG_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DGFLAGS_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DBUILD_opencv_dnn=False BUILD_opencv_python2=True -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7 -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include/numpy -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON .. `  
-`$ make -j12`  
-`$ make install`
+`$ nano $HOME/`<opencv_contrib>`/modules/rgbd/src/odometry.cpp`
 
-So, why do we need to set all these variables in cmake? We have to
-specify manually where are the python interpreter, default executable,
-numpy includes, library and include dirs (for python 2.7 and 3), where
-the opencv\_contrib modules are, where glog, gflags and eigen libraries
-are. The flag added to CXXFLAG is to avoid undefined macros when
-compiling a small ffmpeg example.
+Edit the include \#include <unsupported/Eigen/MatrixFunctions> to
+\#include <eigen3/unsupported/Eigen/MatrixFunctions>
 
 #### Adding support for FFmpeg
 
@@ -272,6 +265,21 @@ Assuming that FFmpeg was compiled previously and the build directory is
 `export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:`<ffmpeg_build>`/lib/pkgconfig`  
 `export PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR:`<ffmpeg_build>`/lib/`  
 `export PATH=`<ffmpeg_bin dir>`:$PATH`
+
+#### Compiling OpenCV
+
+`$ cd `<opencv_source>  
+`$ mkdir build && cd "$_"`  
+`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS: cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/dsemedo/builds/opencv/ -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/dsemedo/libs/opencv_contrib/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so.1.0 PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m/  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/bin/python3.5 -D PYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/ -DBUILD_opencv_dnn=False BUILD_opencv_python2=True -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7 -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON ..`  
+`$ make -j 12`  
+`$ make install`
+
+So, why do we need to set all these variables in cmake? We have to
+specify manually where are the python interpreter, default executable,
+numpy includes, library and include dirs (for python 2.7 and 3), where
+the opencv\_contrib modules are, where glog, gflags and eigen libraries
+are. The flag added to CXXFLAG is to avoid undefined macros when
+compiling a small ffmpeg example.
 
 Now, cmake should be able to find FFmpeg through pkg-config tool.
 
@@ -312,6 +320,12 @@ Steps:
 
 Alternatively, one can pass the option `-D WITH_IPP=OFF` to the cmake
 call to compile without the IPPICV lib.
+
+#### VGG Files hash mismath
+
+It's the same problem as the IPPICV problem described above. Download
+the vgg files from
+[here](http://answers.opencv.org/question/113942/cmake-failing-with-hash-mismatch/).
 
 Caffe
 -----
