@@ -158,7 +158,10 @@ The configure of FFmpeg will complain about libass. Then libass will complain fr
  $ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig/:$PKG_CONFIG_PATH
 Pass the flag '--disable-require-system-font-provider' to the libass configure command.
 
-Then it will complain about libtheora [https://www.theora.org/downloads/ link]. Download libtheora from the provided link. When compiling libtheora take into account the dependencies mentioned in the website and compile with shared library support.
+Then it will complain about libtheora [https://www.theora.org/downloads/ link]. Download libtheora from the provided link. When compiling libtheora take into account the dependencies mentioned in the website and compile it as shared library.
+
+
+
 
 
 

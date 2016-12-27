@@ -216,8 +216,7 @@ configure command.
 Then it will complain about libtheora
 [link](https://www.theora.org/downloads/). Download libtheora from the
 provided link. When compiling libtheora take into account the
-dependencies mentioned in the website and compile with shared library
-support.
+dependencies mentioned in the website and compile it as shared library.
 
 Configure command to compile FFmpeg:
 
