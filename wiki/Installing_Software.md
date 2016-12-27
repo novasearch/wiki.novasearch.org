@@ -226,7 +226,8 @@ OpenCV
 ------
 
 Steps for installing OpenCV 3.1.0 with extra modules (OpenCV contrib).
-OpenCV will be compiled with support for OpenCL and CUDA.
+OpenCV will be compiled with support for OpenCL, FFmpeg, Python 2.7 and
+3.5 (both from anaconda).
 
 Downloading OpenCV: [7](http://opencv.org/downloads.html)
 
@@ -251,9 +252,31 @@ Compiling OpenCV:
 
 `$ cd `<opencv_source>  
 `$ mkdir build && cd "$_"`  
-`$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=`<install_folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=`<opencv_contrib_dir>`/modules -D BUILD_EXAMPLES=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_OPENCL=ON -D BUILD_opencv_python2=ON -D PYTHON_INCLUDE_DIR=/opt/python/include/python2.7 -D PYTHON_LIBRARY=/opt/python/lib/libpython2.7.so  ..`  
+`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/`<build folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/dsemedo/libs/opencv_contrib/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so.1.0 PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m/  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include/numpy -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/bin/python3.5 -D PYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/  -DGLOG_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGFLAGS_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGLOG_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DGFLAGS_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DBUILD_opencv_dnn=False BUILD_opencv_python2=True -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7 -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include/numpy -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON .. `  
 `$ make -j12`  
 `$ make install`
+
+So, why do we need to set all these variables in cmake? We have to
+specify manually where are the python interpreter, default executable,
+numpy includes, library and include dirs (for python 2.7 and 3), where
+the opencv\_contrib modules are, where glog, gflags and eigen libraries
+are. The flag added to CXXFLAG is to avoid undefined macros when
+compiling a small ffmpeg example.
+
+#### Adding support for FFmpeg
+
+Assuming that FFmpeg was compiled previously and the build directory is
+<ffmpeg_build>, the following environment variables must be set:
+
+`export LD_LIBRARY_PATH=`<ffmpeg_build>`/lib/:$LD_LIBRARY_PATH`  
+`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:`<ffmpeg_build>`/lib/pkgconfig`  
+`export PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR:`<ffmpeg_build>`/lib/`  
+`export PATH=`<ffmpeg_bin dir>`:$PATH`
+
+Now, cmake should be able to find FFmpeg through pkg-config tool.
+
+NOTE: FFmpeg must be compiled with the following options:
+`--enable-nonfree --enable-pic --enable-shared`
 
 The final step is to add the path of cv2.so library to the PYTHONPATH
 variable, such that python finds it:
@@ -267,20 +290,6 @@ To check if it installed correctly:
 `>>> import cv2`
 
 If the import succeeds then Python-OpenCV is installed.
-
-#### Adding support for FFmpeg
-
-Assuming that FFmpeg was compiled previously and the build directory is
-<ffmpeg_build>, the following environment variables must be set:
-
-`export LD_LIBRARY_PATH=`<ffmpeg_build>`/lib/:$LD_LIBRARY_PATH`  
-`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:`<ffmpeg_build>`/lib/pkgconfig`  
-`export PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR:`<ffmpeg_build>`/lib/`
-
-Now, cmake should be able to find FFmpeg.
-
-NOTE: FFmpeg must be compiled with the following options:
-`./configure --enable-nonfree --enable-pic --enable-shared`
 
 ### Common Problems
 
