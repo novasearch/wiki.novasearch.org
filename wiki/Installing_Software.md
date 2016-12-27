@@ -170,8 +170,17 @@ Steps for installing FFmpeg [link](https://ffmpeg.org/download.html).
 Follow this tutorial:
 [Link](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu). The
 instructions below introduce some modifications required for correct
-compilation on the Rocks cluster, thus they should be taken into
-account.
+compilation on the Rocks cluster and for enabling linkage with OpenCV,
+thus they should be taken into account. To link later with OpenCV it is
+important to compile all ffmpeg dependencies as shared libraries. This
+is usually accomplished by passing the option '--enable-shared' and
+'--enable-pic' to the configure script. If you get any error when
+compiling any of the dependencies saying that a specific flag is not
+recognized (e.g. --enable-pic) just remove it from the command.
+
+Configure command to compile YASM:
+
+`$ ./configure --prefix="$HOME/`<build folder>`" --bindir="$HOME/`<bins folder>`" --enable-pic --enable-shared`
 
 Configure command to compile x264:
 
@@ -183,15 +192,15 @@ Configure command to compile x265:
 
 Configure command to compile libfdk-aac:
 
-`$ ./configure --prefix="$HOME/`<build folder>`" --enable-shared`
+`$ ./configure --prefix="$HOME/`<build folder>`" --enable-shared --enable-pic`
 
 Configure command to compile libmp3lame:
 
-`$ LIBS=-ltinfo ./configure --prefix="$HOME/`<build folder>`" --enable-nasm --enable-shared `
+`$ LIBS=-ltinfo ./configure --prefix="$HOME/`<build folder>`" --enable-nasm --enable-shared --enable-pic`
 
 Configure command to compile libopus:
 
-`$ ./configure `[`https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz`](https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz)` --enable-shared`
+`$ ./configure `[`https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz`](https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz)` --enable-shared --enable-pic`
 
 The configure of FFmpeg will complain about libass. Then libass will
 complain fribidi and freetype2. Download, compile and install fribidi
@@ -201,14 +210,18 @@ PKG\_CONFIG\_PATH variable the freetype2.pc file:
 
 `$ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig/:$PKG_CONFIG_PATH`
 
+Pass the flag '--disable-require-system-font-provider' to the libass
+configure command.
+
 Then it will complain about libtheora
 [link](https://www.theora.org/downloads/). Download libtheora from the
 provided link. When compiling libtheora take into account the
-dependencies mentioned in the website.
+dependencies mentioned in the website and compile with shared library
+support.
 
 Configure command to compile FFmpeg:
 
-`$ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/builds/ffmpeg/lib/pkgconfig/":$PKG_CONFIG_PATH ./configure   --prefix="$HOME/builds/ffmpeg/"   --pkg-config-flags="--static"   --extra-cflags="-I$HOME/builds/ffmpeg/include"   --extra-ldflags="-L$HOME/builds/ffmpeg/lib"   --bindir="$HOME/bin"   --enable-gpl   --enable-libass   --enable-libfdk-aac   --enable-libfreetype   --enable-libmp3lame   --enable-libopus   --enable-libtheora   --enable-libvorbis   --enable-libvpx   --enable-libx264   --enable-libx265 --enable-nonfree --enable-avresample --enable-shared`
+`$ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/`<build folder>`/lib/pkgconfig/":$PKG_CONFIG_PATH ./configure   --prefix="$HOME/`<build folder>`"   --pkg-config-flags="--static"   --extra-cflags="-I$HOME/`<build folder>`/include"   --extra-ldflags="-L$HOME/`<build folder>`/lib"   --bindir="$HOME/`<bins folder>`"   --enable-gpl   --enable-libass   --enable-libfdk-aac   --enable-libfreetype   --enable-libmp3lame   --enable-libopus   --enable-libtheora   --enable-libvorbis   --enable-libvpx   --enable-libx264   --enable-libx265 --enable-nonfree --enable-avresample --enable-shared`
 
 OpenCV
 ------
