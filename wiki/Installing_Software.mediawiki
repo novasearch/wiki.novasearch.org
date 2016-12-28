@@ -214,10 +214,43 @@ Now, cmake should be able to find FFmpeg through pkg-config tool.
 NOTE: FFmpeg must be compiled with the following options: <code>--enable-nonfree --enable-pic --enable-shared</code>
 
 
+==== Final Steps to correctly setup Python/Anaconda ====
 
-The final step is to add the path of cv2.so library to the PYTHONPATH variable, such that python finds it:
- # Add this line to ~/.bashrc
- export PYTHONPATH=$HOME/opencv_build/lib/python2.7/site-packages:$PYTHONPATH
+Now we've compiled both Python 2.7 and 3.5 OpenCV modules. If you are only interested in using one of the Python versions just export the OpenCV python module path to the PYTHONPATH variable:
+ # Add this line to ~/.bashrc to set this automatically for every shell session
+ export PYTHONPATH=$HOME/<opencv_build>/lib/python2.7(3.5)/site-packages:$PYTHONPATH
+
+To be able to use OpenCV in both Python versions without conflicts we cannot use the PYTHONPATH solution.
+The Python OpenCV modules are located in:
+ $HOME/<opencv_build>/lib/python2.7/site-packages
+ $HOME/<opencv_build>/lib/python3.5/site-packages
+
+From this point I'll leave to you the decision for which solution to take.
+
+Solution 1: Add the path to python sys.path
+ $ python 
+ $ > import sys 
+ $ > sys.path.append('$HOME/<opencv_build>/lib/python2.7(3.5)/site-packages')
+ 
+Solution 2 (more elegant): Add additional site-packages folders, namely, the ones created during OpenCV build.
+
+ $ mkdir -p $HOME/.local/lib/python2.7/site-packages/
+ $ mkdir -p $HOME/.local/lib/python3.5/site-packages/
+ $ echo "$HOME/<opencv_build>/lib/python2.7/site-packages" > $HOME/.local/lib/python2.7/site-packages/usrlocal.pth 
+ $ echo "$HOME/<opencv_build>/lib/python3.5/site-packages" > $HOME/.local/lib/python3.5/site-packages/usrlocal.pth
+
+Then make sure that user site packages are enabled:
+ $ unset PYTHONNOUSERSITE
+
+We've created two files usrlocal.pth each containing the path of the respective OpenCV module python version. By default, now Python will now inspect this folders when searching for modules.
+To confirm this:
+ $ python
+ $ > import sys
+ $ > sys.path
+
+Open CV Python directory should be listed in the last command.
+
+
 
 To check if it installed correctly:
  $ python
