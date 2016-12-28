@@ -183,8 +183,8 @@ Extra modules must be downloaded from git.
 From now on, let <opencv_contrib_dir> be the the downloaded opencv_contrib folder.
 
 Load necessary modules:
- $ module load cmake gnutools mkl python eigen hdf5 mvapich2_eth
-Make sure module cuda is not loaded.
+ $ module load cmake gnutools python eigen hdf5 mvapich2_eth
+Make sure module cuda and mkl are not loaded.
 
 GCC must know where the file mpi.h is. When the mvapich2_eth module is loaded the environment variable CPATH is not updated.
 Update the CPATH variable:
