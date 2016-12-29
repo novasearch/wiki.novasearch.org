@@ -583,11 +583,12 @@ Boost
 The Boost library can be downloaded here: [10](http://www.boost.org/).
 After downloading, extract it to some folder.
 
-Compiling boost:
+Compiling boost with support for python 3.5 (Just update the paths and
+version for python 2.7):
 
 `$ cd `<boost_folder>  
-`$ ./bootstrap.sh --prefix=`<install_folder>  
-`$ ./b2 install  --prefix=`<install_folder>
+`$ ./bootstrap.sh --prefix=`<install_folder>` --with-python=/share/apps/anaconda3/bin/python --with-python-version=3.5 --with-python-root=/share/apps/anaconda3`  
+`$ ./b2 install  --prefix=`<install_folder>` -j12`
 
 Add the <install_folder>`/lib` and <install_folder>`/include` to your
 PATH.
