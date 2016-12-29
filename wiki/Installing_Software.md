@@ -254,7 +254,7 @@ Compiling OpenCV:
 
 `$ cd `<opencv_source>  
 `$ mkdir build && cd "$_"`  
-`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/`<build folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/dsemedo/libs/opencv_contrib/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so.1.0 PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m/  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include/numpy -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/  -DGLOG_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGFLAGS_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGLOG_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DGFLAGS_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DBUILD_opencv_dnn=False BUILD_opencv_python2=True -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7 -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include/numpy -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON .. `  
+`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/`<build folder>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=/home/dsemedo/libs/opencv_contrib/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so.1.0 PYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m/  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/  -DGLOG_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGFLAGS_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGLOG_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DGFLAGS_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DBUILD_opencv_dnn=False BUILD_opencv_python2=True -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7 -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON .. `  
 `$ make -j12`  
 `$ make install`
 
@@ -583,12 +583,22 @@ Boost
 The Boost library can be downloaded here: [10](http://www.boost.org/).
 After downloading, extract it to some folder.
 
+To correctly build the Python boost library using Anaconda some
+configuration steps are required. Copy the file
+<boost_folder>`/tools/build/example/user-config.jam` to your Home
+folder. Modify the last line as follows:
+
+`using python : 3.5 : /share/apps/anaconda3/bin/python3.5 : /share/apps/anaconda3/include/python3.5m : /share/apps/anaconda3/lib ;`
+
+Now boost bootstrap script should identify the correct python. For
+Python 2.7 modify the paths accordingly.
+
 Compiling boost with support for python 3.5 (Just update the paths and
 version for python 2.7):
 
 `$ cd `<boost_folder>  
-`$ ./bootstrap.sh --prefix=`<install_folder>` --with-python=/share/apps/anaconda3/bin/python --with-python-version=3.5 --with-python-root=/share/apps/anaconda3`  
-`$ ./b2 install  --prefix=`<install_folder>` -j12`
+`$ ./bootstrap.sh --prefix=`<install_folder>` `  
+`$ ./b2 install  --prefix=`<install_folder>` --enable-unicode=ucs4 -j12`
 
 Add the <install_folder>`/lib` and <install_folder>`/include` to your
 PATH.
