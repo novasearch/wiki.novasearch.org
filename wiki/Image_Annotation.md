@@ -9,8 +9,6 @@ Image Classification
 
 ### ImageNET Concepts - Convolutional Neural Networks
 
-=
-
 A tool is available in the cluster to classify images with ImageNET
 concepts (a total of 1000 concepts - List available
 [here](http://image-net.org/challenges/LSVRC/2014/browse-synsets)). The
