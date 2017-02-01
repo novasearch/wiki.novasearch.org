@@ -4,12 +4,14 @@ permalink: wiki/Image_Annotation/
 layout: wiki
 ---
 
-Classification Tools
+Image Classification
 --------------------
 
-### Image Classification
+=
 
-#### ImageNET Concepts - Convolutional Neural Networks
+### ImageNET Concepts - Convolutional Neural Networks
+
+=
 
 A tool is available in the cluster to classify images with ImageNET
 concepts (a total of 1000 concepts - List available
