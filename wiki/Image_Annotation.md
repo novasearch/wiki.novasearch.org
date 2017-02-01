@@ -7,8 +7,6 @@ layout: wiki
 Image Classification
 --------------------
 
-=
-
 ### ImageNET Concepts - Convolutional Neural Networks
 
 =
