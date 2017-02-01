@@ -18,7 +18,8 @@ error.
 
 Each image is classified within the 1000 concepts. For each concept, a
 probability score is assigned thus, the tool outputs the top N concepts
-(from the 1000) with highest probability.
+(from the 1000) with highest probability. Namely, for each image it
+outputs N pairs \<concept name, probability\>.
 
 Features:
 
