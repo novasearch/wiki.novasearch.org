@@ -8,8 +8,6 @@
 A tool is available in the cluster to classify images with ImageNET concepts (a total of 1000 concepts - List available [http://image-net.org/challenges/LSVRC/2014/browse-synsets here]).
 The current version performs classification using the state-of-the-art GoogleNet CNN, which won the ILSVRC 2014 competition with 6.65% Top-5 error.  
 
-
-
 Each image is classified within the 1000 concepts. For each concept, a probability score is assigned thus, the tool outputs the top N concepts (from the 1000) with highest probability. 
 
 Features:
