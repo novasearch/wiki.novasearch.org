@@ -18,10 +18,6 @@ current version performs classification using the state-of-the-art
 GoogleNet CNN, which won the ILSVRC 2014 competition with 6.65% Top-5
 error.
 
-<figure>
-<img src="googlenet_diagram.jpg" title="GoogleNet Architecture" width="500" alt="" /><figcaption>GoogleNet Architecture</figcaption>
-</figure>
-
 Each image is classified within the 1000 concepts. For each concept, a
 probability score is assigned thus, the tool outputs the top N concepts
 (from the 1000) with highest probability.
