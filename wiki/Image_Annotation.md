@@ -19,7 +19,7 @@ GoogleNet CNN, which won the ILSVRC 2014 competition with 6.65% Top-5
 error.
 
 <figure>
-<img src="googlenet_diagram.png" title="GoogleNet Architecture" width="500" alt="" /><figcaption>GoogleNet Architecture</figcaption>
+<img src="googlenet_diagram.jpg" title="GoogleNet Architecture" width="500" alt="" /><figcaption>GoogleNet Architecture</figcaption>
 </figure>
 
 Each image is classified within the 1000 concepts. For each concept, a
