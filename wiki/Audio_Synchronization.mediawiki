@@ -1,0 +1,196 @@
+The goal of this component is to perform the synchronization of the all audio files in an existing dataset.
+
+=== Input ===
+
+Option 1:
+
+{{hc|python audio_synchronization.py soundpaths_my_dataset.txt output_matches_100.txt output_matches_segments_default.txt|2=<nowiki>
+--soundpaths_my_dataset.txt: txt file with the paths of all audio files in the dataset.
+--output_matches_100.txt: txt file with the output of a previous run of the audio fingerprinting algorithm.
+--output_matches_segments_default.txt: txt file with the output of all segments of a previous run of the audio fingerprinting algorithm.
+</nowiki>
+}}
+
+Option 2:
+
+{{hc|python audio_synchronization.py soundpaths_my_dataset.txt|2=<nowiki>
+--soundpaths_my_dataset.txt: txt file with the paths of all audio files in the dataset.
+</nowiki>
+}}
+
+=== Output ===
+
+On top of the txt files listed bellow, both options cut the audio files in the dataset according to the segments and save them in "sounds_cut/".
+
+Example: "sounds_cut/1/10.0" has all cut audio files that exist in cluster 1 starting on 10 seconds until the time stamp where the next segments starts.
+
+Option 1:
+
+{{hc|Returns:|2=<nowiki>
+--output.txt: txt file with the list of all clusters and samples inside each cluster with their relative quality.
+
+--output_synchronization.txt: txt file with all the different overlapping segments inside each cluster, with the samples present in each sample and their relative quality.
+</nowiki>
+}}
+
+Option 2:
+
+{{hc|Returns:|2=<nowiki>
+--output.txt: txt file with the list of all clusters and samples inside each cluster with their relative quality.
+
+--output_synchronization.txt: txt file with all the different overlapping segments inside each cluster, with the samples present in each sample and their relative quality.
+
+--output_matches.txt: Audio Fingerprinting algorithm results (sample-level).
+
+--output_matches_segments.txt: Audio Fingerprinting algorithm results (segment-level).
+</nowiki>
+}}
+
+=== File Examples ===
+
+Input:
+
+{{hc|soundpaths_my_dataset.txt|2=<nowiki>
+sounds_my_dataset/song8sample2.mp3
+sounds_my_dataset/song6sample1.mp3
+sounds_my_dataset/song6sample6.mp3
+sounds_my_dataset/song2sample8.mp3
+sounds_my_dataset/song7sample5.mp3
+</nowiki>
+}}
+
+{{hc|output_matches_100.txt|2=<nowiki>
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample9.mp3 at   -7.6 s with    51 of   305 common hashes at rank  6
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample1.mp3 at    6.9 s with    36 of   245 common hashes at rank 15
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample8.mp3 at   -5.6 s with    24 of   104 common hashes at rank 31
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample5.mp3 at  -16.2 s with    22 of   110 common hashes at rank 39
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample7.mp3 at    0.9 s with    16 of    77 common hashes at rank 18
+Matched sounds_my_dataset/song4sample6.mp3 248.9 sec 17513 raw hashes as sounds_my_dataset/song4sample2.mp3 at -156.1 s with     6 of    72 common hashes at rank 12
+</nowiki>
+}}
+
+{{hc|output_matches_segments_default.txt|2=<nowiki>
+NOMATCH sounds_cut/1/0.0/song2sample1.mp3 19.9 sec 3186 raw hashes
+NOMATCH sounds_cut/1/20.0/song2sample1.mp3 2.0 sec 399 raw hashes
+NOMATCH sounds_cut/1/20.0/song2sample5.mp3 2.0 sec 419 raw hashes
+NOMATCH sounds_cut/1/22.1/song2sample1.mp3 7.0 sec 1695 raw hashes
+NOMATCH sounds_cut/1/22.1/song2sample5.mp3 7.1 sec 1501 raw hashes
+NOMATCH sounds_cut/1/22.1/song2sample7.mp3 7.0 sec 827 raw hashes
+Matched sounds_cut/1/29.3/song2sample1.mp3 2.5 sec 336 raw hashes as sounds_cut/1/29.3/song2sample3.mp3 at   -0.0 s with     3 of     3 common hashes at rank  0
+NOMATCH sounds_cut/1/29.3/song2sample5.mp3 2.6 sec 334 raw hashes
+NOMATCH sounds_cut/1/29.3/song2sample7.mp3 2.6 sec 289 raw hashes
+Matched sounds_cut/1/29.3/song2sample3.mp3 2.6 sec 492 raw hashes as sounds_cut/1/29.3/song2sample1.mp3 at    0.0 s with     2 of     2 common hashes at rank  0
+</nowiki>
+}}
+
+Output:
+
+{{hc|output.txt|2=<nowiki>
+1
+sounds_my_dataset/song2sample3.mp3 6.35
+sounds_my_dataset/song2sample8.mp3 4.0704739466
+sounds_my_dataset/song2sample4.mp3 3.13024725495
+sounds_my_dataset/song2sample5.mp3 3.08068635739
+sounds_my_dataset/song2sample1.mp3 2.27266603678
+sounds_my_dataset/song2sample2.mp3 1.35798946444
+sounds_my_dataset/song2sample6.mp3 1.12258105596
+sounds_my_dataset/song2sample7.mp3 1.0636716225
+2
+sounds_my_dataset/song7sample3.mp3 6.15695802185
+sounds_my_dataset/song7sample4.mp3 4.12599554954
+sounds_my_dataset/song7sample5.mp3 3.90231950057
+sounds_my_dataset/song7sample1.mp3 3.81289894492
+sounds_my_dataset/song7sample6.mp3 2.33759016094
+sounds_my_dataset/song7sample2.mp3 1.94741927405
+sounds_my_dataset/song7sample7.mp3 1.40188278915
+sounds_my_dataset/song7sample8.mp3 0.348085858255
+</nowiki>
+}}
+
+{{hc|output_synchronization.txt.txt|2=<nowiki>
+1
+00:00:0-00:20:0
+sounds_cut/1/0.0/song2sample1.mp3 0
+00:20:0-00:22:1
+sounds_cut/1/20.0/song2sample5.mp3 0
+sounds_cut/1/20.0/song2sample1.mp3 0
+00:22:1-00:29:3
+sounds_cut/1/22.1/song2sample1.mp3 0
+sounds_cut/1/22.1/song2sample5.mp3 0
+sounds_cut/1/22.1/song2sample7.mp3 0
+00:29:3-00:32:0
+sounds_cut/1/29.3/song2sample3.mp3 3.0
+sounds_cut/1/29.3/song2sample1.mp3 2.0
+sounds_cut/1/29.3/song2sample7.mp3 0
+sounds_cut/1/29.3/song2sample5.mp3 0
+00:32:0-00:38:0
+sounds_cut/1/32.0/song2sample7.mp3 3.0
+sounds_cut/1/32.0/song2sample8.mp3 0
+sounds_cut/1/32.0/song2sample5.mp3 0
+sounds_cut/1/32.0/song2sample3.mp3 0
+sounds_cut/1/32.0/song2sample1.mp3 0
+00:38:0-00:48:6
+sounds_cut/1/38.0/song2sample3.mp3 22.0
+sounds_cut/1/38.0/song2sample7.mp3 19.0
+sounds_cut/1/38.0/song2sample8.mp3 18.0
+sounds_cut/1/38.0/song2sample5.mp3 17.0
+sounds_cut/1/38.0/song2sample1.mp3 12.0
+sounds_cut/1/38.0/song2sample4.mp3 8.0
+00:48:6-00:58:0
+sounds_cut/1/48.6/song2sample3.mp3 31.0
+sounds_cut/1/48.6/song2sample7.mp3 21.0
+sounds_cut/1/48.6/song2sample8.mp3 16.0
+sounds_cut/1/48.6/song2sample4.mp3 10.0
+sounds_cut/1/48.6/song2sample5.mp3 9.0
+sounds_cut/1/48.6/song2sample2.mp3 4.0
+sounds_cut/1/48.6/song2sample1.mp3 0
+00:58:0-02:01:033
+sounds_cut/1/58.0/song2sample3.mp3 210.0
+sounds_cut/1/58.0/song2sample8.mp3 123.0
+sounds_cut/1/58.0/song2sample6.mp3 119.0
+sounds_cut/1/58.0/song2sample4.mp3 116.0
+sounds_cut/1/58.0/song2sample5.mp3 114.0
+sounds_cut/1/58.0/song2sample7.mp3 110.0
+sounds_cut/1/58.0/song2sample2.mp3 95.0
+sounds_cut/1/58.0/song2sample1.mp3 65.0
+02:01:033-02:57:492
+sounds_cut/1/121.033/song2sample3.mp3 153.0
+sounds_cut/1/121.033/song2sample7.mp3 126.0
+sounds_cut/1/121.033/song2sample5.mp3 116.0
+sounds_cut/1/121.033/song2sample8.mp3 97.0
+sounds_cut/1/121.033/song2sample4.mp3 75.0
+sounds_cut/1/121.033/song2sample2.mp3 53.0
+sounds_cut/1/121.033/song2sample1.mp3 52.0
+02:57:492-03:06:567
+sounds_cut/1/177.492/song2sample3.mp3 24.0
+sounds_cut/1/177.492/song2sample1.mp3 9.0
+sounds_cut/1/177.492/song2sample8.mp3 9.0
+sounds_cut/1/177.492/song2sample7.mp3 2.0
+sounds_cut/1/177.492/song2sample2.mp3 0
+sounds_cut/1/177.492/song2sample4.mp3 0
+03:06:567-03:07:376
+sounds_cut/1/186.567/song2sample3.mp3 17.0
+sounds_cut/1/186.567/song2sample4.mp3 12.0
+sounds_cut/1/186.567/song2sample2.mp3 3.0
+sounds_cut/1/186.567/song2sample1.mp3 3.0
+sounds_cut/1/186.567/song2sample8.mp3 0
+03:07:376-03:08:83
+sounds_cut/1/187.376/song2sample3.mp3 19.0
+sounds_cut/1/187.376/song2sample2.mp3 2.0
+sounds_cut/1/187.376/song2sample4.mp3 0
+sounds_cut/1/187.376/song2sample1.mp3 0
+03:08:83-03:12:384
+sounds_cut/1/188.83/song2sample1.mp3 0
+sounds_cut/1/188.83/song2sample4.mp3 0
+sounds_cut/1/188.83/song2sample2.mp3 0
+03:12:384-03:15:095
+sounds_cut/1/192.384/song2sample2.mp3 0
+sounds_cut/1/192.384/song2sample1.mp3 0
+03:15:095-03:30:991
+sounds_cut/1/195.095/song2sample1.mp3 0
+</nowiki>
+}}
+
+=== Processes ===
+
+=== Default dataset ===
