@@ -33,6 +33,6 @@ Input:
 
 Output:
 
-### Processes
-
 ### Default dataset
+
+For the testing a dataset with recordings crawled from YouTube was used.
