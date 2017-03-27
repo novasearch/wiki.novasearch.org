@@ -29,3 +29,7 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 === OS general info ===
 
 *[[ Ubuntu 14.04 LTS ]]
+
+=== COGNITUS Components ===
+
+*[[ Audio Synchronization ]]

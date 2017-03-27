@@ -55,3 +55,7 @@ Getting started
 ### OS general info
 
 -   [Ubuntu 14.04 LTS](/wiki/Ubuntu_14.04_LTS "wikilink")
+
+### COGNITUS Components
+
+-   [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
