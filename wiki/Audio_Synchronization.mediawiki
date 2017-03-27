@@ -193,4 +193,9 @@ sounds_cut/1/195.095/song2sample1.mp3 0
 
 === Default dataset ===
 
-For the testing a dataset with recordings crawled from YouTube was used.
+For testing and validation purposes, a dataset with recordings crawled from YouTube was used. Each song had one professional recording (BBC) and a set of user-recordings.
+
+Number of songs: 10
+Number of samples: 90
+
+[[File:dataset_info.png|center|500px|Dataset information.]]
