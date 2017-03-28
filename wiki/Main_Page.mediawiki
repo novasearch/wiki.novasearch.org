@@ -21,8 +21,6 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 
 *[[ Search Services ]]
 
-*[[ Classification Services ]]
-
 === Hardware general info ===
 *[[ Lenovo ThinkPad X230 ]]
 
@@ -33,3 +31,5 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 === COGNITUS Components ===
 
 *[[ Audio Synchronization ]]
+
+*[[ Image Annotation ]]
