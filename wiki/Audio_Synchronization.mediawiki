@@ -4,7 +4,7 @@ The goal of this component is to perform the synchronization of the all audio fi
 
 Option 1:
 
-{{hc|python audio_synchronization.py soundpaths_my_dataset.txt output_matches_100.txt output_matches_segments_default.txt|2=<nowiki>
+{{hc|$ python audio_synchronization.py soundpaths_my_dataset.txt output_matches_100.txt output_matches_segments_default.txt|2=<nowiki>
 --soundpaths_my_dataset.txt: txt file with the paths of all audio files in the dataset.
 --output_matches_100.txt: txt file with the output of a previous run of the audio fingerprinting algorithm.
 --output_matches_segments_default.txt: txt file with the output of all segments of a previous run of the audio fingerprinting algorithm.
@@ -13,7 +13,7 @@ Option 1:
 
 Option 2:
 
-{{hc|python audio_synchronization.py soundpaths_my_dataset.txt|2=<nowiki>
+{{hc|$ python audio_synchronization.py soundpaths_my_dataset.txt|2=<nowiki>
 --soundpaths_my_dataset.txt: txt file with the paths of all audio files in the dataset.
 </nowiki>
 }}
