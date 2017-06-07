@@ -3,6 +3,12 @@
 Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
 
 == Getting started ==
+
+=== My paper got accepted now what? ===
+*[[ Funding ]]
+*[[ Acknowledgements ]]
+*[[ Reimbursement ]]
+
 === Cluster ===
 *[[ Cluster ]]
 

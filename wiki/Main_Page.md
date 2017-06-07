@@ -12,6 +12,12 @@ information on using the wiki software.
 Getting started
 ---------------
 
+### My paper got accepted now what?
+
+-   [Funding](/wiki/Funding "wikilink")
+-   [Acknowledgements](/wiki/Acknowledgements "wikilink")
+-   [Reimbursement](/wiki/Reimbursement "wikilink")
+
 ### Cluster
 
 -   [Cluster](/wiki/Cluster "wikilink")
