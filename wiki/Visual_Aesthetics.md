@@ -4,4 +4,4 @@ permalink: wiki/Visual_Aesthetics/
 layout: wiki
 ---
 
-a
+.
