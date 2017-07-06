@@ -39,3 +39,11 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 *[[ Audio Synchronization ]]
 
 *[[ Image Annotation ]]
+
+*[[ Information Extraction ]]
+
+*[[ Visual Spam Filtering ]]
+
+*[[ Visual Near-duplicate Detection ]]
+
+*[[ Visual Aesthetics ]]

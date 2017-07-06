@@ -65,3 +65,20 @@ Getting started
 <!-- -->
 
 -   [Image Annotation](/wiki/Image_Annotation "wikilink")
+
+<!-- -->
+
+-   [Information Extraction](/wiki/Information_Extraction "wikilink")
+
+<!-- -->
+
+-   [Visual Spam Filtering](/wiki/Visual_Spam_Filtering "wikilink")
+
+<!-- -->
+
+-   [Visual Near-duplicate
+    Detection](/wiki/Visual_Near-duplicate_Detection "wikilink")
+
+<!-- -->
+
+-   [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
