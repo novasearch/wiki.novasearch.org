@@ -14,10 +14,11 @@ properties carefully selected from state-of-the-art literature. An
 extensive review and testing was made to find a group of visual features
 good for the task of visual discrimination. A top-down aproach for
 extraction results in a very compact feature vector. A graphical
-interface was used to test overall usability of the features with good
-results. A subset was used to train classifiers for aesthetic and
-interestingness and some of the features were also used to compute a
-similarity metric.
+interface (demo available
+[here](https://drive.google.com/file/d/0Bzelhrdw43rCc0JkOGdSNnYtclE/view?usp=sharing))
+was used to test overall usability of the features with good results. A
+subset was used to train classifiers for aesthetic and interestingness
+and some of the features were also used to compute a similarity metric.
 
 ### Usage
 
