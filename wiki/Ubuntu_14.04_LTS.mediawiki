@@ -31,15 +31,6 @@ Add the PPA to your package sources with the commands:
 The packages may be installed via package management tools:
  $ sudo apt-get install sublime-text-installer
 
-==== X2Go Client ====
-
-Add the PPA to your package sources with the commands:
- $ sudo apt-add-repository ppa:x2go/stable
- $ sudo apt-get update
-
-The packages may be installed via package management tools:
- $ sudo apt-get install x2goclient
-
 === Development ===
 
 ==== Build Essential ====
