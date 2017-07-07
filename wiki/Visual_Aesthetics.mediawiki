@@ -91,7 +91,7 @@ example 2: Extract features from video files in videos.txt to the CSV file image
 > processing: bin/data/videos/1_fingers.mov 30.099fps 320x240 
 > processing: bin/data/videos/4_arabic_news.mov 25fps 320x240 |
 > processing: bin/data/videos/5_mov_480x360.mov 14.8247fps 480x360 
->> saved output file: output.csv
+>> saved output file: video_output.csv
 >> saved ml file: mloutput.csv
 
       </nowiki>
