@@ -23,8 +23,6 @@ Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for informati
 === Services and frameworks ===
 *[[ Condor ]]
 
-*[[ Hadoop ]]
-
 *[[ Search Services ]]
 
 === Hardware general info ===

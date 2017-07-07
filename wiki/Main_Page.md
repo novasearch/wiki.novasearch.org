@@ -44,10 +44,6 @@ Getting started
 
 <!-- -->
 
--   [Hadoop](/wiki/Hadoop "wikilink")
-
-<!-- -->
-
 -   [Search Services](/wiki/Search_Services "wikilink")
 
 ### Hardware general info
