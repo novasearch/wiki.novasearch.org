@@ -138,7 +138,6 @@ Standard deviation - The second color moment which is obtained by taking the squ
 *green_moment_2 - [0-255]
 *blue_moment_2 - [0-255]
 
-
 ====Color ratio====
 Color moments are great as a measure to judge similarity between images or videos, but it's a concept hard to be directly interpreted by a human user, instead we devised a better feature based on the color average given by the first moment, the color ratio. For a human is much easier to understand and use this concept.
 
@@ -159,6 +158,7 @@ note: we tested Prewitt and sobel methods, we intend to experiment also with can
 *h_edges - [0.0-1.0].
 *d_edges - [0.0-1.0].
 *orientation - [Horz-0, Vert-1, Diag-2].
+note: This features are being replaced by the edge histogram algorithm + grid support tool
 
 ====Color diversity====
 We count groups of different hues present on the H channel of HSV.

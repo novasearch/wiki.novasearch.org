@@ -149,6 +149,9 @@ canny edge.
 -   d\_edges - \[0.0-1.0\].
 -   orientation - \[Horz-0, Vert-1, Diag-2\].
 
+note: This features are being replaced by the edge histogram algorithm +
+grid support tool
+
 #### Color diversity
 
 We count groups of different hues present on the H channel of HSV. Edge
