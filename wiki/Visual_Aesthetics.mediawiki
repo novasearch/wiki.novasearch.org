@@ -1,1 +1,100 @@
-.
+
+==Visual feature extraction tool==
+
+A command line utility that can be used to generate metadata for visual quality assessment, it relies on opencv 3.2 library of algorithms to compute features that describe images and videos in respect to visual properties carefully selected from state-of-the-art literature. An extensive review and testing was made to find a group of visual features good for the task of visual discrimination.
+A top-down aproach for extraction results in a very compact feature vector. A graphical interface was used to test overall usability of the features with good results. A subset was used to train classifiers for aesthetic and interestingness and some of the features were also used to compute a similarity metric.
+
+=== Usage ===
+
+The utility accepts images or videos as input. The files can be loaded from a text file list or by providing a folder path.
+The output feature vector is saved in CSV format. 
+
+{{hc|opencv-vq -h|2=<nowiki>
+Usage: execfile <inputFile> <outputFile> [arguments]
+
+Arguments:
+  -v, example usage: -v=false
+      Set video processing off (for image files)
+  -q, example usage: -q=false
+      Quiet mode set off.
+  -t, example usage: -t=0
+      test histogram output off.
+      0-none, 1-hue histogram, 2-static saliency, 3- optical flow 
+      4-dynamic saliency, 5-background subtraction
+      6-faces, 7-Gabor filter, 8-edge histograms
+  -d, example usage: -d=true
+      process files from a folder.
+  -s, example usage: -s=5
+      set sampling factor to 5.
+  -r, example usage: -r=1
+      set resize mode to 320x240.
+      0-no resize,1-320x240, 2-480x360, 3-640x480.
+  -b, example usage: -b=0
+      background subtraction off.
+      0-none, 1-knn, 2-mog2.
+  -f, example usage: -f=false
+      optical flow off.
+  -i, example usage: -i=true
+      use Haar classifiers intersection.
+  -g, example usage: -g=true
+      extract Gabor features.
+  -e, example usage: -e=true
+      extract edge histograms.
+  -h, example usage: -h=true
+      this help message.
+      </nowiki>
+}}
+
+example 1: Extract features from image files in bin/data/images folder to the CSV file images_output.csv
+
+{{hc|<nowiki>opencv-vq bin/data/images images_output.csv -v=false -d=true</nowiki> |2=<nowiki>
+
+>> parsing input: bin/data/images folder
+
+> processing: bin/data/images/2hues.jpg 
+> processing: bin/data/images/5hues.jpg 
+> processing: bin/data/images/8hues.jpg 
+> processing: bin/data/images/black.jpg 
+> processing: bin/data/images/blue.jpg 
+> processing: bin/data/images/face-4.jpg 
+> processing: bin/data/images/face-8.jpg 
+> processing: bin/data/images/face-gaza.jpg 
+> processing: bin/data/images/face-kids.jpg 
+> processing: bin/data/images/face-obama.jpg 
+> processing: bin/data/images/facts-about-eyesight-600x375.jpg 
+> processing: bin/data/images/frame1.jpg 
+> processing: bin/data/images/frame2.jpg 
+> processing: bin/data/images/lena.jpg 
+> processing: bin/data/images/paprika.jpg 
+> processing: bin/data/images/red.jpg 
+> processing: bin/data/images/rule.jpg 
+> processing: bin/data/images/spots2.png 
+> processing: bin/data/images/test_edge_nond.jpg 
+> processing: bin/data/images/test_edges_135.jpg 
+> processing: bin/data/images/test_edges_45.jpg 
+> processing: bin/data/images/test_edges_h.jpg 
+> processing: bin/data/images/test_edges_v.jpg 
+> processing: bin/data/images/x-135.jpg 
+> processing: bin/data/images/x-45.jpg 
+> processing: bin/data/images/x-nond.jpg 
+>> saved output file: images_output.csv
+>> saved ml file: mloutput.csv
+
+      </nowiki>
+}}
+The resulting output file can be found [https://drive.google.com/file/d/0Bzelhrdw43rCWWc5QWQtQmp6Y0E/view?usp=sharing here].
+
+example 2: Extract features from video files in videos.txt to the CSV file images_output.csv
+{{hc|<nowiki>opencv-vq videos.txt video_output.csv -v=true -d=false</nowiki> |2=<nowiki>
+>> parsing input: videos.txt text file
+
+> processing: bin/data/videos/1_fingers.mov 30.099fps 320x240 
+> processing: bin/data/videos/4_arabic_news.mov 25fps 320x240 |
+> processing: bin/data/videos/5_mov_480x360.mov 14.8247fps 480x360 
+>> saved output file: output.csv
+>> saved ml file: mloutput.csv
+
+      </nowiki>
+}}
+
+[https://drive.google.com/file/d/0Bzelhrdw43rCQURPaHYwaUoyMFk/view?usp=sharing Here] is the resulting feature vector in CSV format.
