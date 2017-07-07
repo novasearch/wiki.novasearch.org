@@ -78,7 +78,7 @@ as useful. This is not an easy measure to normalize since we are not
 trying to get perfect focus on one same media(camera), but instead we
 want to apply it to very different inputs.
 
-#### Color Moments
+#### Color moments
 
 The basis of color moments lays in the assumption that the distribution
 of color in an image can be interpreted as a probability distribution.
@@ -122,14 +122,15 @@ to understand and use this concept.
 -   blue\_ratio - \[0.0-1.0\]
 -   green\_ratio - \[0.0-1.0\]
 
-<!-- -->
+#### Luminance
+
+Luminance is
+[arguable](http://therefractedlight.blogspot.pt/2010/06/luminance-is-more-important-than-color.html)the
+most important component of color, humans are so much more sensitive to
+light than color information. we compute the average luminance of the
+media (first luminance moment).
 
 -   luminance - \[0.0-1.0\]
-
-Luminance is arguable the most important component of color, humans are
-so much more sensitive to light than color information.
-[1](http://therefractedlight.blogspot.pt/2010/06/luminance-is-more-important-than-color.html)
-we compute the average luminance of the media (first luminance moment).
 
 #### edges
 
@@ -225,8 +226,8 @@ normalized to the \[0.1-1.0\] range.
 
 #### Saliency
 
-Topics related to saliency were adapted from the opencv documentation
-[2](http://docs.opencv.org/3.0-beta/modules/saliency/doc/saliency.html)
+Topics related to saliency were adapted from the opencv
+[documentation](http://docs.opencv.org/3.0-beta/modules/saliency/doc/saliency.html).
 
 Many computer vision applications may benefit from understanding where
 humans focus given a scene. Other than cognitively understanding the way
@@ -234,7 +235,7 @@ human perceive images and scenes, finding salient regions and objects in
 the images helps various tasks such as speeding up object detection,
 object recognition, object tracking and content-aware image editing.
 
-1.  static\_saliency\[0.0-1.0\]
+-   static\_saliency\[0.0-1.0\]
 
 Algorithms belonging to this category, exploit different image features
 that allow to detect salient objects in a non dynamic scenario. We
@@ -255,7 +256,7 @@ center-surround differences. High resolution saliency maps are generated
 in real time by using integral images. Based on \[Sebastian Montabone
 and Alvaro Soto. Human detection using a mobile platform and novel
 features derived from a visual saliency mechanism. In Image and Vision
-Computing, Vol. 28 Issue 3, pages 391–402. Elsevier, 2010.\]
+Computing, Vol. 28 Issue 3, pages 391–402. Elsevier, 2010.
 
 After computing a saliency map with one of the above methods, we
 calculate the mean pixel value of this saliency map to give a rough
@@ -341,8 +342,8 @@ Heijden. “Efficient Adaptive Density Estimation per Image Pixel for the
 Task of Background Subtraction”, Pattern Recognition Letters, vol. 27,
 no. 7, pages 773-780, 2006\] . Very efficient if number of foreground
 pixels is low. Link:
-[3](http://www.zoranz.net/Publications/zivkovicPRL2006.pdf) -
-[4](http://escholarship.org/uc/item/2kj2g2f7)
+[1](http://www.zoranz.net/Publications/zivkovicPRL2006.pdf) -
+[2](http://escholarship.org/uc/item/2kj2g2f7)
 
 \[BackgroundSubtractorMOG2\] - The class implements the Gaussian mixture
 model background subtraction described in \[Zivkovic. “Improved adaptive
@@ -365,7 +366,7 @@ Foreground area
 -   shadow\_area
 
 From
-[5](http://www.hitl.washington.edu/research/knowledge_base/virtual-worlds/EVE/III.A.1.c.DepthCues.html)
+[3](http://www.hitl.washington.edu/research/knowledge_base/virtual-worlds/EVE/III.A.1.c.DepthCues.html)
 When we know the location of a light source and see objects casting
 shadows on other objects, we learn that the object shadowing the other
 is closer to the light source. As most illumination comes downward we

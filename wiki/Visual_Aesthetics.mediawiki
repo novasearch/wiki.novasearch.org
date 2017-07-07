@@ -122,7 +122,7 @@ We selected the OpenCV port of 'LAPV' Variance of Laplacian algorithm ([http://d
 This kind of algorithms are used in camera auto-focus, and rely on edge detection since we can detect more edges in a focused image then in a blurred version of it. Returns  the maximum sharpness detected, which is a pretty good indicator of if a camera is in focus or not. Not surprisingly, normal values are scene dependent but much less so than other methods like FFT which has too high of a false positive rate to be as useful.
 This is not an easy measure to normalize since we are not trying to get perfect focus on one same media(camera), but instead we want to apply it to very different inputs.
 
-====Color Moments====
+====Color moments====
 The basis of color moments lays in the assumption that the distribution of color in an image  can be interpreted as a probability distribution. Probability distributions are characterized by a number of unique moments (e.g. Normal distributions are differentiated by their mean and variance). It therefore follows that if the color in an image follows a certain probability distribution, the moments of that distribution can then be used as features to identify that image based on color. Color moments are scaling and rotation invariant, they are also a good feature to use under changing lighting conditions.
 We use the first two central moments of color distribution. They are the Mean and Standard deviation computed as explained in:  [http://spie.org/Publications/Proceedings/Paper/10.1117/12.205308 "M. Stricker and M. Orengo Similarity of color images."]
 
@@ -146,8 +146,10 @@ Color moments are great as a measure to judge similarity between images or video
 *blue_ratio - [0.0-1.0]
 *green_ratio - [0.0-1.0]
 
+====Luminance====
+Luminance is [http://therefractedlight.blogspot.pt/2010/06/luminance-is-more-important-than-color.html arguable]the most important component of color, humans are so much more sensitive to light than color information. we compute the average luminance of the media (first luminance moment).
+
 *luminance - [0.0-1.0]
-Luminance is arguable the most important component of color, humans are so much more sensitive to light than color information. [http://therefractedlight.blogspot.pt/2010/06/luminance-is-more-important-than-color.html] we compute the average luminance of the media (first luminance moment).
 
 ====edges====
 Edges may indicate the boundaries of objects in the scene. Detecting sharp changes in brigthness between each pixel and its surroundings allow us to detect edges.We start by first applying Gaussian Blur (3x3) to add some robustness to eventual presence of noise. Afterwards we apply Prewitt or Sobel kernel convolution to differentiate edge pixels and give some perspective about the general orientation of edges found in the scene (horizontal, vertical or diagonal predominance).
@@ -196,17 +198,17 @@ The rule of thirds is one of the usual guidelines used to assess quality of visu
 Like in “Evaluating Visual Aesthetics in Photographic Portraiture,” in Computational Aesthetics in Graphics, Visualization and Imaging , Annecy, 2012, by D. V. Shehroz and S. Khan we use a Spatial composition template to score images according to a variation of the rule of thirds where more power points were added, the template is in grayscale format, afterwards we compare face centroids from the previous step of the pipeline with this template and assign a score ranging from 0-255, this value is afterward normalized to the [0.1-1.0] range.
 
 ====Saliency====
-Topics related to saliency were adapted from the opencv documentation [http://docs.opencv.org/3.0-beta/modules/saliency/doc/saliency.html]
+Topics related to saliency were adapted from the opencv [http://docs.opencv.org/3.0-beta/modules/saliency/doc/saliency.html documentation].
 
 Many computer vision applications may benefit from understanding where humans focus given a scene. Other than cognitively understanding the way human perceive images and scenes, finding salient regions and objects in the images helps various tasks such as speeding up object detection, object recognition, object tracking and content-aware image editing.
 
-#static_saliency[0.0-1.0]
+*static_saliency[0.0-1.0]
 Algorithms belonging to this category, exploit different image features that allow to detect salient objects in a non dynamic scenario. We experiment with both approaches for static saliency offered by the new opencv 3.2 Saliency API:
 
 [SpectralResidual] - Starting from the principle of natural image statistics, this method simulate the behavior of pre-attentive visual search. The algorithm analyzes the log spectrum of each image and obtain the spectral residual. Then transform the spectral residual to spatial domain to obtain the saliency map, which suggests the positions of proto-objects.
 based on [Hou, Xiaodi, and Liqing Zhang. “Saliency detection: A spectral residual approach.” Computer Vision and Pattern Recognition, 2007. CVPR‘07. IEEE Conference on. IEEE, 2007.]
 
-[FineGrained] - This method calculates saliency based on center-surround differences. High resolution saliency maps are generated in real time by using integral images. Based on [Sebastian Montabone and Alvaro Soto. Human detection using a mobile platform and novel features derived from a visual saliency mechanism. In Image and Vision Computing, Vol. 28 Issue 3, pages 391–402. Elsevier, 2010.]
+[FineGrained] - This method calculates saliency based on center-surround differences. High resolution saliency maps are generated in real time by using integral images. Based on [Sebastian Montabone and Alvaro Soto. Human detection using a mobile platform and novel features derived from a visual saliency mechanism. In Image and Vision Computing, Vol. 28 Issue 3, pages 391–402. Elsevier, 2010.
 
 After computing a saliency map with one of the above methods, we calculate the mean pixel value of this saliency map to give a rough measure of its strength, the value is normalized dividing it by 255.
 
@@ -265,6 +267,7 @@ Percentage of frames where foreground area is bigger then 80% of total area avai
 Difference of focus between foreground and background. We try to detect low depth of field, the region of interest should be in sharp focus and the background blurred, this is a attribute that can boost aesthetic perceived from media or attention arouse.
 
 ====Texture====
+
 *Gabor
 
 *Edge histogram
