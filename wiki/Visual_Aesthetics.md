@@ -33,7 +33,7 @@ The resulting output file can be found
 [here](https://drive.google.com/file/d/0Bzelhrdw43rCWWc5QWQtQmp6Y0E/view?usp=sharing).
 
 example 2: Extract features from video files in videos.txt to the CSV
-file images\_output.csv
+file video\_output.csv
 
 [Here](https://drive.google.com/file/d/0Bzelhrdw43rCQURPaHYwaUoyMFk/view?usp=sharing)
 is the resulting feature vector in CSV format.

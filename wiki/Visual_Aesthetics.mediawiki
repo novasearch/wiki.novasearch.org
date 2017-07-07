@@ -84,7 +84,7 @@ example 1: Extract features from image files in bin/data/images folder to the CS
 }}
 The resulting output file can be found [https://drive.google.com/file/d/0Bzelhrdw43rCWWc5QWQtQmp6Y0E/view?usp=sharing here].
 
-example 2: Extract features from video files in videos.txt to the CSV file images_output.csv
+example 2: Extract features from video files in videos.txt to the CSV file video_output.csv
 {{hc|<nowiki>opencv-vq videos.txt video_output.csv -v=true -d=false</nowiki> |2=<nowiki>
 >> parsing input: videos.txt text file
 
