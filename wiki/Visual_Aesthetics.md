@@ -399,3 +399,11 @@ perceived from media or attention arouse.
 <!-- -->
 
 -   Edge histogram
+
+#### Not implemented
+
+-   Dynamic saliency
+
+<!-- -->
+
+-   Onjectness

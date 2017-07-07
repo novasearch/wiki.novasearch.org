@@ -271,3 +271,9 @@ Difference of focus between foreground and background. We try to detect low dept
 *Gabor
 
 *Edge histogram
+
+====Not implemented====
+
+*Dynamic saliency
+
+*Onjectness
