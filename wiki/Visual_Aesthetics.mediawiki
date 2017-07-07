@@ -276,4 +276,4 @@ Difference of focus between foreground and background. We try to detect low dept
 
 *Dynamic saliency
 
-*Onjectness
+*Objectness
