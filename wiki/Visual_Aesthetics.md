@@ -87,9 +87,8 @@ certain probability distribution, the moments of that distribution can
 then be used as features to identify that image based on color. Color
 moments are scaling and rotation invariant, they are also a good feature
 to use under changing lighting conditions. We use the first two central
-moments of color distribution. They are the Mean and Standard deviation
-computed as explained in: ["M. Stricker and M. Orengo Similarity of
-color
+moments of color distribution. They are the mean and standard deviation
+computed as explained in ["M. Stricker and M. Orengo Similarity of color
 images."](http://spie.org/Publications/Proceedings/Paper/10.1117/12.205308)
 
 We compute moments for each RGB channel.
