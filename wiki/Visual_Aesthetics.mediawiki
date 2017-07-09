@@ -120,7 +120,6 @@ Based on a survey implementation of many focus measurement algorithms in [https:
 We selected the OpenCV port of 'LAPV' Variance of Laplacian algorithm ([http://decsai.ugr.es/vip/files/conferences/Autofocusing2000.pdf Pech2000]).
 
 This kind of algorithms are used in camera auto-focus, and rely on edge detection since we can detect more edges in a focused image then in a blurred version of it. Returns  the maximum sharpness detected, which is a pretty good indicator of if a camera is in focus or not. Not surprisingly, normal values are scene dependent but much less so than other methods like FFT which has too high of a false positive rate to be as useful.
-This is not an easy measure to normalize since we are not trying to get perfect focus on one same media(camera), but instead we want to apply it to very different inputs.
 
 ====Color moments====
 The basis of color moments lays in the assumption that the distribution of color in an image  can be interpreted as a probability distribution. Probability distributions are characterized by a number of unique moments (e.g. Normal distributions are differentiated by their mean and variance). It therefore follows that if the color in an image follows a certain probability distribution, the moments of that distribution can then be used as features to identify that image based on color. Color moments are scaling and rotation invariant, they are also a good feature to use under changing lighting conditions.

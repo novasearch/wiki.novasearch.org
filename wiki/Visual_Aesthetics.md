@@ -74,9 +74,7 @@ blurred version of it. Returns the maximum sharpness detected, which is
 a pretty good indicator of if a camera is in focus or not. Not
 surprisingly, normal values are scene dependent but much less so than
 other methods like FFT which has too high of a false positive rate to be
-as useful. This is not an easy measure to normalize since we are not
-trying to get perfect focus on one same media(camera), but instead we
-want to apply it to very different inputs.
+as useful.
 
 #### Color moments
 
