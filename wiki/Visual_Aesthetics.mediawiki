@@ -145,7 +145,7 @@ Color moments are great as a measure to judge similarity between images or video
 *green_ratio - [0.0-1.0]
 
 ====Luminance====
-Luminance is [http://therefractedlight.blogspot.pt/2010/06/luminance-is-more-important-than-color.html arguable]the most important component of color, humans are so much more sensitive to light than color information. we compute the average luminance of the media (first luminance moment).
+Luminance is arguable the most important component of color, humans are so much more sensitive to light than color information. we compute the average luminance of the mean (first luminance moment).
 
 *luminance - [0.0-1.0]
 
