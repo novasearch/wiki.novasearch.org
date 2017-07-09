@@ -149,23 +149,24 @@ grid support tool
 
 #### Color diversity
 
-We count groups of different hues present on the H channel of HSV. Edge
-composition - it's a measure of edges detected on the image. We compute
-the harmonic mean of this two factors.
+Color diversity is a property related to visual aesthetics.
 
 -   dif\_hues - \[0-360\].
 
-Color diversity is a property related to visual aesthetics. We count
-different groups of hues. On the hue histogram (computed from the H
-channel of HSV) we count any variation of hue bigger than a certain
-threshold.
+We count different groups of hues. On the hue histogram (computed from
+the H channel of HSV) we count any variation of hue bigger than a
+certain threshold.
 
 using the argument -t=1 we turn on a visualization were we can see the
 hue histograms computed for each image or frame.
 
 -   simplicity - \[0.0-1.0\]
 
-At the moment this feature relies only on two factors:
+At the moment this feature relies on two factors:
+
+-We count groups of different hues present on the H channel of HSV.
+-Edge composition - it's a measure of edges detected on the image. We
+compute the harmonic mean of this two factors.
 
 #### Object detection
 
