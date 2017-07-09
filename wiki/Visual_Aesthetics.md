@@ -122,8 +122,8 @@ to understand and use this concept.
 #### Luminance
 
 Luminance is arguable the most important component of color, humans are
-so much more sensitive to light than color information. we compute the
-average luminance of the mean (first luminance moment).
+so much more sensitive to light than color information. We compute the
+first luminance moment.
 
 -   luminance - \[0.0-1.0\]
 
