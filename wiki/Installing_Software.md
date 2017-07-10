@@ -240,12 +240,12 @@ NOTE: MAKE SURE THAT OpenCV and OpenCV-Contrib VERSIONS ARE THE SAME!
 From now on, let <opencv_contrib_dir> be the the downloaded
 opencv\_contrib folder.
 
-Load necessary modules:
+Unload EVERYTHING and load ONLY the necessary modules:
 
-`$ module load cmake gnutools eigen hdf5 mvapich2_eth`
+`$ module purge`  
+`$ module load cmake gnu gnutools eigen mvapich2_eth hdf5`
 
-Unload EVERYTHING and load only the aforementioned modules. Make sure
-module cuda and mkl are not loaded.
+Make sure module cuda and mkl are not loaded.
 
 GCC must know where the file mpi.h is. When the mvapich2\_eth module is
 loaded the environment variable CPATH is not updated. Update the CPATH
