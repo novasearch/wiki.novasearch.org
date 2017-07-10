@@ -244,7 +244,7 @@ Load necessary modules:
 
 `$ module load cmake gnutools eigen hdf5 mvapich2_eth`
 
-Unload everything and load only the aforementioned modules. Make sure
+Unload EVERYTHING and load only the aforementioned modules. Make sure
 module cuda and mkl are not loaded.
 
 GCC must know where the file mpi.h is. When the mvapich2\_eth module is
@@ -257,7 +257,7 @@ Compiling OpenCV:
 
 `$ cd `<opencv_source>  
 `$ mkdir build && cd "$_"`  
-`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=$HOME/cluster/compiling/opencv_build -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=$HOME/cluster/compiling/opencv_contrib-3.2.0/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -DPYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so -DPYTHON3_PACKAGES_PATH=/share/apps/anaconda3/lib/python3.5/site-packages -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/ -DGLOG_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGFLAGS_INCLUDE_DIRS=/home/dsemedo/installed_libs/include/ -DGLOG_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DGFLAGS_LIBRARIES=/home/dsemedo/installed_libs/lib/ -DBUILD_opencv_dnn=OFF BUILD_opencv_python2=ON -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7/ -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON2_LIBRARIES=/share/apps/anaconda2/lib/python2.7/ -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON -DBUILD_opencv_dnn=OFF -DWITH_IPP=OFF -DPYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 ..`  
+`$ CXXFLAGS=-D__STDC_CONSTANT_MACROS:$CXXFLAGS cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=`<prefix_path>` -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=`<opencv_contrib_dir>`/modules -D BUILD_EXAMPLES=ON -D WITH_OPENCL=ON -D BUILD_opencv_python3=ON -DPYTHON3_INCLUDE_DIR=/share/apps/anaconda3/include/python3.5m  -D PYTHON3_NUMPY_INCLUDE_DIRS=/share/apps/anaconda3/lib/python3.5/site-packages/numpy/core/include -D PYTHON3_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 -D PYTHON3_LIBRARY=/share/apps/anaconda3/lib/libpython3.5m.so -DPYTHON3_PACKAGES_PATH=/share/apps/anaconda3/lib/python3.5/site-packages -D WITH_EIGEN=ON -D WITH_TBB=ON -D EIGEN_INCLUDE_PATH=/opt/eigen/include/ -DGLOG_INCLUDE_DIRS=`<glog_lib_path>`/include/ -DGFLAGS_INCLUDE_DIRS=`<gflags_lib_path>`/include/ -DGLOG_LIBRARIES=`<glog_lib_path>`/lib/ -DGFLAGS_LIBRARIES=`<gflags_lib_path>`/lib/ -DBUILD_opencv_dnn=OFF BUILD_opencv_python2=ON -D PYTHON_INCLUDE_DIR=/share/apps/anaconda2/include/python2.7/ -D PYTHON_LIBRARY=/share/apps/anaconda2/lib/libpython2.7.so -D PYTHON2_LIBRARIES=/share/apps/anaconda2/lib/python2.7/ -D PYTHON2_NUMPY_INCLUDE_DIRS=/share/apps/anaconda2/lib/python2.7/site-packages/numpy/core/include -D PYTHON_EXECUTABLE=/share/apps/anaconda2/bin/python2.7 -DWITH_FFMPEG=ON -DBUILD_SHARED_LIBS=ON -DWITH_IPP=OFF -DPYTHON_DEFAULT_EXECUTABLE=/share/apps/anaconda3/bin/python3.5 ..`  
 `$ make -j12`  
 `$ make install`
 
@@ -339,6 +339,13 @@ If the import succeeds then Python-OpenCV is installed.
 
 ### Common Problems
 
+#### OpenCV Contrib - Modules Download Failure and Hash mismatch
+
+Read the directory structure described in
+[9](http://answers.opencv.org/answers/113990/revisions/). Create this
+structure and download the required files (links are available in the
+website).
+
 #### IPPICV hash mismatch
 
 While creating the makefile for compilation, the lib ippicv will be
@@ -347,7 +354,7 @@ will not match the hardcoded hash on the cmake.
 
 Instead of changing cmake we can manually download the file. Download
 URL:
-[9](https://raw.githubusercontent.com/Itseez/opencv_3rdparty/81a676001ca8075ada498583e4166079e5744668/ippicv/ippicv_linux_20151201.tgz)
+[10](https://raw.githubusercontent.com/Itseez/opencv_3rdparty/81a676001ca8075ada498583e4166079e5744668/ippicv/ippicv_linux_20151201.tgz)
 Steps:
 
 `$ mkdir `<opencv_source>`/3rdparty/ippicv/downloads/linux-808b791a6eac9ed78d32a7666804320e && cd "$_"`  
@@ -363,7 +370,7 @@ Caffe
 -----
 
 Steps for installing the Caffe
-[10](http://caffe.berkeleyvision.org/installation.html). Caffe is a deep
+[11](http://caffe.berkeleyvision.org/installation.html). Caffe is a deep
 learning framework made with expression, speed, and modularity in mind.
 
 Caffe has the following dependencies:
@@ -583,7 +590,7 @@ used that version.
 Boost
 -----
 
-The Boost library can be downloaded here: [11](http://www.boost.org/).
+The Boost library can be downloaded here: [12](http://www.boost.org/).
 After downloading, extract it to some folder.
 
 To correctly build the Python boost library using Anaconda some
