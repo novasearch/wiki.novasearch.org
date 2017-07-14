@@ -4,7 +4,8 @@ permalink: wiki/Visual_Aesthetics/
 layout: wiki
 ---
 
-![](Semiautomatic_video_assessment_system.pdf "Semiautomatic_video_assessment_system.pdf")
+**Paper CBMI: Semi-automatic Video Assessment System**
+![](Semiautomatic_video_assessment_system.pdf "fig:Semiautomatic_video_assessment_system.pdf")
 
 Visual feature extraction tool
 ------------------------------
