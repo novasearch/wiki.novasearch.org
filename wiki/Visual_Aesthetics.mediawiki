@@ -1,4 +1,4 @@
-
+[[File:Semiautomatic_video_assessment_system.pdf]]
 ==Visual feature extraction tool==
 
 A command line utility that can be used to generate metadata for visual quality assessment, it relies on opencv 3.2 library of algorithms to compute features that describe images and videos in respect to visual properties carefully selected from state-of-the-art literature. An extensive review and testing was made to find a group of visual features good for the task of visual discrimination.
