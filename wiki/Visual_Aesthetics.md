@@ -144,9 +144,7 @@ allow us to detect edges.We start by first applying Gaussian Blur (3x3)
 to add some robustness to eventual presence of noise. Afterwards we
 apply Prewitt or Sobel kernel convolution to differentiate edge pixels
 and give some perspective about the general orientation of edges found
-in the scene (horizontal, vertical or diagonal predominance). note: we
-tested Prewitt and sobel methods, we intend to experiment also with
-canny edge.
+in the scene (horizontal, vertical or diagonal predominance).
 
 -   v\_edges - \[0.0-1.0\].
 -   h\_edges - \[0.0-1.0\].

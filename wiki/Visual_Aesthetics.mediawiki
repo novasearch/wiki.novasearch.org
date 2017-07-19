@@ -157,7 +157,6 @@ We also compute the luminance standard deviation. In terms of the human visual p
 *luminance_std - [0.0-1.0]
 ====edges====
 Edges may indicate the boundaries of objects in the scene. Detecting sharp changes in brigthness between each pixel and its surroundings allow us to detect edges.We start by first applying Gaussian Blur (3x3) to add some robustness to eventual presence of noise. Afterwards we apply Prewitt or Sobel kernel convolution to differentiate edge pixels and give some perspective about the general orientation of edges found in the scene (horizontal, vertical or diagonal predominance).
-note: we tested Prewitt and sobel methods, we intend to experiment also with canny edge.
 
 *v_edges - [0.0-1.0].
 *h_edges - [0.0-1.0].
