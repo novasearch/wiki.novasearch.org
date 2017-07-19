@@ -130,6 +130,12 @@ first luminance moment.
 
 -   luminance - \[0.0-1.0\]
 
+We also compute the luminance standard deviation. In terms of the human
+visual perception system the variance of luminance may be more
+informative than the mean or median.
+
+-   luminance\_std - \[0.0-1.0\]
+
 #### edges
 
 Edges may indicate the boundaries of objects in the scene. Detecting
@@ -149,6 +155,27 @@ canny edge.
 
 note: This features are being replaced by the edge histogram algorithm +
 grid support tool
+
+-   EH\_0 - \[0,1,2,3,4,5\]
+
+(...)
+
+-   EH\_15 - \[0,1,2,3,4,5\]
+
+We implented a simplification of the method presented in [Efficient Use
+of Local Edge Histogram
+Descriptor](https://www.dcc.fc.up.pt/~mcoimbra/lectures/VC_1415/VC_1415_P8_LEH.pdf)
+where edge histograms MPEG-7 compliant features are extracted.We used a
+global and a local representation, for the local one a support tool was
+used to split each frame by a 4x4 grid, resulting in 16 sub-images. Each
+one of this sub-images was convolved with 5 different oriented kernels
+(0-zero, 1-vertical, 2-horizontal, 3-45ª, 4-135ª, 5-non-directional)
+this process results in 16 local features representing the orientation
+of each sub-image.
+
+-   EH\_16 - \[0,1,2,3,4,5\]
+
+The global feature is computed using the full image.
 
 #### Color diversity
 
@@ -205,10 +232,12 @@ attention faces can arouse is directly related to their visible area.
 
 -   smiles - images\[0,1\] , videos\[0.0-1.0\]
 
-We do smile detection with cascade classifier to compute a smile
-measure.It represents average frames where smiles were found, for
-videos, and smiles found for images. Depending on the boolean parameter
-"insideFace" smiles are detected inside or outside faces.
+When someone smiles he's normally seen as a person with positive
+intentions. Generally people tend to be attracted by smiling subjects.We
+do smile detection with cascade classifier to compute a smile measure.It
+represents average frames where smiles were found, for videos, and
+smiles found for images. Depending on the boolean parameter "insideFace"
+smiles are detected inside or outside faces.
 
 -   rule\_of\_thirds - \[0.0-1.0\]
 
@@ -216,15 +245,15 @@ The rule of thirds is one of the usual guidelines used to assess quality
 of visual image composition, The image is divided in nine equal parts by
 four equal spaced lines(the power lines), two oriented horizontally and
 the other two vertically, important compositional elements should be
-placed along these lines or their intersections. Like in “Evaluating
-Visual Aesthetics in Photographic Portraiture,” in Computational
-Aesthetics in Graphics, Visualization and Imaging , Annecy, 2012, by D.
-V. Shehroz and S. Khan we use a Spatial composition template to score
-images according to a variation of the rule of thirds where more power
-points were added, the template is in grayscale format, afterwards we
-compare face centroids from the previous step of the pipeline with this
-template and assign a score ranging from 0-255, this value is afterward
-normalized to the \[0.1-1.0\] range.
+placed along these lines or their intersections. Like in [“Evaluating
+Visual Aesthetics in Photographic
+Portraiture”](https://ai2-s2-pdfs.s3.amazonaws.com/ab62/68d290b23fee36c3faf1ae77f0fd900a225f.pdf)
+we use a Spatial composition template to score images according to a
+variation of the rule of thirds where more power points were added, the
+template is in grayscale format, afterwards we compare face centroids
+from the previous step of the pipeline with this template and assign a
+score ranging from 0-255, this value is afterward normalized to the
+\[0.1-1.0\] range.
 
 #### Saliency
 
@@ -249,21 +278,18 @@ statistics, this method simulate the behavior of pre-attentive visual
 search. The algorithm analyzes the log spectrum of each image and obtain
 the spectral residual. Then transform the spectral residual to spatial
 domain to obtain the saliency map, which suggests the positions of
-proto-objects. based on \[Hou, Xiaodi, and Liqing Zhang. “Saliency
-detection: A spectral residual approach.” Computer Vision and Pattern
-Recognition, 2007. CVPR‘07. IEEE Conference on. IEEE, 2007.\]
+proto-objects. based on [“Saliency detection: A spectral residual
+approach.”](https://www.researchgate.net/publication/221364530_Saliency_Detection_A_Spectral_Residual_Approach)
 
 \[FineGrained\] - This method calculates saliency based on
 center-surround differences. High resolution saliency maps are generated
-in real time by using integral images. Based on \[Sebastian Montabone
-and Alvaro Soto. Human detection using a mobile platform and novel
-features derived from a visual saliency mechanism. In Image and Vision
-Computing, Vol. 28 Issue 3, pages 391–402. Elsevier, 2010.
+in real time by using integral images. Based on [Human detection using a
+mobile platform and novel features derived from a visual saliency
+mechanism](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=4CC3F597B5F4F9EC4E4D71817098C3E2?doi=10.1.1.700.4706&rep=rep1&type=pdf).
 
 After computing a saliency map with one of the above methods, we
 calculate the mean pixel value of this saliency map to give a rough
 measure of its strength, the value is normalized dividing it by 255.
-
 Using the argument -t=2 we have acess in a window to the original image,
 saliency map and binary map.
 
@@ -391,18 +417,16 @@ low depth of field, the region of interest should be in sharp focus and
 the background blurred, this is a attribute that can boost aesthetic
 perceived from media or attention arouse.
 
-#### Texture
+-   entropy \[0.0 – 1.0\]
 
--   Gabor
+Entropy is a quantity normally used to describe the business of an
+image, in other words, the volume of data that needs to be encoded by a
+compression algorithm. A completly flat image, without any proeminent
+pixel have zero entropy and can be compressed to a very small size. On
+the other side an image with high entropy, full of details and pixel
+contrast will result in a very large encoded file size.
 
-<!-- -->
+Not finished
+------------
 
--   Edge histogram
-
-#### Not implemented
-
--   Dynamic saliency
-
-<!-- -->
-
--   Objectness
+-ML scores -Gabor -Dynamic saliency -Objectness
