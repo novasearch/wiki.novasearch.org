@@ -14,6 +14,9 @@ Job submission examples:
 How to recipes:
 <https://htcondor-wiki.cs.wisc.edu/index.cgi/wiki?p=HowToAdminRecipes>
 
+Useful commands:
+<http://vivaldi.ll.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.CondorUsefulCommands>
+
 Highlights
 ----------
 
