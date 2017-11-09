@@ -1,5 +1,10 @@
 Condor is an workload management system for compute-intensive tasks. It is used in production environments for more than 15 years, so it is considered a stable and mature project.
 
+Job submission examples: http://vivaldi.ll.iac.es/sieinvens/siepedia/pmwiki.php?n=HOWTOs.CondorSubmitFile
+
+How to recipes: https://htcondor-wiki.cs.wisc.edu/index.cgi/wiki?p=HowToAdminRecipes
+
+
 == Highlights ==
 
 * Preserves user environment on remote machine
