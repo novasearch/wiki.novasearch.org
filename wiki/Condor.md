@@ -143,7 +143,7 @@ environment. This is useful if you want to share global library paths.
 Sets the base execution path of the execution. Useful to reference files
 with relative paths.
 
-`   Requirements = (Machine == "arthur.novasearch.org")`
+`   Requirements = (Machine == "compute-0-1")`
 
 Restricts the job to run on machines that satisfy the requirement. On
-this example, the jobs will only be deployed to **arthur**.
+this example, the jobs will only be deployed to **compute-0-1**.
