@@ -51,23 +51,23 @@ compute-0-{0,1,2,3} (10.1.1.\*)
 
 ### Hardware
 
-compute-0-0
+compute-0-{0,1}
 
 |     |                                                                                         |
 |-----|-----------------------------------------------------------------------------------------|
 | MB  | ASUS P9X79 PRO                                                                          |
 | CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
 | RAM | 64 GB DDR3 (1333Mhz)                                                                    |
-| GPU | 2 x NVIDIA GeForce GTX TITAN X 12 GB                                                    |
+| GPU | NVIDIA GeForce GTX TITAN X 12 GB                                                        |
 
-compute-0-{1,2,3}
+compute-0-{2,3}
 
 |     |                                                                                         |
 |-----|-----------------------------------------------------------------------------------------|
 | MB  | ASUS P9X79 PRO                                                                          |
 | CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
 | RAM | 64 GB DDR3 (1333Mhz)                                                                    |
-| GPU | 2 x AMD Radeon HD 7950 3 GB                                                             |
+| GPU | NVIDIA GeForce GTX 1080 Ti 11 GB                                                        |
 
 Security
 --------
