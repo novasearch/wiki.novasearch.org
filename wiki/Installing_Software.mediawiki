@@ -130,11 +130,16 @@ Keras Documentation: [http://keras.io/]
 == Tensorflow ==
 
 This steps describe how to compile and install tensorflow from sources. The result of compiling tensorflow is a .whl package, containing everything needed to run tensorflow with python. This package can then be easily installed with pip.
-NOTE: Some Tensorflow .whl packages are already available for download. At the time of writing (12/03/2018), there isn't a package for CUDA 9.1 (which is the one installed in the cluster). Anyway, you should check first if there already a pre-compiled .whl package ([https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package here]), and if so, install from there.
+
+'''NOTE:''' Some Tensorflow .whl packages are already available for download. At the time of writing (12/03/2018), there isn't a package for CUDA 9.1 (which is the one installed in the cluster). Anyway, you should check first if there already a pre-compiled .whl package ([https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package here]), and if so, install from there.
 
 
 So let's start. We will use Anaconda Python 3.6 distribution.
 
+
+First, unload EVERYTHING and load ONLY the necessary modules:
+ $ module purge
+ $ module load cmake gnu gnutools cuda anaconda/3.6
 
 === Dependencies ===
 
@@ -166,10 +171,6 @@ Clone the tensorflow git repository (It needs to be done through SSH. HTTPS won'
  
  $ git clone git@github.com:tensorflow/tensorflow.git
  $ cd tensorflow
-
-Then unload EVERYTHING and load ONLY the necessary modules:
- $ module purge
- $ module load cmake gnu gnutools cuda anaconda/3.6
 
 Create and activate a conda environment (if you do not know what this is, check it [https://conda.io/docs/user-guide/tasks/manage-environments.html here]):
  $ conda create -n tensorflow pip python=3.6

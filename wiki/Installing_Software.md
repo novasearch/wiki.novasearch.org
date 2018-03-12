@@ -168,15 +168,21 @@ Tensorflow
 This steps describe how to compile and install tensorflow from sources.
 The result of compiling tensorflow is a .whl package, containing
 everything needed to run tensorflow with python. This package can then
-be easily installed with pip. NOTE: Some Tensorflow .whl packages are
-already available for download. At the time of writing (12/03/2018),
-there isn't a package for CUDA 9.1 (which is the one installed in the
-cluster). Anyway, you should check first if there already a pre-compiled
-.whl package
+be easily installed with pip.
+
+**NOTE:** Some Tensorflow .whl packages are already available for
+download. At the time of writing (12/03/2018), there isn't a package for
+CUDA 9.1 (which is the one installed in the cluster). Anyway, you should
+check first if there already a pre-compiled .whl package
 ([here](https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package)),
 and if so, install from there.
 
 So let's start. We will use Anaconda Python 3.6 distribution.
+
+First, unload EVERYTHING and load ONLY the necessary modules:
+
+`$ module purge`  
+`$ module load cmake gnu gnutools cuda anaconda/3.6`
 
 ### Dependencies
 
@@ -212,11 +218,6 @@ HTTPS won't work) and enter the tensorflow folder:
 
 `$ git clone git@github.com:tensorflow/tensorflow.git`  
 `$ cd tensorflow`
-
-Then unload EVERYTHING and load ONLY the necessary modules:
-
-`$ module purge`  
-`$ module load cmake gnu gnutools cuda anaconda/3.6`
 
 Create and activate a conda environment (if you do not know what this
 is, check it
