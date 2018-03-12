@@ -223,7 +223,7 @@ Create and activate a conda environment (if you do not know what this
 is, check it
 [here](https://conda.io/docs/user-guide/tasks/manage-environments.html)):
 
-`$ conda create -n tensorflow pip python=3.6`  
+`$ conda create -n tensorflow pip scipy python=3.6`  
 `$ source activate tensorflow`
 
 Now comes the tricky part. Edit line 1062 of the file

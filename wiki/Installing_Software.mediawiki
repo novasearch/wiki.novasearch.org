@@ -173,7 +173,7 @@ Clone the tensorflow git repository (It needs to be done through SSH. HTTPS won'
  $ cd tensorflow
 
 Create and activate a conda environment (if you do not know what this is, check it [https://conda.io/docs/user-guide/tasks/manage-environments.html here]):
- $ conda create -n tensorflow pip python=3.6
+ $ conda create -n tensorflow pip scipy python=3.6
  $ source activate tensorflow
 
 Now comes the tricky part. Edit line 1062 of the file tensorflow/tensorflow.bzl, and add the bold line shown below:
