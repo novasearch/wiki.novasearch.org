@@ -162,6 +162,189 @@ Keras Documentation: [6](http://keras.io/)
 
 `pip install --upgrade scikit-image --user`
 
+Tensorflow
+----------
+
+This steps describe how to compile and install tensorflow from sources.
+The result of compiling tensorflow is a .whl package, containing
+everything needed to run tensorflow with python. This package can then
+be easily installed with pip. NOTE: Some Tensorflow .whl packages are
+already available for download. At the time of writing (12/03/2018),
+there isn't a package for CUDA 9.1 (which is the one installed in the
+cluster). Anyway, you should check first if there already a pre-compiled
+.whl package
+([here](https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package)),
+and if so, install from there.
+
+So let's start. We will use Anaconda Python 3.6 distribution.
+
+### Dependencies
+
+You'll need to manually compile the bazel library. The tutorial can be
+found
+[here](https://docs.bazel.build/versions/master/install-compile-source.html).
+
+Download, unzip and compile bazel:
+
+`$ wget `[`https://github.com/bazelbuild/bazel/releases/download/0.11.1/bazel-0.11.1-dist.zip`](https://github.com/bazelbuild/bazel/releases/download/0.11.1/bazel-0.11.1-dist.zip)  
+`$ unzip bazel-0.11.1-dist.zip`  
+`$ cd bazel`  
+`$ ./compile.sh`
+
+Then add the binary to the PATH environment variable.
+
+`$ export PATH=`<bazel_binary_location>`:$PATH`
+
+Load cudnn libraries to your LD\_LIBRARY\_PATH:
+
+`$ cp /nas/Public/dsemedo/cudnn-9.1-linux-x64-v7.tgz ~/`  
+`$ tar -xvf cudnn-9.1-linux-x64-v7.tgz`  
+`$ export LD_LIBRARY_PATH=`<path_of_cudnn/>`:$LD_LIBRARY_PATH`
+
+### Compilation
+
+First, login to one of the computes (e.g. compute-0-0):
+
+`$ ssh compute-0-0`
+
+Clone the tensorflow git repository (It needs to be done through SSH.
+HTTPS won't work) and enter the tensorflow folder:
+
+`$ git clone git@github.com:tensorflow/tensorflow.git`  
+`$ cd tensorflow`
+
+Then unload EVERYTHING and load ONLY the necessary modules:
+
+`$ module purge`  
+`$ module load cmake gnu gnutools cuda anaconda/3.6`
+
+Create and activate a conda environment (if you do not know what this
+is, check it
+[here](https://conda.io/docs/user-guide/tasks/manage-environments.html)):
+
+`$ conda create -n tensorflow pip python=3.6`  
+`$ source activate tensorflow`
+
+Now comes the tricky part. Edit line 1062 of the file
+tensorflow/tensorflow.bzl, and add the bold line shown below:
+
+`ctx.action(`  
+`     `**`use_default_shell_env`` ``=`` ``True,`**  
+`     executable=ctx.executable._swig,`  
+`     arguments=args,`  
+`     inputs=list(inputs),`  
+`     outputs=outputs,`  
+`     mnemonic="PythonSwig",`  
+`     progress_message="SWIGing " + src.path)`
+
+You can open the file with nano:
+
+`nano tensorflow/tensorflow.bzl`
+
+Then press CTRL+\_ and enter the line number (1062). Add the line on
+bold and save.
+
+Create tensorflow configuration. You'll need the path of your python
+executable, from the created Anaconda env:
+
+`$ which python`
+
+Now save the python path. Run the command above on tensorflow root
+folder:
+
+`$ ./configure`
+
+You will be prompted with the following options:
+
+-   Please specify the location of python. \[Default is
+    /usr/bin/python\]:
+    **/home/dsemedo/.conda/envs/tensorflow/bin/python**
+
+`Found possible Python library paths:`  
+` /home/dsemedo/.conda/envs/tensorflow/lib/python3.6/site-packages`  
+` /home/dsemedo/repos/coco-caption`
+
+-   Please input the desired Python library path to use. Default is
+    \[/usr/lib/python2.7/dist-packages\]
+    **/home/dsemedo/.conda/envs/tensorflow/lib/python3.6/site-packages**
+
+<!-- -->
+
+-   Please specify optimization flags to use during compilation when
+    bazel option "--config=opt" is specified \[Default is
+    -march=native\]: **<ENTER>**
+-   Do you wish to use jemalloc as the malloc implementation? \[Y/n\]
+    **N**
+-   Do you wish to build TensorFlow with Google Cloud Platform support?
+    \[y/N\] **<ENTER>**
+-   Do you wish to build TensorFlow with Hadoop File System support?
+    \[y/N\] **<ENTER>**
+-   Do you wish to build TensorFlow with the XLA just-in-time compiler
+    (experimental)? \[y/N\] **<ENTER>**
+-   Do you wish to build TensorFlow with VERBS support? \[y/N\]
+    **<ENTER>**
+-   Do you wish to build TensorFlow with OpenCL support? \[y/N\]
+    **<ENTER>**
+-   Do you wish to build TensorFlow with CUDA support? \[y/N\] **Y**
+-   Do you want to use clang as CUDA compiler? \[y/N\] **<ENTER>**
+-   Please specify the Cuda SDK version you want to use, e.g. 7.0.
+    \[Leave empty to default to CUDA 9.0\]: **9.1**
+-   Please specify the location where CUDA 9.0 toolkit is installed.
+    Refer to README.md for more details. \[Default is /usr/local/cuda\]:
+    **/opt/cuda\_9.1.85/**
+-   Please specify the cuDNN version you want to use. \[Leave empty to
+    default to cuDNN 7.0\]: **<ENTER>**
+-   Please specify the location where cuDNN 7 library is installed.
+    Refer to README.md for more details. \[Default is /usr/local/cuda\]:
+    **<path_of_cudnn/>** (get it from the dependencies step)
+-   Do you wish to build TensorFlow with TensorRT support? \[y/N\]
+    **<ENTER>**
+-   Please specify a list of comma-separated Cuda compute capabilities
+    you want to build with. You can find the compute capability of your
+    device at: <https://developer.nvidia.com/cuda-gpus>. Please note
+    that each additional compute capability significantly increases your
+    build time and binary size. \[Default is: "3.5,5.2"\]: **<ENTER>**
+-   Do you want to use clang as CUDA compiler? \[y/N\]: **<ENTER>**
+-   Please specify which gcc should be used by nvcc as the host
+    compiler. \[Default is /opt/gnu/gcc/bin/gcc\]: **<ENTER>**
+-   Do you wish to build TensorFlow with MPI support? \[y/N\]
+    **<ENTER>**
+-   Please specify optimization flags to use during compilation when
+    bazel option "--config=opt" is specified \[Default is
+    -march=native\]: **<ENTER>**
+-   Would you like to interactively configure ./WORKSPACE for Android
+    builds? \[y/N\] **<ENTER>**
+
+Note that **<ENTER>** means Press Enter. Before pressing Enter, confirm
+that the default value (the upper case letter in brackets) matches the
+one here in this tutorial.
+
+Now let's create the .whl package:
+
+`$ bazel build tensorflow/contrib/lite/toco:toco`  
+`$ bazel build --config=opt --config=cuda --verbose_failures //tensorflow/tools/pip_package:build_pip_package`  
+`$ bazel-bin/tensorflow/tools/pip_package/build_pip_package tensorflow_pkg`
+
+Install tensorflow Python package with pip:
+
+`$ pip install tensorflow_pkg/tensorflow-1.6.0-cp36-cp36m-linux_x86_64.whl`
+
+And everything should be working. To validate your installation leave
+tensorflow root folder and run python:
+
+`$ cd ~/ && python`
+
+Then on the Python shell:
+
+`>>> import tensorflow as tf`  
+`>>> hello = tf.constant('Hello, TensorFlow!')`  
+`>>> sess = tf.Session()`  
+`>>> print(sess.run(hello))`
+
+It should output:
+
+`Hello, TensorFlow!`
+
 FFmpeg
 ------
 
