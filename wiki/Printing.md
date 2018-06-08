@@ -37,4 +37,4 @@ address of one:
 
 `   `[`ipp://print.ci.fct.unl.pt:631/printers/di-canon-MF411DW-piso3`](ipp://print.ci.fct.unl.pt:631/printers/di-canon-MF411DW-piso3)
 
-Select Canon -\> MF410
+Select Canon MF411dw/416dw PCL
