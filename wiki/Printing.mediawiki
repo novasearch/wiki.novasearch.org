@@ -1,9 +1,4 @@
-== How to use the new Canon MF411dw/416dw PS ==
-
-We will need the full address of a printer.
-For convenience here is the address of one:
-
-    ipp://print.ci.fct.unl.pt:631/printers/di-canon-MF411DW-piso3
+== HOWTO: MF411dw ==
 
 First download the driver at:
 http://gdlp01.c-wss.com/gds/8/0100007658/05/linux-UFRII-drv-v350-uken.tar.gz
@@ -27,3 +22,10 @@ Without this all your printing jobs will fail due to "Filter Failed" like shown 
     D [08/Jun/2018:14:50:40 +0100] [Job 95] Process is dying with \"Encountered error Broken pipe during fwrite\", exit stat 1
     D [08/Jun/2018:14:50:40 +0100] [Job 95] Cleaning up...
     D [08/Jun/2018:14:50:40 +0100] [Job 95] Killing pdf-to-ps
+
+We will need the full address of a printer.
+For convenience here is the address of one:
+
+    ipp://print.ci.fct.unl.pt:631/printers/di-canon-MF411DW-piso3
+
+Select Canon -> MF410
