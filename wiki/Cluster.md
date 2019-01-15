@@ -48,7 +48,7 @@ Computing nodes
 
 ### Network
 
-compute-0-{0,1,2,3} (10.1.1.\*)
+compute-0-{0,1,2,3} (10.1.1.\*) (10.10.1.\*)
 
 ### Hardware
 
