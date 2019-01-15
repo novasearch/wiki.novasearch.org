@@ -23,7 +23,8 @@ Network
 To access the cluster you need to log on to the SSH server on
 193.136.122.132.
 
-All the nodes are interconnected using a Gigabit switch.
+All the nodes are interconnected using a Gigabit switch (.local) and a
+10GBit switch (.fast).
 
 Master node
 -----------
