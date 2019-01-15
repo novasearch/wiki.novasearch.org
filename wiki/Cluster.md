@@ -33,8 +33,9 @@ Master node
 
 Host: 193.136.122.132
 
-Internal .local: zarco.novasearch.org (10.1.1.1) Internal .fast:
-zarco.novasearch.org (10.10.1.1)
+Internal .local: zarco.novasearch.org (10.1.1.1)
+
+Internal .fast: zarco.novasearch.org (10.10.1.1)
 
 ### Hardware
 

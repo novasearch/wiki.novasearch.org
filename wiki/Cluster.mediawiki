@@ -17,6 +17,7 @@ All the nodes are interconnected using a Gigabit switch (.local) and a 10GBit sw
 Host: 193.136.122.132
 
 Internal .local: zarco.novasearch.org (10.1.1.1)
+
 Internal .fast:  zarco.novasearch.org (10.10.1.1)
 
 === Hardware ===
