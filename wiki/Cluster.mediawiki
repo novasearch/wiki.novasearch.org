@@ -18,6 +18,8 @@ Host: 193.136.122.132
 
 Internal: zarco.novasearch.org (10.1.1.1)
 
+          zarco.novasearch.org (10.10.1.1)
+
 === Hardware ===
 
 {| class="wikitable"
