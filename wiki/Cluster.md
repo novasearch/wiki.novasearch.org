@@ -52,23 +52,45 @@ compute-0-{0,1,2,3} (10.1.1.\*) (10.10.1.\*)
 
 ### Hardware
 
-compute-0-{0,1}
+compute-0-0
 
-|     |                                                                                         |
-|-----|-----------------------------------------------------------------------------------------|
-| MB  | ASUS P9X79 PRO                                                                          |
-| CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
-| RAM | 64 GB DDR3 (1333Mhz)                                                                    |
-| GPU | NVIDIA GeForce GTX TITAN X 12 GB                                                        |
+|       |                                                                                         |
+|-------|-----------------------------------------------------------------------------------------|
+| MB    | ASUS P9X79 PRO                                                                          |
+| CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
+| RAM   | 64 GB DDR3 (1333Mhz)                                                                    |
+| GPU 0 | NVIDIA GeForce GTX 1080 Ti 11GB                                                         |
+| GPU 1 | NVIDIA GeForce GTX TITAN X 12GB                                                         |
 
-compute-0-{2,3}
+compute-0-1
 
-|     |                                                                                         |
-|-----|-----------------------------------------------------------------------------------------|
-| MB  | ASUS P9X79 PRO                                                                          |
-| CPU | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
-| RAM | 64 GB DDR3 (1333Mhz)                                                                    |
-| GPU | NVIDIA GeForce GTX 1080 Ti 11 GB                                                        |
+|       |                                                                                         |
+|-------|-----------------------------------------------------------------------------------------|
+| MB    | ASUS P9X79 PRO                                                                          |
+| CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
+| RAM   | 64 GB DDR3 (1333Mhz)                                                                    |
+| GPU 0 | NVIDIA GeForce GTX 1080 Ti 11GB                                                         |
+| GPU 1 | NVIDIA GeForce TITAN Xp 12GB                                                            |
+
+compute-0-2
+
+|       |                                                                                         |
+|-------|-----------------------------------------------------------------------------------------|
+| MB    | ASUS P9X79 PRO                                                                          |
+| CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
+| RAM   | 64 GB DDR3 (1333Mhz)                                                                    |
+| GPU 0 | NVIDIA GeForce GTX 1080 Ti 11GB                                                         |
+| GPU 1 | NVIDIA GeForce TITAN Xp 12GB                                                            |
+
+compute-0-3
+
+|       |                                                                                         |
+|-------|-----------------------------------------------------------------------------------------|
+| MB    | ASUS P9X79 PRO                                                                          |
+| CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
+| RAM   | 64 GB DDR3 (1333Mhz)                                                                    |
+| GPU 0 | NVIDIA GeForce GTX 1080 Ti 11GB                                                         |
+| GPU 1 | NVIDIA GeForce GTX TITAN X 12GB                                                         |
 
 Security
 --------
