@@ -15,7 +15,7 @@ or tasks.
 Software
 --------
 
-Rocks Cluster Distribution 6.2 (CentOS 6.7)
+Rocks Cluster Distribution 6.2 (CentOS 6.10)
 
 Network
 -------
