@@ -58,15 +58,15 @@ Usage
 
 $ vi sim.submit
 
+`   Universe = vanilla`  
 `   Executable = sim`  
-`   Input = sim.in`  
 `   Output = sim.out`  
 `   Log = sim.log`  
 `   Error = sim.err`  
-`   getenv = True`  
+`   GetEnv = True`  
 `   Queue`
 
-Do not forget "getenv" to load your environment!
+Do not forget "GetEnv" to load your environment!
 
 ### Submit the job
 
