@@ -58,13 +58,12 @@ Usage
 
 $ vi sim.submit
 
-`   getenv = True`  
 `   Executable = sim`  
-`   getenv = True`  
 `   Input = sim.in`  
 `   Output = sim.out`  
 `   Log = sim.log`  
 `   Error = sim.err`  
+`   getenv = True`  
 `   Queue`
 
 Do not forget "getenv" to load your environment!
