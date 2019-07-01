@@ -4,10 +4,15 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  toc_levels: 2..3
 plugins:
   - jekyll-redirect-from
 whitelist:
   - jekyll-redirect-from
+params:
+  themeColor: "theme-base-0d"
+  h_min: 2
+  h_max: 3
 
 # Setup
 title: NOVA Search
@@ -23,5 +28,3 @@ author:
 version: "1.0"
 github:
   repo: https://github.com/novasearch/novasearch.github.io
-params:
-  themeColor: "theme-base-09"
