@@ -11,18 +11,13 @@ redirect_from:
  - wiki/Biopython
 ---
 
-**Welcome to NOVA Search wiki.**
-
-Getting started
----------------
-
-### My paper got accepted now what?
+## Accepted Papers
 
 -   [Funding](/wiki/Funding "wikilink")
 -   [Acknowledgements](/wiki/Acknowledgements "wikilink")
 -   [Reimbursement](/wiki/Reimbursement "wikilink")
 
-### Cluster
+## Cluster
 
 -   [Cluster](/wiki/Cluster "wikilink")
 
@@ -42,7 +37,7 @@ Getting started
 
 -   [Installing Software](/wiki/Installing_Software "wikilink")
 
-### Services and frameworks
+## Services and frameworks
 
 -   [Condor](/wiki/Condor "wikilink")
 
@@ -50,15 +45,15 @@ Getting started
 
 -   [Search Services](/wiki/Search_Services "wikilink")
 
-### Hardware general info
+## Hardware general info
 
 -   [Lenovo ThinkPad X230](/wiki/Lenovo_ThinkPad_X230 "wikilink")
 
-### OS general info
+## OS general info
 
 -   [Ubuntu 14.04 LTS](/wiki/Ubuntu_14.04_LTS "wikilink")
 
-### COGNITUS Components
+## COGNITUS Components
 
 -   [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
 
