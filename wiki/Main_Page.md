@@ -11,10 +11,7 @@ redirect_from:
  - wiki/Biopython
 ---
 
-**Welcome to Nova Search wiki.**
-
-Consult the \[//meta.wikimedia.org/wiki/Help:Contents User's Guide\] for
-information on using the wiki software.
+**Welcome to NOVA Search wiki.**
 
 Getting started
 ---------------
