@@ -1,7 +1,14 @@
 ---
 title: Main Page
-permalink: wiki/Main_Page/
+permalink: /
 layout: wiki
+redirect_from:
+ - wiki/
+ - wiki/Website
+ - wiki/Website_HTML
+ - wiki/Main_Page
+ - wiki/Main
+ - wiki/Biopython
 ---
 
 **Welcome to Nova Search wiki.**
