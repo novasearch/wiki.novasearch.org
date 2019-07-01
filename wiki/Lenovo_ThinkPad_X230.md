@@ -9,7 +9,7 @@ users. It is the standard option available in Lenovo's X Series under
 12-13 inches display category.
 
 <figure>
-<img src="ThinkPadX230.png" title="ThinkPad X230" width="300" alt="" /><figcaption>ThinkPad X230</figcaption>
+<img src="/wiki/ThinkPadX230.png" title="ThinkPad X230" width="300" alt="" /><figcaption>ThinkPad X230</figcaption>
 </figure>
 
 ### Hardware

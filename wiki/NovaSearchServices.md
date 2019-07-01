@@ -5,7 +5,7 @@ layout: wiki
 ---
 
 <figure>
-<img src="NSS.png" title="Framework diagram" width="500" alt="" /><figcaption>Framework diagram</figcaption>
+<img src="/wiki/NSS.png" title="Framework diagram" width="500" alt="" /><figcaption>Framework diagram</figcaption>
 </figure>
 
 Overview

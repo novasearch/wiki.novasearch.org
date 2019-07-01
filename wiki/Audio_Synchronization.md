@@ -42,5 +42,5 @@ and a set of user-recordings.
 Number of songs: 10 Number of samples: 90
 
 <figure>
-<img src="dataset_info.png" title="Dataset information." width="500" alt="" /><figcaption>Dataset information.</figcaption>
+<img src="/wiki/dataset_info.png" title="Dataset information." width="500" alt="" /><figcaption>Dataset information.</figcaption>
 </figure>
