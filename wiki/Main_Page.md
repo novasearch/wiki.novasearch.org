@@ -20,29 +20,14 @@ redirect_from:
 ## Cluster
 
 -   [Cluster](/wiki/Cluster "wikilink")
-
-<!-- -->
-
 -   [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
-
-<!-- -->
-
 -   [Sessions](/wiki/Sessions "wikilink")
-
-<!-- -->
-
 -   [NFS](/wiki/NFS "wikilink")
-
-<!-- -->
-
 -   [Installing Software](/wiki/Installing_Software "wikilink")
 
 ## Services and frameworks
 
 -   [Condor](/wiki/Condor "wikilink")
-
-<!-- -->
-
 -   [Search Services](/wiki/Search_Services "wikilink")
 
 ## Hardware general info
@@ -56,24 +41,9 @@ redirect_from:
 ## COGNITUS Components
 
 -   [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
-
-<!-- -->
-
 -   [Image Annotation](/wiki/Image_Annotation "wikilink")
-
-<!-- -->
-
 -   [Information Extraction](/wiki/Information_Extraction "wikilink")
-
-<!-- -->
-
 -   [Visual Spam Filtering](/wiki/Visual_Spam_Filtering "wikilink")
-
-<!-- -->
-
 -   [Visual Near-duplicate
     Detection](/wiki/Visual_Near-duplicate_Detection "wikilink")
-
-<!-- -->
-
 -   [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
