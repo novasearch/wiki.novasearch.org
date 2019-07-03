@@ -10,5 +10,7 @@ Users
 ### Create a user
 
 $ adduser USER
+
 $ passwd USER
+
 $ rocks sync users
