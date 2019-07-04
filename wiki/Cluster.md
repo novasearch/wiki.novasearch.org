@@ -39,7 +39,6 @@ Internal .fast: zarco.novasearch.org (10.10.1.1)
 
 ### Hardware
 
-|     |                                                                                    |
 |-----|------------------------------------------------------------------------------------|
 | MB  | Supermicro X9 Series                                                               |
 | CPU | Intel Xeon E5-2620v2 CPU @ (6 cores, 12 threads, 15M cache 2.10GHz, up to 2.6 GHz) |
@@ -56,7 +55,6 @@ compute-0-{0,1,2,3} (10.1.1.\*) (10.10.1.\*)
 
 compute-0-0
 
-|       |                                                                                         |
 |-------|-----------------------------------------------------------------------------------------|
 | MB    | ASUS P9X79 PRO                                                                          |
 | CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
@@ -66,7 +64,6 @@ compute-0-0
 
 compute-0-1
 
-|       |                                                                                         |
 |-------|-----------------------------------------------------------------------------------------|
 | MB    | ASUS P9X79 PRO                                                                          |
 | CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
@@ -76,7 +73,6 @@ compute-0-1
 
 compute-0-2
 
-|       |                                                                                         |
 |-------|-----------------------------------------------------------------------------------------|
 | MB    | ASUS P9X79 PRO                                                                          |
 | CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
@@ -86,7 +82,6 @@ compute-0-2
 
 compute-0-3
 
-|       |                                                                                         |
 |-------|-----------------------------------------------------------------------------------------|
 | MB    | ASUS P9X79 PRO                                                                          |
 | CPU   | Intel Core i7-3930K Processor (6 cores, 12 threads, 12M cache, 3.2 GHz, up to 3.80 GHz) |
