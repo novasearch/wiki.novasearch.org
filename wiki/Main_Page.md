@@ -21,7 +21,7 @@ redirect_from:
 
 -   [Cluster](/wiki/Cluster "wikilink")
 -   [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
--   [Cluster/FAQ](/wiki/Cluster/Admin "wikilink")
+-   [Cluster/Admin](/wiki/Cluster/Admin "wikilink")
 -   [Sessions](/wiki/Sessions "wikilink")
 -   [NFS](/wiki/NFS "wikilink")
 -   [Installing Software](/wiki/Installing_Software "wikilink")
