@@ -7,7 +7,8 @@ layout: wiki
 Users
 -----
 
-### How to create a user?
+
+### Add a new user
 
 📖 **Important: Make sure /state/partition1/usr0 is mounted.**
 

@@ -1,0 +1,12 @@
+{
+    "default": true,
+    "MD003": { "style": "setext_with_atx" },
+    "MD007": { "indent": 4 },
+    "MD012": { "maximum": 2},
+    "MD013": false,
+    "MD022": { "lines_above": 2, "lines_below": 1},
+    "MD024": { "siblings_only": true},
+    "MD025": false,
+    "MD033": { "allowed_elements": ["br", "sup"]},
+    "no-hard-tabs": false
+}
