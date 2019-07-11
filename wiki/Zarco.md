@@ -1,7 +1,9 @@
 ---
-title: Cluster
-permalink: wiki/Cluster/
+title: Zarco
+permalink: wiki/Zarco/
 layout: wiki
+redirect_from:
+ - wiki/Cluster
 ---
 
 We are very fortunate to have a powerful computing cluster to aid in

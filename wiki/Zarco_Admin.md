@@ -1,7 +1,9 @@
 ---
-title: Cluster/Admin
-permalink: wiki/Cluster/Admin/
+title: Zarco/Admin
+permalink: wiki/Zarco/Admin/
 layout: wiki
+redirect_from:
+ - wiki/Cluster/Admin
 ---
 
 Users
