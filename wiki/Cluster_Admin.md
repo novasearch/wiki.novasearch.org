@@ -9,10 +9,10 @@ Users
 
 ### How to create a user?
 
-`Important: Make sure /state/partition1/usr0 is mounted`
+📖 **Important: Make sure /state/partition1/usr0 is mounted.**
 
-`$ adduser USER`
-
-`$ passwd USER`
-
-`$ rocks sync users`
+```bash
+adduser USER
+passwd USER
+rocks sync users
+```
