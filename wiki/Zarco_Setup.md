@@ -28,6 +28,14 @@ prepend-path PATH /share/apps/anaconda3.x/bin
 #prepend-path LIBPATH /share/apps/anaconda3.x/lib
 ```
 
+### JupyterHub Configuration
+
+📖 **Repository: <https://github.com/nscr/zarco-jupyterhub>**
+
+```bash
+git clone git@github.com:nscr/zarco-jupyterhub.git
+```
+
 NAS
 ---
 
