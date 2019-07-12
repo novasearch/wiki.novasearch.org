@@ -57,8 +57,8 @@ Maintenance CentOS 6.x
 ### Keeping the head node updated
 
 ```bash
-yum check-update --enablerepo=base,updates
-yum update --enablerepo=base,updates
+yum check-update --enablerepo=base,updates,epel,nodesource-el6,WANdisco-git,WANdisco-svn
+yum update --enablerepo=base,updates,epel,nodesource-el6,WANdisco-git,WANdisco-svn
 ```
 
 ### Keeping computing nodes updated
@@ -74,8 +74,8 @@ yum update --enablerepo=base,updates
 If everything is working proceed to the other nodes:
 
 ```bash
-rocks run host 'hostname && yum check-update --enablerepo=base,updates'
-rocks run host 'hostname && yum update --enablerepo=base,updates'
+rocks run host 'hostname && yum check-update --enablerepo=base,updates,epel,nodesource-el6,WANdisco-git,WANdisco-svn'
+rocks run host 'hostname && yum update --enablerepo=base,updates,epel,nodesource-el6,WANdisco-git,WANdisco-svn'
 ```
 
 #### Reboot if needed
