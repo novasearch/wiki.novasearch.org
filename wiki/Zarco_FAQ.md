@@ -6,6 +6,47 @@ redirect_from:
  - wiki/Cluster/FAQ
 ---
 
+Software
+--------
+
+GNU Compilers 7.2.0
+
+GNU Tools 2.69
+
+cmake 3.12.1
+
+ffmpeg-static 4.1.4
+
+OpenCV 3.2.0
+
+CoreNLP 2018-10-05
+
+trec_eval 9.0.6
+
+Check for the availability of other software with `module avail`.
+
+JupyterHub
+----------
+
+### Setup your own conda environment
+
+```bash
+conda env create -n myenv python=3.7 ipykernel
+source activate myenv
+```
+
+Install the packages you need
+
+```bash
+conda install numpy scipy scikit-learn
+```
+
+Make it available in JupyterHub
+
+```bash
+python -m ipykernel install --user
+```
+
 Working storage
 ---------------
 
