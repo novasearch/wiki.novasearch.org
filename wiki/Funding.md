@@ -11,7 +11,7 @@ Immediately after an article is accepted please make the necessary travel arrang
 
 1. Major conferences offer travel grants for students. Apply.
 2. The CS department might be offering travel grants. Apply.
-3. If all else fails the it will be financed using the group's funding.
+3. If all else fails, it will be financed using the group's funding.
 
 Conference registration
 -----------------------
