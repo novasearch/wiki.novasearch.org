@@ -33,7 +33,22 @@ prepend-path PATH /share/apps/anaconda3.x/bin
 📖 **Repository: <https://github.com/nscr/zarco-jupyterhub>**
 
 ```bash
-git clone git@github.com:nscr/zarco-jupyterhub.git
+git clone git@github.com:nscr/zarco-jupyterhub.git /etc/jupyterhub
+cd /etc/jupyterhub
+make install
+```
+
+The last command installs the init script for supervisord. You still need to bring the service up yourself.
+
+```bash
+supervisorctl reread
+supervisorctl update
+```
+
+Check the status of the service with
+
+```bash
+supervisorctl status
 ```
 
 NAS
