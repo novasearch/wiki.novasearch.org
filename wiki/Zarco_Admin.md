@@ -20,6 +20,18 @@ passwd USER
 rocks sync users
 ```
 
+Certain things are barred to users unless they are part of the `zarco-users` group.
+
+```bash
+usermod -a -G zarco-users USER
+```
+
+Admins need to be part of the `admin` group as well.
+
+```bash
+usermod -a -G admin USER
+```
+
 NVIDIA and CUDA Drivers
 -----------------------
 

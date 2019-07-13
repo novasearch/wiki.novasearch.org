@@ -32,6 +32,14 @@ prepend-path PATH /share/apps/anaconda3.x/bin
 
 📖 **Repository: <https://github.com/nscr/zarco-jupyterhub>**
 
+Install the following dependencies to the desired base environment:
+
+```bash
+source /share/apps/anaconda3.6/bin/activate
+pip install git+https://github.com/jupyterhub/wrapspawner
+pip install git+https://github.com/jupyterhub/batchpawner
+```
+
 ```bash
 git clone git@github.com:nscr/zarco-jupyterhub.git /etc/jupyterhub
 cd /etc/jupyterhub
