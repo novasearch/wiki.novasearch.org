@@ -4,5 +4,12 @@ permalink: wiki/Reimbursement/
 layout: wiki
 ---
 
-Devem pedir factura/invoice em nome da NOVA.ID (PT513010661) ou da
-FCT/UNL (PT501559094) com o tax number correcto.
+International invoices should mention one of:
+
+- NOVA.ID.FCT PT513010661
+- FCT/UNL PT501559094
+
+Portuguese invoices should mention one of:
+
+- NOVA.ID.FCT 513010661
+- FCT/UNL 501559094

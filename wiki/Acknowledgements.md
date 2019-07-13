@@ -4,7 +4,7 @@ permalink: wiki/Acknowledgements/
 layout: wiki
 ---
 
-A camera ready deve fazer acknowledgements semelhantes a estes:
+The camera-ready version should make the necessary acknowledgments:
 
 -   We gratefully acknowledge the support of NVIDIA Corporation with the
     donation of the Titan X GPU used for this research.
@@ -14,17 +14,14 @@ A camera ready deve fazer acknowledgements semelhantes a estes:
     project BioVisualSpeech, reference CMUP-ERI/TIC/0033/2014 and by the
     project NOVA LINCS Ref. UID/CEC/04516/2013.
 -   This work has been partially funded by the CMU Portugal research
-    project GoLocal Ref. CMUP-ERI/TIC/0033/2014, by the H2020 ICT
-    project COGNITUS with the grant agreement No 687605 and by the
+    project GoLocal Ref. CMUP-ERI/TIC/0033/2014 and by the
     project NOVA LINCS Ref. UID/CEC/04516/2013.
--   À vossa bolsa de doutoramento se for o caso.
+-   To your own scholarship if appropriate.
 
-An example for acmart template:
+Here is an example for the acmart template:
 
 -   This work has been partially funded by the \\grantsponsor{CMUP}{CMU
     Portugal}{} research project GoLocal Ref.
-    \\grantnum{CMUP}{CMUP-ERI/TIC/0033/2014}, by the \\grantsponsor{EU
-    H2020}{H2020 ICT}{} project COGNITUS with the grant agreement
-    n\\textsuperscript{o} \\grantnum{EU H2020}{687605} and by the
+    \\grantnum{CMUP}{CMUP-ERI/TIC/0033/2014} and by the
     \\grantsponsor{FCT}{FCT}{} project NOVA LINCS Ref.
     \\grantnum{FCT}{UID/CEC/04516/2013}.
