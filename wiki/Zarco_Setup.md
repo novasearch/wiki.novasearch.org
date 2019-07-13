@@ -62,6 +62,33 @@ supervisorctl status
 NAS
 ---
 
+### Automounts
+
+Rocks installation sets up `/share` and `/home` automount configurations. While `share` is still served by the headnode's NFS server the homedirs `/home` are served by the NAS appliance instead.
+
+To setup the extra locations served by the external NAS appliance you can create a separate automount configuration and mount them under `/nas`.
+
+In `/etc/auto.master` the following line was appended:
+
+```
+/nas   /etc/auto.nas   --timeout=1200
+```
+
+In  `/etc/auto.nas` setup the mounts that are needed:
+
+```
+Public  nas-0-0.fast:/Public
+Datasets        nas-0-0.fast:/Datasets
+wamse   nas-0-0.fast:/wamse
+pmc     nas-0-0.fast:/pmc
+```
+
+Finally restart the automount daemon:
+
+```
+service autofs restart
+```
+
 ### Adding the NAS as an appliance in Rocks
 
 ```bash

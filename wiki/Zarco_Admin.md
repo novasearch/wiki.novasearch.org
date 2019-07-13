@@ -17,7 +17,6 @@ Users
 ```bash
 adduser USER
 passwd USER
-rocks sync users
 ```
 
 Certain things are barred to users unless they are part of the `zarco-users` group.
@@ -31,6 +30,14 @@ Admins need to be part of the `admin` group as well.
 ```bash
 usermod -a -G admin USER
 ```
+
+Finally you can make it official to the whole cluster by issuing
+
+```bash
+rocks sync users
+```
+
+The `rocks sync users` also takes care of configuring the `automount` mount points for the user home. It does not know about the 10GbE network `.fast` so the NFS mounts for homedirs will go through the FastEthernet network `.local` initially. You can edit `/etc/auto.home` and change to the `.fast` network. Don't forget to then run `rocks sync users` again.
 
 NVIDIA and CUDA Drivers
 -----------------------
