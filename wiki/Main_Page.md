@@ -11,41 +11,39 @@ redirect_from:
  - wiki/Biopython
 ---
 
-## Accepted Papers
+Accepted Papers
+---------------
 
--   [Funding](/wiki/Funding "wikilink")
--   [Acknowledgements](/wiki/Acknowledgements "wikilink")
--   [Reimbursement](/wiki/Reimbursement "wikilink")
+- [Funding](/wiki/Funding "wikilink")
+- [Acknowledgements](/wiki/Acknowledgements "wikilink")
+- [Reimbursement](/wiki/Reimbursement "wikilink")
 
-## Cluster
+Cluster
+-------
 
--   [Cluster](/wiki/Cluster "wikilink")
--   [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
--   [Cluster/Admin](/wiki/Cluster/Admin "wikilink")
--   [Cluster/Setup](/wiki/Cluster/Setup "wikilink")
--   [Sessions](/wiki/Sessions "wikilink")
--   [NFS](/wiki/NFS "wikilink")
--   [Installing Software](/wiki/Installing_Software "wikilink")
+- [Cluster](/wiki/Cluster "wikilink")
+- [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
+- [Cluster/Admin](/wiki/Cluster/Admin "wikilink")
+- [Cluster/Setup](/wiki/Cluster/Setup "wikilink")
+- [Installing Software](/wiki/Installing_Software "wikilink")
+- [Condor](/wiki/Condor "wikilink")
 
-## Services and frameworks
+OS general info
+---------------
 
--   [Condor](/wiki/Condor "wikilink")
--   [Search Services](/wiki/Search_Services "wikilink")
+- [Ubuntu 18.04 LTS](/wiki/Ubuntu_18.04_LTS "wikilink")
 
-## Hardware general info
+Services and frameworks
+-----------------------
 
--   [Lenovo ThinkPad X230](/wiki/Lenovo_ThinkPad_X230 "wikilink")
+- [Search Services](/wiki/Search_Services "wikilink")
 
-## OS general info
+COGNITUS Components
+-------------------
 
--   [Ubuntu 14.04 LTS](/wiki/Ubuntu_14.04_LTS "wikilink")
-
-## COGNITUS Components
-
--   [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
--   [Image Annotation](/wiki/Image_Annotation "wikilink")
--   [Information Extraction](/wiki/Information_Extraction "wikilink")
--   [Visual Spam Filtering](/wiki/Visual_Spam_Filtering "wikilink")
--   [Visual Near-duplicate
-    Detection](/wiki/Visual_Near-duplicate_Detection "wikilink")
--   [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
+- [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
+- [Image Annotation](/wiki/Image_Annotation "wikilink")
+- [Information Extraction](/wiki/Information_Extraction "wikilink")
+- [Visual Spam Filtering](/wiki/Visual_Spam_Filtering "wikilink")
+- [Visual Near-duplicate Detection](/wiki/Visual_Near-duplicate_Detection "wikilink")
+- [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
