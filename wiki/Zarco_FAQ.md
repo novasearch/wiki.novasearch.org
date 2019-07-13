@@ -9,6 +9,8 @@ redirect_from:
 Software
 --------
 
+OpenJDK 1.8
+
 GNU Compilers 7.2.0
 
 GNU Tools 2.69
