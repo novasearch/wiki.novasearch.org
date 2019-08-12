@@ -27,6 +27,42 @@ trec_eval 9.0.6
 
 Check for the availability of other software with `module avail`.
 
+GPUs
+----
+
+### Why is Condor required to get GPUs/CUDA acceleration?
+
+In essence, Condor allows sharing the GPU resources between all the users
+and, as configured, is the only sanctioned way to use GPU acceleration (CUDA)
+(i.e., processes launched directly via the command-line run on the CPU only).
+
+We know it might take you a little bit of time to get acquainted with Condor,
+however after a bit of trial and error you will appreciate it.
+Here is a simple template for `condor_submit` to help you get started.
+
+📖 **Important: Note the use of request_GPUs = 1.**
+
+```bash
+Universe  =  vanilla
+GetEnv = True
+
+Remote_Initialdir = /home/user/workspace
+Executable = bin/myprogram
+Arguments = -l 0.025 -dummy 0
+
+RequestMemory = 2048
+RequestCpus = 1
+request_GPUs = 1
+
+Output =  /home/user/myprogram/myprogram.out
+Error =  /home/user/myprogram/myprogram.err
+
+Queue
+```
+
+If the job is [H]eld or [I]dle when you check `condor_q`
+use `condor_q -analyze JOB_ID` to get debug information.
+
 JupyterHub
 ----------
 
