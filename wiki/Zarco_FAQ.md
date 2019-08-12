@@ -54,8 +54,8 @@ RequestMemory = 2048
 RequestCpus = 1
 request_GPUs = 1
 
-Output =  /home/user/myprogram/myprogram.out
-Error =  /home/user/myprogram/myprogram.err
+Output =  /home/user/workspace/myprogram.out
+Error =  /home/user/workspace/myprogram.err
 
 Queue
 ```
