@@ -12,7 +12,11 @@ Users
 
 ### Add a new user
 
-📖 **Important: Make sure /state/partition1/usr0 is mounted.**
+📖 **Important: Make sure /state/partition1/home is mounted before.**
+
+```bash
+mount nas-0-0.fast:/usr0 /state/partition1/home
+```
 
 ```bash
 adduser USER
