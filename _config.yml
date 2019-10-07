@@ -17,14 +17,14 @@ params:
 # Setup
 title: NOVA Search
 tagline: Web and Media Search Lab
-url: http://novasearch.github.io
+url: http://wiki.novasearch.org
 baseurl: /
 
 author:
   name: NOVA Search Contributors
-  url: http://novasearch.github.io
+  url: http://wiki.novasearch.org
 
 # Custom variables for Hyde theme
 version: "1.0"
 github:
-  repo: https://github.com/novasearch/novasearch.github.io
+  repo: https://github.com/novasearch/wiki.novasearch.org
