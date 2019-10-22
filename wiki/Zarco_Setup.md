@@ -12,20 +12,20 @@ Anaconda Setup
 
 ### Install latest Anaconda distribution with Python 3.x
 
-Set install directory to /share/apps/anaconda3.x
+Set install directory to /share/apps/anaconda3/20XX.XX/
 
 ```bash
 bash Anaconda3-xxxx.xx-Linux-x86_64.sh
 ```
 
-Add new modulefile /share/apps/modulefiles/anaconda/3.x
+Add new modulefile /share/apps/modulefiles/anaconda3/20XX.XX/
 
 ```bash
 #%Module1.0
-setenv PYTHONROOT /share/apps/anaconda3.x
-prepend-path PATH /share/apps/anaconda3.x/bin
-#prepend-path LD_LIBRARY_PATH /share/apps/anaconda3.x/lib
-#prepend-path LIBPATH /share/apps/anaconda3.x/lib
+setenv PYTHONROOT /share/apps/anaconda3/20XX.XX/
+prepend-path PATH /share/apps/anaconda3/20XX.XX/bin
+#prepend-path LD_LIBRARY_PATH /share/apps/anaconda3/20XX.XX/lib
+#prepend-path LIBPATH /share/apps/anaconda3/20XX.XX/lib
 ```
 
 ### JupyterHub Configuration
@@ -35,7 +35,8 @@ prepend-path PATH /share/apps/anaconda3.x/bin
 Install the following dependencies to the desired base environment:
 
 ```bash
-source /share/apps/anaconda3.6/bin/activate
+source /share/apps/anaconda3/20XX/XX/bin/activate
+conda install jupyterhub
 pip install git+https://github.com/jupyterhub/wrapspawner
 pip install git+https://github.com/jupyterhub/batchpawner
 ```
