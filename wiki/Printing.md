@@ -8,7 +8,7 @@ HOWTO: MF411dw
 --------------
 
 First, take a leap of faith and download the driver at:
-<http://files.canon-europe.com/files/soft45505/Driver/CQue_v4.0.0_Linux_64_EN.deb>
+<https://files.canon-europe.com/files/soft45505/Driver/CQue_v4.0.5_Linux_64_EN.deb>
 
 We need to create the following link so the filter can be found on the
 path!
