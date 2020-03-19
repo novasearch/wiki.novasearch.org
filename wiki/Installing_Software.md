@@ -1,5 +1,5 @@
 ---
-title: Installing Software
+title: Software - Libraries and Frameworks
 permalink: wiki/Installing_Software/
 layout: wiki
 ---
@@ -85,9 +85,9 @@ After this, Scipy installs correctly and MKL is used in Numpy.
 
 `pip install --upgrade scikit-learn --user`
 
-### Deep Learning Packages
+### Deep Learning Frameworks
 
-#### Theano
+#### PyTorch
 
 Theano is a Python library that allows the definition, optimization, and
 evaluation of mathematical expressions involving multi-dimensional
@@ -104,11 +104,7 @@ flags must be set:
 
   
   
-<code>THEANO\_FLAGS='floatX=float32,device=gpu0' python
-
-<script>
-
-.py</code>
+<code>THEANO\_FLAGS='floatX=float32,device=gpu0' python.py</code>
 
 -   Alternatively we can create a config file:
 
