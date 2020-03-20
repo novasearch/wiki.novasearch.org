@@ -1,6 +1,6 @@
 ---
 title: Software - Libraries and Frameworks
-permalink: wiki/Installing_Software/
+permalink: wiki/Software_Libraries/
 layout: wiki
 ---
 
