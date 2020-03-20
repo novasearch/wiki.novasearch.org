@@ -73,10 +73,14 @@ Let's say you have an Anaconda environment called `my_env`. To run things on Jup
 
     > conda install jupyter ipykernel
     > python -m ipykernel install --name <some_name> --user
+
+
 This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
         
     /home/<username>/.local/share/jupyter/kernels/some_name/kernel.json
+
 This file contains the following information:
+
 ```json
 {
  "argv": [
@@ -90,18 +94,23 @@ This file contains the following information:
  "language": "python",
 }
 ```
+
 As you can see, the first element of the `argv` list is the python executable. We just need to change this, to run Python with the correct GLIBC. To do this, create a bash script in the same path as the python executable:
     
     > touch pythont.sh
     > chmod +x pythont.sh      // Give it permissions to execute  
+
 Now edit the `pythont.sh` file and paste the following:
+
 ```bash
 #!/bin/sh
 LD_PRELOAD=/home/<username>/<glib_path>/lib/libc.so.6 /home/<username>/.conda/envs/some_name/bin/python "$@"
 ```
+
 This script will call the same Python executable, but it will Pre-load the correct GLIBC before calling the executable. 
 
 Finally, we just have to update the kernel spec. Edit the `kernel.json` file and change the line of the Python executable:
+
 ```json
 {
  "argv": [
@@ -115,6 +124,7 @@ Finally, we just have to update the kernel spec. Edit the `kernel.json` file and
  "language": "python",
 }
 ```
+
 Note that it will execute the script that we created instead of the Python executable.
 
 
