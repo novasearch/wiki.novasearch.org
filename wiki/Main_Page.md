@@ -25,7 +25,7 @@ Cluster
 - [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
 - [Cluster/Admin](/wiki/Cluster/Admin "wikilink")
 - [Cluster/Setup](/wiki/Cluster/Setup "wikilink")
-- [Software - Libraries and Frameworks](/wiki/Installing_Software "wikilink")
+- [Software - Libraries and Frameworks](/wiki/Software_Libraries "wikilink")
 - [Condor](/wiki/Condor "wikilink")
 
 OS general info
