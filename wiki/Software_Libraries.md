@@ -1,3 +1,4 @@
+
 ---
 title: Software - Libraries and Frameworks
 permalink: wiki/Software_Libraries/
@@ -31,17 +32,17 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 
 First, install PyTorch dependencies:
 
-`> conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi`
+  $ conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
 
 
 Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
 For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
 
-    > conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+    $ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
 Now comes the first tricky part (yes there are two :/). The cluster is running on an old OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components in Anaconda. To confirm this, open a python shell and import PyTorch:
 
-    > conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+    $ python -c "import torch; print(torch.__version__)"
 
 You will get the following error:
 
@@ -51,11 +52,11 @@ You will get the following error:
 
 Let's fix this. We need to download Glibc 2.14 and compile it (Yeah I know ...). First get the source [here](http://gnu.askapache.com/libc/glibc-2.14.tar.gz) and extract it:
 
-    > tar -xvf glibc-2.14.tar.gz
-    > cd glibc-2.14 && mkdir build && cd build
-    > module unload gnu          // (bear with me)
-    > ../configure --prefix <installation_path>
-    > make -j 4 install
+    $ tar -xvf glibc-2.14.tar.gz
+    $ cd glibc-2.14 && mkdir build && cd build
+    $ module unload gnu          // (bear with me)
+    $ ../configure --prefix <installation_path>
+    $ make -j 4 install
 
 
 The compiled library files (*.so and .a) should now be installed in the folder \<installation_path\>
@@ -68,7 +69,7 @@ Now that we've compiled the glibc, let's create an alias for python and store it
 
 Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
 
-    > pythont -c "import torch; print(torch.__version__)"
+    $ pythont -c "import torch; print(torch.__version__)"
     1.4.0
 
 ##### PyTorch and JupyterHub
@@ -76,8 +77,8 @@ Now for the second and last tricky part. The alias we created doesn't work with 
 
 Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
 
-    > conda install jupyter ipykernel
-    > python -m ipykernel install --name <some_name> --user
+    $ conda install jupyter ipykernel
+    $ python -m ipykernel install --name <some_name> --user
 
 
 This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
@@ -102,8 +103,8 @@ This file contains the following information:
 
 As you can see, the first element of the `argv` list is the python executable. We just need to change this, to run Python with the correct GLIBC. To do this, create a bash script in the same path as the python executable:
     
-    > touch pythont.sh
-    > chmod +x pythont.sh      // Give it permissions to execute  
+    $ touch pythont.sh
+    $ chmod +x pythont.sh      // Give it permissions to execute  
 
 Now edit the `pythont.sh` file and paste the following:
 
@@ -150,47 +151,39 @@ recognized (e.g. --enable-pic) just remove it from the command.
 
 Configure command to compile YASM:
 
-`$ ./configure --prefix="$HOME/`<build folder>`" --bindir="$HOME/`<bins folder>`" --enable-pic --enable-shared`
+  $./configure --prefix="$HOME/`<build folder>`" --bindir="$HOME/`<bins folder>`" --enable-pic --enable-shared
 
 Configure command to compile x264:
 
-`$ PATH="$HOME/`<bins folder>`:$PATH" ./configure --prefix="$HOME/`<build folder>`" --bindir="$HOME/`<bins folder>`" --enable-static --disable-opencl --enable-pic --enable-shared`
+  $ PATH="$HOME/`<bins folder>`:$PATH" ./configure --prefix="$HOME/`<build folder>`" --bindir="$HOME/`<bins folder>`" --enable-static --disable-opencl --enable-pic --enable-shared
 
 Configure command to compile x265:
 
-`$ PATH="$HOME/`<bins folder>`:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/`<build folder>`"  -DENABLE_SHARED:bool=on ../../source`
+  $ PATH="$HOME/`<bins folder>`:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/`<build folder>`"  -DENABLE_SHARED:bool=on ../../source
 
 Configure command to compile libfdk-aac:
 
-`$ ./configure --prefix="$HOME/`<build folder>`" --enable-shared --enable-pic`
+  $ ./configure --prefix="$HOME/`<build folder>`" --enable-shared --enable-pic
 
 Configure command to compile libmp3lame:
 
-`$ LIBS=-ltinfo ./configure --prefix="$HOME/`<build folder>`" --enable-nasm --enable-shared --enable-pic`
+  $ LIBS=-ltinfo ./configure --prefix="$HOME/`<build folder>`" --enable-nasm --enable-shared --enable-pic
 
 Configure command to compile libopus:
 
-`$ ./configure `[`https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz`](https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz)` --enable-shared --enable-pic`
+  $ ./configure `[`https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz`](https://github.com/libass/libass/releases/download/0.13.4/libass-0.13.4.tar.gz)` --enable-shared --enable-pic
 
-The configure of FFmpeg will complain about libass. Then libass will
-complain fribidi and freetype2. Download, compile and install fribidi
-and then libass libraries. Remember to set the --prefix of every library
-to the build folder. For freetype2, we only need to export to
-PKG\_CONFIG\_PATH variable the freetype2.pc file:
+The configure of FFmpeg will complain about libass. Then libass will complain fribidi and freetype2. Download, compile and install fribidi and then libass libraries. Remember to set the --prefix of every library to the build folder. For freetype2, we only need to export to PKG\_CONFIG\_PATH variable the freetype2.pc file:
 
-`$ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig/:$PKG_CONFIG_PATH`
+  $ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig/:$PKG_CONFIG_PATH
 
-Pass the flag '--disable-require-system-font-provider' to the libass
-configure command.
+Pass the flag '--disable-require-system-font-provider' to the libass configure command.
 
-Then it will complain about libtheora
-[link](https://www.theora.org/downloads/). Download libtheora from the
-provided link. When compiling libtheora take into account the
-dependencies mentioned in the website and compile it as shared library.
+Then it will complain about libtheora [link](https://www.theora.org/downloads/). Download libtheora from the provided link. When compiling libtheora take into account the dependencies mentioned in the website and compile it as shared library.
 
 Configure command to compile FFmpeg:
 
-`$ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/`<build folder>`/lib/pkgconfig/":$PKG_CONFIG_PATH ./configure   --prefix="$HOME/`<build folder>`"   --pkg-config-flags="--static"   --extra-cflags="-I$HOME/`<build folder>`/include"   --extra-ldflags="-L$HOME/`<build folder>`/lib"   --bindir="$HOME/`<bins folder>`"   --enable-gpl   --enable-libass   --enable-libfdk-aac   --enable-libfreetype   --enable-libmp3lame   --enable-libopus   --enable-libtheora   --enable-libvorbis   --enable-libvpx   --enable-libx264   --enable-libx265 --enable-nonfree --enable-avresample --enable-shared`
+  $ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/`<build folder>`/lib/pkgconfig/":$PKG_CONFIG_PATH ./configure   --prefix="$HOME/`<build folder>`"   --pkg-config-flags="--static"   --extra-cflags="-I$HOME/`<build folder>`/include"   --extra-ldflags="-L$HOME/`<build folder>`/lib"   --bindir="$HOME/`<bins folder>`"   --enable-gpl   --enable-libass   --enable-libfdk-aac   --enable-libfreetype   --enable-libmp3lame   --enable-libopus   --enable-libtheora   --enable-libvorbis   --enable-libvpx   --enable-libx264   --enable-libx265 --enable-nonfree --enable-avresample --enable-shared
 
 OpenCV
 ------
