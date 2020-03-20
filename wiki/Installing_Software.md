@@ -36,10 +36,11 @@ First, install PyTorch dependencies:
 Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
 For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
 
-`> conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
+    > conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
 Now comes the first tricky part (yes there are two :/). The cluster is running on an old OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components in Anaconda. To confirm this, open a python shell and import PyTorch:
-`> conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
+
+    > conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
 You will get the following error:
 
@@ -54,7 +55,10 @@ Let's fix this. We need to download Glibc 2.14 and compile it (Yeah I know ...).
     > module unload gnu          // (bear with me)
     > ../configure --prefix <installation_path>
     > make -j 4 install
+
+
 The compiled library files (*.so and .a) should now be installed in the folder \<installation_path\>
+
 
 Now that we've compiled the glibc, let's create an alias for python and store it in your .bashrc file. Just edit /home/\<username\>/.bashrc and add the following line:
 
