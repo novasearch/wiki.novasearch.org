@@ -1,4 +1,3 @@
-
 ---
 title: Software - Libraries and Frameworks
 permalink: wiki/Software_Libraries/
