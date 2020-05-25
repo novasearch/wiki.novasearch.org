@@ -11,13 +11,6 @@ redirect_from:
  - wiki/Biopython
 ---
 
-Accepted Papers
----------------
-
-- [Funding](/wiki/Funding "wikilink")
-- [Acknowledgements](/wiki/Acknowledgements "wikilink")
-- [Reimbursement](/wiki/Reimbursement "wikilink")
-
 Cluster
 -------
 
@@ -33,14 +26,17 @@ OS general info
 
 - [Ubuntu 18.04 LTS](/wiki/Ubuntu_18.04_LTS "wikilink")
 
-Services and frameworks
+Accepted Papers
+---------------
+
+- [Funding](/wiki/Funding "wikilink")
+- [Acknowledgements](/wiki/Acknowledgements "wikilink")
+- [Reimbursement](/wiki/Reimbursement "wikilink")
+
+Old stuff
 -----------------------
 
 - [Search Services](/wiki/Search_Services "wikilink")
-
-COGNITUS Components
--------------------
-
 - [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
 - [Image Annotation](/wiki/Image_Annotation "wikilink")
 - [Information Extraction](/wiki/Information_Extraction "wikilink")
