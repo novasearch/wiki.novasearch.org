@@ -39,5 +39,4 @@ Old stuff
 - [Search Services](/wiki/Search_Services "wikilink")
 - [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
 - [Image Annotation](/wiki/Image_Annotation "wikilink")
-- [Information Extraction](/wiki/Information_Extraction "wikilink")
 - [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
