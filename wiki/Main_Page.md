@@ -11,8 +11,8 @@ redirect_from:
  - wiki/Biopython
 ---
 
-Cluster
--------
+How-to on Cluster
+--------------------
 
 - [Cluster](/wiki/Cluster "wikilink")
 - [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
