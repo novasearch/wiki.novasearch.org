@@ -26,8 +26,8 @@ OS general info
 
 - [Ubuntu 18.04 LTS](/wiki/Ubuntu_18.04_LTS "wikilink")
 
-Accepted Papers
----------------
+Handling Accepted Papers
+---------------------------
 
 - [Funding](/wiki/Funding "wikilink")
 - [Acknowledgements](/wiki/Acknowledgements "wikilink")
@@ -40,6 +40,4 @@ Old stuff
 - [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
 - [Image Annotation](/wiki/Image_Annotation "wikilink")
 - [Information Extraction](/wiki/Information_Extraction "wikilink")
-- [Visual Spam Filtering](/wiki/Visual_Spam_Filtering "wikilink")
-- [Visual Near-duplicate Detection](/wiki/Visual_Near-duplicate_Detection "wikilink")
 - [Visual Aesthetics](/wiki/Visual_Aesthetics "wikilink")
