@@ -1,26 +1,26 @@
 ---
-title: Software - Libraries and Frameworks
+title: Configuring your home (Libraries and Frameworks)
 permalink: wiki/Software_Libraries/
 layout: wiki
 ---
 
-
-
 Some guidelines/tutorials for installing some common libraries and frameworks in the Rocks Cluster (Work in Progress).
+
 
 Python Stuff
 ------------
 
-### General Advice
+### Basics
 
 User Home folders are mounted through nfs. This means you can access your Home folder in the Head node (zarco) and in all the computes (0 to 3), in the exact same path "/home/\<username\>/".
 
 A set of libraries are already ready to use through the "module load" feature. When you need a specific library/software that is not on the cluster, you should compile and install it somewhere on your home folder, such that all the computes can access it.
 
+To start using Anaconda, you must load its module:
 
+    $module load Anaconda3/20XX.XX
 
-
-### Machine Learning General Packages
+where XX refers to the latest version installed on cluster.
 
 
 ### Deep Learning Frameworks
