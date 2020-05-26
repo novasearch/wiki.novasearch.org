@@ -242,7 +242,7 @@ Now we've compiled both Python 2.7 and 3.5 OpenCV modules. If you are
 only interested in using one of the Python versions just export the
 OpenCV python module path to the PYTHONPATH variable:
 
-# Add this line to ~/.bashrc to set this automatically for every shell session
+Add this line to ~/.bashrc to set this automatically for every shell session
     export PYTHONPATH=$HOME/`<opencv_build>`/lib/python2.7(3.5)/site-packages:$PYTHONPATH
 
 To be able to use OpenCV in both Python versions without conflicts we cannot use the PYTHONPATH solution. The Python OpenCV modules are located in:
