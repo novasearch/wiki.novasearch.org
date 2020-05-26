@@ -21,7 +21,7 @@ To start using Anaconda, you must load its module:
 where XX refers to the latest version installed on cluster.
 
 
-Old versions of TensorFlow
+TensorFlow (old versions)
 ------------
 TO DO.
 
