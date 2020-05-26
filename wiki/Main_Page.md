@@ -16,9 +16,9 @@ How-to instructions for Cluster
 
 - [Overview](/wiki/Cluster "wikilink")
 - [FAQ](/wiki/Cluster/FAQ "wikilink")
-- [Admin and Setup](/wiki/Cluster/Admin "wikilink")
 - [Configuring your home](/wiki/Software_Libraries "wikilink")
 - [Using Condor](/wiki/Condor "wikilink")
+- [Admin and Setup](/wiki/Cluster/Admin "wikilink")
 
 OS general info
 ---------------
