@@ -14,12 +14,11 @@ redirect_from:
 How-to instructions for Cluster
 --------------------
 
-- [Cluster](/wiki/Cluster "wikilink")
-- [Cluster/FAQ](/wiki/Cluster/FAQ "wikilink")
-- [Cluster/Admin](/wiki/Cluster/Admin "wikilink")
-- [Cluster/Setup](/wiki/Cluster/Setup "wikilink")
-- [Software - Libraries and Frameworks](/wiki/Software_Libraries "wikilink")
-- [Condor](/wiki/Condor "wikilink")
+- [Overview](/wiki/Cluster "wikilink")
+- [FAQ](/wiki/Cluster/FAQ "wikilink")
+- [Admin and Setup](/wiki/Cluster/Admin "wikilink")
+- [Configuring your home](/wiki/Software_Libraries "wikilink")
+- [Using Condor](/wiki/Condor "wikilink")
 
 OS general info
 ---------------
