@@ -16,7 +16,7 @@ A set of libraries are already ready to use through the "module load" feature. W
 
 To start using Anaconda, you must load its module:
 
-    $module load Anaconda3/20XX.XX
+    $ module load Anaconda3/20XX.XX
 
 where XX refers to the latest version installed on cluster.
 
@@ -24,6 +24,7 @@ where XX refers to the latest version installed on cluster.
 TensorFlow (old versions)
 ------------
 TO DO.
+
 
 PyTorch
 ------------
@@ -306,8 +307,9 @@ Steps:
 
 Alternatively, one can pass the option `-D WITH_IPP=OFF` to the cmake call to compile without the IPPICV lib.
 
+
 Caffe
------
+------------
 
 Steps for installing the Caffe
 [11](http://caffe.berkeleyvision.org/installation.html). Caffe is a deep
@@ -528,7 +530,7 @@ with another python version. I compiled boost into a local folder and
 used that version.
 
 Boost
------
+------------
 
 The Boost library can be downloaded here: [12](http://www.boost.org/).
 After downloading, extract it to some folder.
