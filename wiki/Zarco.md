@@ -1,5 +1,5 @@
 ---
-title: Zarco
+title: Cluster
 permalink: wiki/Zarco/
 layout: wiki
 redirect_from:
