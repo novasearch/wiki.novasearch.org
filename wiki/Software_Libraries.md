@@ -7,7 +7,7 @@ layout: wiki
 Some guidelines/tutorials for installing some common libraries and frameworks in the Rocks Cluster (Work in Progress).
 
 
-### Basics
+Basics
 ------------
 
 User Home folders are mounted through nfs. This means you can access your Home folder in the Head node (zarco) and in all the computes (0 to 3), in the exact same path "/home/\<username\>/".
@@ -28,7 +28,7 @@ TO DO.
 PyTorch
 ------------
 
-# Installation
+### Installation
 
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
 
@@ -74,7 +74,7 @@ Now when you execute python, instead of "python" just use "pythont" (note the ex
     $ pythont -c "import torch; print(torch.__version__)"
     1.4.0
 
-# PyTorch and JupyterHub
+### PyTorch and JupyterHub
 Now for the second and last tricky part. The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernel that you are using to use the new GLibc version.
 
 Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
