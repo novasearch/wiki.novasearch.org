@@ -31,7 +31,7 @@ In Anaconda, virtual environments are referred as conda environments.
 
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
-_Step 3_: Run the following command to create a conda env:
+*Step 3*: Run the following command to create a conda env:
 
     $ conda create -n <env_name> python=3.6
 
