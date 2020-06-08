@@ -7,7 +7,7 @@ layout: wiki
 Some guidelines/tutorials for installing some common libraries and frameworks in the Rocks Cluster (Work in Progress).
 
 
-Configuring Anaconda in your home
+Configuring Anaconda
 ------------
 
 User Home folders are mounted through nfs. This means you can access your Home folder in the Head node (zarco) and in all the computes (0 to 3), in the exact same path "/home/\<username\>/".
@@ -22,7 +22,7 @@ Once you first login into your area, you should load the one of the Anaconda ins
 
 where XX refers to the latest version installed on the cluster. Then, you just need to restart your bash shell.
 
-Conda environments
+Conda Environments
 ------------
 
 Anaconda allows the creation of Python virtual environments. The main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has.
@@ -31,16 +31,18 @@ In Anaconda, virtual environments are referred as conda environments.
 
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
-*Step 3*: Run the following command to create a conda env:
+Step 2: Run the following command to create a conda env:
 
     $ conda create -n <env_name> python=3.6
 
 where you should replace <env_name> by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
 
-Step 4: Activate the environment in your current shell:
+Step 3: Activate the environment in your current shell:
+
     $ conda activate <env_name>
 
 To deactivate an environment, just run the command 
+
     $ conda deactivate.
 
 
@@ -105,6 +107,8 @@ Step 9: Test if Keras is using the tensorflow backend:
 
 It should print the following message: Using TensorFlow backend.
 
+### JupyterHub
+
 Step 10: Create a Jupyter Kernel in your conda environment
 
     $ ipython kernel install --user --name=WebSearch
@@ -116,8 +120,6 @@ Now you should deactivate the conda environment to avoid changing its configurat
 
 PyTorch Environment
 ------------
-
-### Installation
 
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
 
@@ -163,7 +165,7 @@ Now when you execute python, instead of "python" just use "pythont" (note the ex
     $ pythont -c "import torch; print(torch.__version__)"
     1.4.0
 
-### PyTorch and JupyterHub
+### JupyterHub and PyTorch
 Now for the second and last tricky part. The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernel that you are using to use the new GLibc version.
 
 Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
