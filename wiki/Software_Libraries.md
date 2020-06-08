@@ -31,7 +31,7 @@ In Anaconda, virtual environments are referred as conda environments.
 
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
-Step 3: Run the following command to create a conda env:
+_Step 3_: Run the following command to create a conda env:
 
     $ conda create -n <env_name> python=3.6
 
@@ -61,11 +61,14 @@ Pandas
 
 Step 4. Conda environment for the WebSearch course
 Before attempting to install these libraries, make sure have created the conda environment for this course and that you activated it:
+
     $ conda create -n WebSearch python=3.6
     $ conda activate WebSearch
 
 Step 5: Installing the required Python libraries:
+
     $ conda install pip h5py numpy scipy scikit-learn scikit-image gensim nltk jupyter pandas ipykernel
+
 Conda will also install the required libraries’ dependencies.
 
 Step 6: Installing tensorflow:
@@ -75,35 +78,41 @@ Step 6: Installing tensorflow:
 If you have an NVIDIA GPU, you can install tensorflow with GPU support. Check tensorflow documentation for installation instructions for your platform.
 
 Step 7: Installing keras:
+
     $ conda install keras
 
 Step 8: Setup Keras to use tensorflow backend.
 
 Create a Keras config file -  Linux and macOS:
+
     $ mkdir ~/keras && touch ~/keras/keras.json
 
 Open the created file and paste:
-{
-    "floatx": "float32",
-    "epsilon": 1e-07,
-    "backend": "tensorflow",
-    "image_data_format": "channels_last"
-}
+
+    {
+        "floatx": "float32",
+        "epsilon": 1e-07,
+        "backend": "tensorflow",
+        "image_data_format": "channels_last"
+    }
+
 Save and exit.
 
 Step 9: Test if Keras is using the tensorflow backend:
+
     $ python
     $ >>> import keras
+
 It should print the following message: Using TensorFlow backend.
 
 Step 10: Create a Jupyter Kernel in your conda environment
+
     $ ipython kernel install --user --name=WebSearch
 
 Step 11. Deactivate the conda environment 
 Now you should deactivate the conda environment to avoid changing its configuration:
+
     $ conda deactivate
-
-
 
 PyTorch Environment
 ------------
