@@ -7,26 +7,105 @@ layout: wiki
 Some guidelines/tutorials for installing some common libraries and frameworks in the Rocks Cluster (Work in Progress).
 
 
-Basics
+Configuring Anaconda in your home
 ------------
 
 User Home folders are mounted through nfs. This means you can access your Home folder in the Head node (zarco) and in all the computes (0 to 3), in the exact same path "/home/\<username\>/".
 
 A set of libraries are already ready to use through the "module load" feature. When you need a specific library/software that is not on the cluster, you should compile and install it somewhere on your home folder, such that all the computes can access it.
 
-To start using Anaconda, you must load its module:
+Step 1:
+Once you first login into your area, you should load the one of the Anaconda instalations available on the cluster and configure your bash initialization script:
 
-    $ module load Anaconda3/20XX.XX
+    $ module load anaconda3/20XX.XX
+    $ conda init bash
 
-where XX refers to the latest version installed on cluster.
+where XX refers to the latest version installed on the cluster. Then, you just need to restart your bash shell.
 
-
-TensorFlow (old versions)
+Conda environments
 ------------
-TO DO.
+
+Anaconda allows the creation of Python virtual environments. The main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has.
+
+In Anaconda, virtual environments are referred as conda environments.
+
+To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
+
+Step 3: Run the following command to create a conda env:
+
+    $ conda create -n <env_name> python=3.6
+
+where you should replace <env_name> by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
+
+Step 4: Activate the environment in your current shell:
+    $ conda activate <env_name>
+
+To deactivate an environment, just run the command 
+    $ conda deactivate.
 
 
-PyTorch
+TensorFlow Environment
+------------
+For this course, we will need at least the following libraries:
+Numpy
+Scipy
+IPython
+Jupyter
+Scikit-learn
+Scikit-image
+Tensorflow
+Keras
+NLTK
+Gensim
+Pandas
+
+Step 4. Conda environment for the WebSearch course
+Before attempting to install these libraries, make sure have created the conda environment for this course and that you activated it:
+    $ conda create -n WebSearch python=3.6
+    $ conda activate WebSearch
+
+Step 5: Installing the required Python libraries:
+    $ conda install pip h5py numpy scipy scikit-learn scikit-image gensim nltk jupyter pandas ipykernel
+Conda will also install the required libraries’ dependencies.
+
+Step 6: Installing tensorflow:
+
+    $ conda install tensorflow==1.15
+
+If you have an NVIDIA GPU, you can install tensorflow with GPU support. Check tensorflow documentation for installation instructions for your platform.
+
+Step 7: Installing keras:
+    $ conda install keras
+
+Step 8: Setup Keras to use tensorflow backend.
+
+Create a Keras config file -  Linux and macOS:
+    $ mkdir ~/keras && touch ~/keras/keras.json
+
+Open the created file and paste:
+{
+    "floatx": "float32",
+    "epsilon": 1e-07,
+    "backend": "tensorflow",
+    "image_data_format": "channels_last"
+}
+Save and exit.
+
+Step 9: Test if Keras is using the tensorflow backend:
+    $ python
+    $ >>> import keras
+It should print the following message: Using TensorFlow backend.
+
+Step 10: Create a Jupyter Kernel in your conda environment
+    $ ipython kernel install --user --name=WebSearch
+
+Step 11. Deactivate the conda environment 
+Now you should deactivate the conda environment to avoid changing its configuration:
+    $ conda deactivate
+
+
+
+PyTorch Environment
 ------------
 
 ### Installation
