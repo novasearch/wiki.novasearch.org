@@ -15,6 +15,7 @@ User Home folders are mounted through nfs. This means you can access your Home f
 A set of libraries are already ready to use through the "module load" feature. When you need a specific library/software that is not on the cluster, you should compile and install it somewhere on your home folder, such that all the computes can access it.
 
 **Step 1: Add Anaconda to your home init**
+
 Once you first login into your area, you should load the one of the Anaconda instalations available on the cluster and configure your bash initialization script:
 
     $ module load anaconda3/20XX.XX
@@ -32,6 +33,7 @@ In Anaconda, virtual environments are referred as conda environments.
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
 **Step 2: Conda Environment**
+
 Run the following command to create a conda env:
 
     $ conda create -n <env_name> python=3.6
@@ -100,7 +102,9 @@ Save and exit.
 
 It should print the following message: Using TensorFlow backend.
 
-**Step 9: JupyterHub**: Create a Jupyter Kernel in your conda environment
+**Step 9: JupyterHub**
+
+Create a Jupyter Kernel in your conda environment
 
 To create a JupyterHub Kernel with currently active environment you need to do this:
 
@@ -108,7 +112,7 @@ To create a JupyterHub Kernel with currently active environment you need to do t
 
 Note that the name above can be different from the current environment name. 
 
-**Step 10: Deactivate the conda environment **
+**Step 10: Deactivate the conda environment**
 
 Now you should deactivate the conda environment to avoid changing its configuration:
 
@@ -165,6 +169,7 @@ Now when you execute python, instead of "python" just use "pythont" (note the ex
     1.4.0
 
 **Step 7: JupyterHub and PyTorch**
+
 Now for the second and last tricky part. The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernel that you are using to use the new GLibc version.
 
 Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
