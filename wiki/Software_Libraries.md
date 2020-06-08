@@ -32,7 +32,7 @@ In Anaconda, virtual environments are referred as conda environments.
 
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
-**Step 2: Conda Environment**
+**Step 2: Creating conda environments**
 
 Run the following command to create a conda env:
 
@@ -40,7 +40,7 @@ Run the following command to create a conda env:
 
 where you should replace <env_name> by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
 
-**Step 3: Active Environment**
+**Step 3: Activate/deactivate a conda environment**
 
 Since you may have multiple conda environemnts, you need to activate the environment in your current shell:
 
@@ -55,7 +55,7 @@ TensorFlow Environment
 ------------
 For the Web Mining and Data Search course, we will need to install at least the following libraries: Numpy, Scipy, IPython, Jupyter, Scikit-learn, Scikit-image, Tensorflow, Keras, NLTK, Gensim and Pandas.
 
-**Step 4: Conda environment for Web Data Mining and Search**
+**Step 4: A Conda Environment for Web Data Mining and Search**
 
 Before attempting to install these libraries, make sure have created the conda environment for this course and that you activated it:
 
@@ -68,17 +68,17 @@ Before attempting to install these libraries, make sure have created the conda e
 
 Conda will also install the required libraries’ dependencies.
 
-**Step 6: Installing tensorflow and Keras**
+**Step 6: Installing TensorFlow and Keras**
 
     $ conda install tensorflow==1.15
 
-If you have an NVIDIA GPU, you can install tensorflow with GPU support. Check tensorflow documentation for installation instructions for your platform.
+If you have an NVIDIA GPU, you can install tensorflow with GPU support. Check TensorFlow documentation for installation instructions for your platform.
 
     $ conda install keras
 
-In the above command, conda will select the keras version that is suited to your version of tensorflow.
+In the above command, conda will select the keras version that is suited to your version of TensorFlow.
 
-**Step 7: Setup Keras to use tensorflow backend.**
+**Step 7: Setup Keras to use TensorFlow backend**
 
 Create a Keras config file -  Linux and macOS:
 
@@ -95,7 +95,9 @@ Open the created file and paste:
 
 Save and exit.
 
-**Step 8: Test if Keras is using the tensorflow backend**
+**Step 8: Keras-TensorFlow integration**
+
+To test if Keras is using the TensorFlow backend you can run:
 
     $ python
     $ >>> import keras
