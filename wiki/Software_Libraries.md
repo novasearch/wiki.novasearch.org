@@ -16,12 +16,12 @@ A set of libraries are already ready to use through the "module load" feature. W
 
 **Step 1: Add Anaconda to your home init**
 
-Once you first login into your area, you should load the one of the Anaconda instalations available on the cluster and configure your bash initialization script:
+Once you first login into your account, you must load one of the Anaconda instalations available on the cluster and configure your bash initialization script:
 
     $ module load anaconda3/20XX.XX
     $ conda init bash
 
-where XX refers to the latest version installed on the cluster. Then, you just need to restart your bash shell.
+where XX refers to the version that you select from list available versions on the cluster. Then, you just need to restart your bash shell.
 
 Conda Environments
 ------------
