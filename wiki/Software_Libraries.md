@@ -14,7 +14,7 @@ User Home folders are mounted through nfs. This means you can access your Home f
 
 A set of libraries are already ready to use through the "module load" feature. When you need a specific library/software that is not on the cluster, you should compile and install it somewhere on your home folder, such that all the computes can access it.
 
-**Step 1**:
+**Step 1: Add Anaconda to your home init**
 Once you first login into your area, you should load the one of the Anaconda instalations available on the cluster and configure your bash initialization script:
 
     $ module load anaconda3/20XX.XX
@@ -31,13 +31,16 @@ In Anaconda, virtual environments are referred as conda environments.
 
 To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
 
-**Step 2**: Run the following command to create a conda env:
+**Step 2: Conda Environment**
+Run the following command to create a conda env:
 
     $ conda create -n <env_name> python=3.6
 
 where you should replace <env_name> by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
 
-**Step 3**: Activate the environment in your current shell:
+**Step 3: Active Environment**
+
+Since you may have multiple conda environemnts, you need to activate the environment in your current shell:
 
     $ conda activate <env_name>
 
@@ -50,19 +53,20 @@ TensorFlow Environment
 ------------
 For the Web Mining and Data Search course, we will need to install at least the following libraries: Numpy, Scipy, IPython, Jupyter, Scikit-learn, Scikit-image, Tensorflow, Keras, NLTK, Gensim and Pandas.
 
-**Step 4**. Conda environment for the WebSearch course
+**Step 4: Conda environment for Web Data Mining and Search**
+
 Before attempting to install these libraries, make sure have created the conda environment for this course and that you activated it:
 
     $ conda create -n WebSearch python=3.6
     $ conda activate WebSearch
 
-**Step 5**: Installing the required Python libraries:
+**Step 5: Installing the required Python libraries**
 
     $ conda install pip h5py numpy scipy scikit-learn scikit-image gensim nltk jupyter pandas ipykernel
 
 Conda will also install the required libraries’ dependencies.
 
-**Step 6**: Installing tensorflow and Keras
+**Step 6: Installing tensorflow and Keras**
 
     $ conda install tensorflow==1.15
 
@@ -72,7 +76,7 @@ If you have an NVIDIA GPU, you can install tensorflow with GPU support. Check te
 
 In the above command, conda will select the keras version that is suited to your version of tensorflow.
 
-**Step 7**: Setup Keras to use tensorflow backend.
+**Step 7: Setup Keras to use tensorflow backend.**
 
 Create a Keras config file -  Linux and macOS:
 
@@ -89,16 +93,14 @@ Open the created file and paste:
 
 Save and exit.
 
-**Step 8**: Test if Keras is using the tensorflow backend:
+**Step 8: Test if Keras is using the tensorflow backend**
 
     $ python
     $ >>> import keras
 
 It should print the following message: Using TensorFlow backend.
 
-### JupyterHub
-
-**Step 9**: Create a Jupyter Kernel in your conda environment
+**Step 9: JupyterHub**: Create a Jupyter Kernel in your conda environment
 
 To create a JupyterHub Kernel with currently active environment you need to do this:
 
@@ -106,7 +108,7 @@ To create a JupyterHub Kernel with currently active environment you need to do t
 
 Note that the name above can be different from the current environment name. 
 
-Step 11. Deactivate the conda environment 
+**Step 10: Deactivate the conda environment **
 
 Now you should deactivate the conda environment to avoid changing its configuration:
 
@@ -118,18 +120,18 @@ PyTorch Environment
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
 
 
-**Step 4**: Install PyTorch dependencies:
+**Step 4: Install PyTorch dependencies**
 
     $ conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
 
-**Step 5**: Install PyTorch
+**Step 5: Install PyTorch**
 
 Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
 For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
 
     $ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 
-**Step 6**: GLIBC library
+**Step 6: GLIBC library**
 
 Now comes the first tricky part (yes there are two :/). The cluster is running on an old OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components in Anaconda. To confirm this, open a python shell and import PyTorch:
 
@@ -152,7 +154,6 @@ Let's fix this. We need to download Glibc 2.14 and compile it (Yeah I know ...).
 
 The compiled library files (*.so and .a) should now be installed in the folder \<installation_path\>
 
-
 Now that we've compiled the glibc, let's create an alias for python and store it in your .bashrc file. Just edit /home/\<username\>/.bashrc and add the following line:
 
     # Alias for Python with Glibc 2.14 on LD_LIBRARY_PATH
@@ -163,10 +164,8 @@ Now when you execute python, instead of "python" just use "pythont" (note the ex
     $ pythont -c "import torch; print(torch.__version__)"
     1.4.0
 
-### JupyterHub and PyTorch
+**Step 7: JupyterHub and PyTorch**
 Now for the second and last tricky part. The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernel that you are using to use the new GLibc version.
-
-**Step 7**: 
 
 Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
 
