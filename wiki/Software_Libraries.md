@@ -165,7 +165,7 @@ The compiled library files (*.so and .a) should now be installed in the folder \
 Now that we've compiled the glibc, let's create an alias for python and store it in your .bashrc file. Just edit /home/\<username\>/.bashrc and add the following line:
 
     # Alias for Python with Glibc 2.14 on LD_LIBRARY_PATH
-    alias pythont="LD_LIBRARY_PATH=/home/dsemedo/<glib_path>/lib:$D_LIBRARY_PATH python"
+    alias pythont="LD_LIBRARY_PATH=/home/dsemedo/<glib_path>/lib:$LD_LIBRARY_PATH python"
 
 Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
 
