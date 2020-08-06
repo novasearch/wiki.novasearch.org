@@ -1,4 +1,3 @@
-
 ---
 title: Condor
 permalink: wiki/Condor/
