@@ -50,7 +50,7 @@ Since you may have multiple conda environemnts, you need to activate the environ
 
 To deactivate an environment, just run the command 
 
-    $ conda deactivate.
+    $ conda deactivate
 
 
 TensorFlow Environment
