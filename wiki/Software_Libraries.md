@@ -59,18 +59,14 @@ PyTorch Environment
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
 
 
-**Step 4: Install PyTorch dependencies**
+**Step 4: Install PyTorch**
 
-    $ conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
-
-**Step 5: Install PyTorch**
-
-Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
-For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
+Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
+Choose Linux, Conda and choose the latest CUDA release (10.2 at the moment of writing). Then copy and execute the command. It should look like:
 
     $ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
     
-**Step 7: JupyterHub and PyTorch**
+**Step 5: JupyterHub and PyTorch**
 
 The cluster is running on an older OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components for Anaconda. To confirm this, open a python shell and import PyTorch:
 
@@ -137,7 +133,7 @@ Finally, we just have to update the kernel spec. Edit the `kernel.json` file and
 
 Note that it will execute the script that we created instead of the Python executable.
 
-**Step 7: CLI**
+**Step 6: Command Line**
 
 We need tell python to use our precompiled glibc 2.14 for pytorch, so lets use an alias. Just edit ~/.bashrc and add the following line:
 
