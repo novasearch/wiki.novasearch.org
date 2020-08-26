@@ -53,6 +53,103 @@ To deactivate an environment, just run the command
     $ conda deactivate
 
 
+PyTorch Environment
+------------
+
+The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
+
+
+**Step 4: Install PyTorch dependencies**
+
+    $ conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
+
+**Step 5: Install PyTorch**
+
+Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
+For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
+
+    $ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
+    
+**Step 7: JupyterHub and PyTorch**
+
+The cluster is running on an older OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components for Anaconda. To confirm this, open a python shell and import PyTorch:
+
+    $ python -c "import torch; print(torch.__version__)"
+    
+You will get the following error:
+
+    ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found
+
+Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel in that env:
+
+    $ conda install jupyter ipykernel
+    $ python -m ipykernel install --name myenv --user
+
+This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
+        
+    ~/.local/share/jupyter/kernels/myenv/kernel.json
+
+This file contains the following information:
+
+```json
+{
+ "argv": [
+  "~/.conda/envs/myenv/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "myenv",
+ "language": "python",
+}
+```
+
+To run Python with the correct glibc, create a bash script in `~/.conda/envs/myenv/bin/` the same path as the python executable:
+    
+    $ touch ~/.conda/envs/myenv/bin/pythont.sh
+    $ chmod +x ~/.conda/envs/myenv/bin/pythont.sh      // Give it permissions to execute  
+
+Now edit the `pythont.sh` file and paste the following:
+
+```bash
+#!/bin/sh
+LD_PRELOAD=/share/apps/glibc/2.14/lib/libc.so.6 ~/.conda/envs/myenv/bin/python "$@"
+```
+
+This script will call the same Python executable, but it will Pre-load the correct GLIBC before calling the executable. 
+
+Finally, we just have to update the kernel spec. Edit the `kernel.json` file and change the line of the Python executable:
+
+```json
+{
+ "argv": [
+  "~/.conda/envs/myenv/bin/pythont.sh",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "myenv",
+ "language": "python",
+}
+```
+
+Note that it will execute the script that we created instead of the Python executable.
+
+**Step 7: CLI**
+
+We need tell python to use our precompiled glibc 2.14 for pytorch, so lets use an alias. Just edit ~/.bashrc and add the following line:
+
+    # Alias for Python with glibc 2.14 on LD_LIBRARY_PATH
+    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.14/lib:$LD_LIBRARY_PATH python"
+
+Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
+
+    $ pythont -c "import torch; print(torch.__version__)"
+    1.4.0
+
+
 TensorFlow Environment
 ------------
 For the Web Mining and Data Search course, we will need to install at least the following libraries: Numpy, Scipy, IPython, Jupyter, Scikit-learn, Scikit-image, Tensorflow, Keras, NLTK, Gensim and Pandas.
@@ -121,106 +218,6 @@ Note that the name above can be different from the current environment name.
 Now you should deactivate the conda environment to avoid changing its configuration:
 
     $ conda deactivate
-
-PyTorch Environment
-------------
-
-The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
-
-
-**Step 4: Install PyTorch dependencies**
-
-    $ conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
-
-**Step 5: Install PyTorch**
-
-Next, go to the [PyTorch website](https://pytorch.org/). Scroll-down and you will find some sliders that can be used to generated the conda install command.
-For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10.1 at the moment of writing). Then copy and execute the command. It should be something like:
-
-    $ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
-
-**Step 6: GLIBC library**
-
-The cluster is running on an older OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components for Anaconda. To confirm this, open a python shell and import PyTorch:
-
-    $ python -c "import torch; print(torch.__version__)"
-
-You will get the following error:
-
-    ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found
-
-Let's fix this. We need tell pytorch to use our precompiled glibc 2.14, so lets use an alias. Just edit ~/.bashrc and add the following line:
-
-    # Alias for Python with glibc 2.14 on LD_LIBRARY_PATH
-    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.14/lib:$LD_LIBRARY_PATH python"
-
-Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
-
-    $ pythont -c "import torch; print(torch.__version__)"
-    1.4.0
-
-**Step 7: JupyterHub and PyTorch**
-
-The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernels that you are using to use the new glibc version.
-
-Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel in that env.
-
-With the environment `myenv` activated:
-
-    $ conda install jupyter ipykernel
-    $ python -m ipykernel install --name myenv --user
-
-This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
-        
-    ~/.local/share/jupyter/kernels/myenv/kernel.json
-
-This file contains the following information:
-
-```json
-{
- "argv": [
-  "~/.conda/envs/myenv/bin/python",
-  "-m",
-  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "myenv",
- "language": "python",
-}
-```
-
-As you can see, the first element of the `argv` list is the python executable. We just need to change this, to run Python with the correct GLIBC. To do this, create a bash script in the same path as the python executable:
-    
-    $ touch pythont.sh
-    $ chmod +x pythont.sh      // Give it permissions to execute  
-
-Now edit the `pythont.sh` file and paste the following:
-
-```bash
-#!/bin/sh
-LD_PRELOAD=/share/apps/glibc/2.14/lib/libc.so.6 ~/.conda/envs/myenv/bin/python "$@"
-```
-
-This script will call the same Python executable, but it will Pre-load the correct GLIBC before calling the executable. 
-
-Finally, we just have to update the kernel spec. Edit the `kernel.json` file and change the line of the Python executable:
-
-```json
-{
- "argv": [
-  "~/.conda/envs/myenv/bin/pythont.sh",
-  "-m",
-  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "myenv",
- "language": "python",
-}
-```
-
-Note that it will execute the script that we created instead of the Python executable.
 
 
 FFmpeg
