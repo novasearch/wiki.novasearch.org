@@ -38,15 +38,15 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n <env_name> python=3.6
+    $ conda create -n myenv python=3.6
 
-where you should replace <env_name> by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
+where you should replace myenv by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
 
 **Step 3: Activate/deactivate a conda environment**
 
 Since you may have multiple conda environemnts, you need to activate the environment in your current shell:
 
-    $ conda activate <env_name>
+    $ conda activate myenv
 
 To deactivate an environment, just run the command 
 
@@ -141,31 +141,18 @@ For OS choose Linux, for Package choose Conda and for CUDA choose the latest (10
 
 **Step 6: GLIBC library**
 
-Now comes the first tricky part (yes there are two :/). The cluster is running on an old OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components in Anaconda. To confirm this, open a python shell and import PyTorch:
+The cluster is running on an older OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components for Anaconda. To confirm this, open a python shell and import PyTorch:
 
     $ python -c "import torch; print(torch.__version__)"
 
 You will get the following error:
 
-    File "/home/dsemedo/.conda/envs/pytorch/lib/python3.7/site-packages/torch/__init__.py", line 81, in <module>
-        from torch._C import *
-    ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /home/dsemedo/.conda/envs/pytorch/lib/python3.7/site-packages/torch/lib/libshm.so)
+    ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found
 
-Let's fix this. We need to download Glibc 2.14 and compile it (Yeah I know ...). First get the source [here](http://gnu.askapache.com/libc/glibc-2.14.tar.gz) and extract it:
+Let's fix this. We need tell pytorch to use our precompiled glibc 2.14, so lets use an alias. Just edit ~/.bashrc and add the following line:
 
-    $ tar -xvf glibc-2.14.tar.gz
-    $ cd glibc-2.14 && mkdir build && cd build
-    $ module unload gnu          // (bear with me)
-    $ ../configure --prefix <installation_path>
-    $ make -j 4 install
-
-
-The compiled library files (*.so and .a) should now be installed in the folder \<installation_path\>
-
-Now that we've compiled the glibc, let's create an alias for python and store it in your .bashrc file. Just edit /home/\<username\>/.bashrc and add the following line:
-
-    # Alias for Python with Glibc 2.14 on LD_LIBRARY_PATH
-    alias pythont="LD_LIBRARY_PATH=/home/dsemedo/<glib_path>/lib:$LD_LIBRARY_PATH python"
+    # Alias for Python with glibc 2.14 on LD_LIBRARY_PATH
+    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.14/lib:$LD_LIBRARY_PATH python"
 
 Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
 
@@ -174,30 +161,31 @@ Now when you execute python, instead of "python" just use "pythont" (note the ex
 
 **Step 7: JupyterHub and PyTorch**
 
-Now for the second and last tricky part. The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernel that you are using to use the new GLibc version.
+The alias we created doesn't work with JupyterHub. Instead, we need to patch the IPython Kernels that you are using to use the new glibc version.
 
-Let's say you have an Anaconda environment called `my_env`. To run things on JupyterHub using this env, you had to create an ipykernel for that env. With the environment `my_env` activated:
+Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel in that env.
+
+With the environment `myenv` activated:
 
     $ conda install jupyter ipykernel
-    $ python -m ipykernel install --name <some_name> --user
-
+    $ python -m ipykernel install --name myenv --user
 
 This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
         
-    /home/<username>/.local/share/jupyter/kernels/some_name/kernel.json
+    ~/.local/share/jupyter/kernels/myenv/kernel.json
 
 This file contains the following information:
 
 ```json
 {
  "argv": [
-  "/home/<username>/.conda/envs/some_name/bin/python",
+  "~/.conda/envs/myenv/bin/python",
   "-m",
   "ipykernel_launcher",
   "-f",
   "{connection_file}"
  ],
- "display_name": "some_name",
+ "display_name": "myenv",
  "language": "python",
 }
 ```
@@ -211,7 +199,7 @@ Now edit the `pythont.sh` file and paste the following:
 
 ```bash
 #!/bin/sh
-LD_PRELOAD=/home/<username>/<glib_path>/lib/libc.so.6 /home/<username>/.conda/envs/some_name/bin/python "$@"
+LD_PRELOAD=/share/apps/glibc/2.14/lib/libc.so.6 ~/.conda/envs/myenv/bin/python "$@"
 ```
 
 This script will call the same Python executable, but it will Pre-load the correct GLIBC before calling the executable. 
@@ -221,13 +209,13 @@ Finally, we just have to update the kernel spec. Edit the `kernel.json` file and
 ```json
 {
  "argv": [
-  "/home/<username>/.conda/envs/some_name/bin/pythont.sh",
+  "~/.conda/envs/myenv/bin/pythont.sh",
   "-m",
   "ipykernel_launcher",
   "-f",
   "{connection_file}"
  ],
- "display_name": "some_name",
+ "display_name": "myenv",
  "language": "python",
 }
 ```
