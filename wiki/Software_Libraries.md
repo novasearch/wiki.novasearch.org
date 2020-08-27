@@ -40,15 +40,11 @@ Run the following command to create a conda env:
 
 Note that we specified python=3.8 but other python versions are availble to install.
 
-**Step 3: Activate/deactivate a conda environment**
+**Step 3: Activate conda environments**
 
 Since you may have multiple conda environemnts, you need to activate the environment in your current shell:
 
     $ conda activate myenv
-
-To deactivate an environment, just run the command 
-
-    $ conda deactivate
 
 
 PyTorch Environment
