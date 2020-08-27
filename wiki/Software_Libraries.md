@@ -38,7 +38,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.6
+    $ conda create -n myenv python=3.6 ipykernel
 
 where you should replace myenv by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
 
@@ -74,76 +74,44 @@ The cluster is running on an older OS, CentOS 6. As such, the glibc library vers
     
 You will get the following error:
 
-    ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found
+    ImportError: /lib64/libc.so.6: version `GLIBC_2.17' not found
 
 Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel in that env:
 
-    $ conda install jupyter ipykernel
-    $ python -m ipykernel install --name myenv --user
+    $ python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
 
-This creates a new IPython kernel based on your env, and stores a kernel spec (a .json) file in:
+This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
 
-This file contains the following information:
+To run the kernel with the updated glibc your `kernel.json` file should look like:
 
 ```json
 {
  "argv": [
-  "~/.conda/envs/myenv/bin/python",
+  "/home/myusername/.conda/envs/myenv/bin/python",
   "-m",
   "ipykernel_launcher",
   "-f",
   "{connection_file}"
  ],
- "display_name": "myenv",
+ "display_name": "Python (myenv)",
  "language": "python",
+ "env": {"LD_PRELOAD": "/share/apps/glibc/2.17/lib/libc.so.6"}
 }
 ```
-
-To run Python with the correct glibc, create a bash script in `~/.conda/envs/myenv/bin/` the same path as the python executable:
-    
-    $ touch ~/.conda/envs/myenv/bin/pythont.sh
-    $ chmod +x ~/.conda/envs/myenv/bin/pythont.sh      // Give it permissions to execute  
-
-Now edit the `pythont.sh` file and paste the following:
-
-```bash
-#!/bin/sh
-LD_PRELOAD=/share/apps/glibc/2.14/lib/libc.so.6 ~/.conda/envs/myenv/bin/python "$@"
-```
-
-This script will call the same Python executable, but it will Pre-load the correct GLIBC before calling the executable. 
-
-Finally, we just have to update the kernel spec. Edit the `kernel.json` file and change the line of the Python executable:
-
-```json
-{
- "argv": [
-  "~/.conda/envs/myenv/bin/pythont.sh",
-  "-m",
-  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "myenv",
- "language": "python",
-}
-```
-
-Note that it will execute the script that we created instead of the Python executable.
 
 **Step 6: Command Line**
 
 We need tell python to use our precompiled glibc 2.14 for pytorch, so lets use an alias. Just edit ~/.bashrc and add the following line:
 
-    # Alias for Python with glibc 2.14 on LD_LIBRARY_PATH
-    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.14/lib:$LD_LIBRARY_PATH python"
+    # Alias for Python with updated glibc on LD_LIBRARY_PATH
+    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.17/lib:$LD_LIBRARY_PATH python"
 
 Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
 
     $ pythont -c "import torch; print(torch.__version__)"
-    1.4.0
+    1.6.0
 
 
 TensorFlow Environment
