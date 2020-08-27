@@ -30,17 +30,15 @@ Anaconda allows the creation of Python virtual environments. The main purpose of
 
 In Anaconda, virtual environments are referred as conda environments.
 
-To keep both Python and libraries required for the Web Search course isolated from other libraries installed in your computer, let’s create a conda environment:
-
 PS: Great cheat sheet, covering possible operations for manipulating conda environments and packages: [Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf).
 
 **Step 2: Creating conda environments**
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.6 ipykernel
+    $ conda create -n myenv python=3.8 ipykernel
 
-where you should replace myenv by any name you like. Note that we are specifying the python version. To create a Python 2.7 environment replace 3.6 by 2.7.
+Note that we specified python=3.8 but other python versions are availble to install.
 
 **Step 3: Activate/deactivate a conda environment**
 
@@ -68,14 +66,6 @@ Choose Linux, Conda and choose the latest CUDA release (10.2 at the moment of wr
     
 **Step 5: JupyterHub and PyTorch**
 
-The cluster is running on an older OS, CentOS 6. As such, the glibc library version is older than the one that was used to compile pytorch components for Anaconda. To confirm this, open a python shell and import PyTorch:
-
-    $ python -c "import torch; print(torch.__version__)"
-    
-You will get the following error:
-
-    ImportError: /lib64/libc.so.6: version `GLIBC_2.17' not found
-
 Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel in that env:
 
     $ python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
@@ -83,35 +73,6 @@ Let's say you have an Anaconda environment called `myenv`. To run things on Jupy
 This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
-
-To run the kernel with the updated glibc your `kernel.json` file should look like:
-
-```json
-{
- "argv": [
-  "/home/myusername/.conda/envs/myenv/bin/python",
-  "-m",
-  "ipykernel_launcher",
-  "-f",
-  "{connection_file}"
- ],
- "display_name": "Python (myenv)",
- "language": "python",
- "env": {"LD_PRELOAD": "/share/apps/glibc/2.17/lib/libc.so.6"}
-}
-```
-
-**Step 6: Command Line**
-
-We need tell python to use our precompiled glibc 2.14 for pytorch, so lets use an alias. Just edit ~/.bashrc and add the following line:
-
-    # Alias for Python with updated glibc on LD_LIBRARY_PATH
-    alias pythont="LD_LIBRARY_PATH=/share/apps/glibc/2.17/lib:$LD_LIBRARY_PATH python"
-
-Now when you execute python, instead of "python" just use "pythont" (note the extra 't'):
-
-    $ pythont -c "import torch; print(torch.__version__)"
-    1.6.0
 
 
 TensorFlow Environment
