@@ -56,15 +56,15 @@ Usage
 
 ### Create a submit file
 
-$ vi sim.submit
+	$ vi sim.submit
 
-`   Universe = vanilla`  
-`   Executable = sim`  
-`   Output = sim.out`  
-`   Log = sim.log`  
-`   Error = sim.err`  
-`   GetEnv = True`  
-`   Queue`
+	Universe = vanilla 
+	Executable = sim  
+	Output = sim.out  
+	Log = sim.log  
+	Error = sim.err  
+	GetEnv = True 
+	Queue
 
 Do not forget "GetEnv" to load your environment!
 
@@ -80,25 +80,25 @@ $ condor\_q
 
 The real benefit of Condor comes from managing 1000s of jobs.
 
-$ vi sim.submit
+	$ vi sim.submit
 
-`   Executable = sim`  
-`   getenv = True`  
-`   Input = sim.$(PROCESS)`  
-`   Output = sim.$(PROCESS)`  
-`   Log = sim.log`  
-`   Error = sim.err`  
-`   Queue 1000`
+	Executable = sim  
+	getenv = True 
+	Input = sim.$(PROCESS) 
+	Output = sim.$(PROCESS)
+	Log = sim.log 
+	Error = sim.err
+	Queue 1000
 
 ### Running many processes with different arguments
 
-`   Executable = sim`  
-`   getenv = True`  
-`   Arguments = $(PROCESS)`  
-`   Output = sim.$(PROCESS)`  
-`   Log = sim.log`  
-`   Error = sim.err`  
-`   Queue 1000`
+	Executable = sim 
+	getenv = True 
+	Arguments = $(PROCESS)` 
+	Output = sim.$(PROCESS)  
+	Log = sim.log  
+	Error = sim.err  
+	Queue 1000
 
 Will execute 1000 processes with the process id as a parameter: sim 0,
 sim 1, sim 2, ... , sim 999
@@ -106,23 +106,23 @@ sim 1, sim 2, ... , sim 999
 If you need to change multiple arguments, you can set the shared
 parameters at the beginning and change the required parameters
 
-`   Executable = sim `  
-`   getenv = True`  
-`   Output = sim.$(PROCESS)`  
-`   Log = sim.log`  
-`   Error = sim.err`  
-`   `  
-`   Arguments = a    `  
-`   Output = a.out`  
-`   Queue`  
-`   `  
-`   Arguments = b`  
-`   Output = b.out`  
-`   Queue`  
-`   `  
-`   Arguments = c`  
-`   Output = c.out`  
-`   Queue`
+	Executable = sim 
+	getenv = True 
+	Output = sim.$(PROCESS)
+	Log = sim.log
+	Error = sim.err
+
+	Arguments = a
+	Output = a.out
+	Queue
+
+	Arguments = b
+	Output = b.out
+	Queue`  
+
+	Arguments = c 
+	Output = c.out 
+	Queue
 
 Will execute 3 processes with the selected parameters: sim a, sim b, sim
 c and will output to a.out, b.out, c.out respectively.
@@ -132,17 +132,17 @@ condor file with a script.
 
 ### Other useful parameters
 
-`   getenv = True`
+	getenv = True
 
 This parameter shares the local environmental variables with the remote
 environment. This is useful if you want to share global library paths.
 
-`   initialdir = `<path>
+	initialdir = <path>
 
 Sets the base execution path of the execution. Useful to reference files
 with relative paths.
 
-`   Requirements = (Machine == "compute-0-1.local")`
+	Requirements = (Machine == "compute-0-1.local")
 
 Restricts the job to run on machines that satisfy the requirement. On
 this example, the jobs will only be deployed to **compute-0-1**.
