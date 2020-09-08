@@ -180,7 +180,7 @@ It should look like this:
 	Output              = /home/my_username/condor_test.out.$(PROCESS)
 	Error               = /home/my_username/condor_test.err.$(PROCESS)
 
-	request_GPUs = 1      # If you need a GPU, yout must specify it
+	request_GPUs = 1      # If you need a GPU, you must specify it
 
 	Queue 1
 
