@@ -187,7 +187,7 @@ It should look like this:
 	Queue 1
 
 The important parts are:
-* Executable: It must be the python executable from the environment that you created. If your username is *myusername*, and your environment name is *myenv*, then the path should be */home/myusername/.conda/envs/myenv/bin/python*
+* Executable: It must be the python executable from the environment that you created. If your username is *myusername* ($USER), and your environment name is *myenv*, then the path should be */home/myusername/.conda/envs/myenv/bin/python*
 * Initialdir: Set this to the path where your code is. It will be your *working directory*.
 
 
