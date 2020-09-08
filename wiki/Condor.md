@@ -159,3 +159,59 @@ To check the status of Condor slots and check how many GPUs are in available/in 
 
 	$ condor_status -af  Machine Gpus RemoteUser State
 
+
+### Launching a Python job using *your* Python Environment
+
+You can adapt the following example of a .submit file, to use your Python environment.
+
+Edit a .submit file:
+
+	$ vi example.submit
+
+It should look like this:
+
+	Universe            = vanilla
+	Executable          = /home/my_username/.conda/envs/env_name/bin/python
+	Arguments           = your_script.py
+	getenv              = True
+	Transfer_executable = False
+	Initialdir          = /home/my_username/             # Point to the base folder of your code (i.e. the your_script.py file)
+	Log                 = /home/my_username/condor_test.log.$(PROCESS)
+	Output              = /home/my_username/condor_test.out.$(PROCESS)
+	Error               = /home/my_username/condor_test.err.$(PROCESS)
+
+	request_GPUs = 1      # If you need a GPU, yout must specify it
+
+	Queue 1
+
+The important parts are:
+* Executable: It must be the python executable from the environment that you created. If your username is *my_username*, and your environment name is *env_name*, then the path should be */home/my_username/.conda/envs/env_name/bin/python*
+* Initialdir: Set this to the path where your code is. It will be your *working directory*.
+
+
+#### Testing your condor + Python Env setup
+
+Before starting submitting jobs, it is advisable to do a quick test to confirm that everything is working correctly. To do so, create a simple Python script:
+
+	$ touch your_script.py
+	$ vi your_script.py
+
+Add the following code to the script:
+	
+	print("My python script is running!")
+	
+	# Check if GPUs are seen by PyTorch (if you're not using PyTorch, remove the next two lines)
+	import torch
+	print("CUDA is available:", torch.cuda.is_available())
+
+Then create a condor .submit file using the one above as example (use your own environment and set each path), and submit it:
+
+	$ condor_submit example.submit
+	
+Your job is then submitted and the output is now available in the Log file (*/home/my_username/condor_test.out.0*). It should look like this:
+
+	$ cat condor_test.out.0
+	My python script is running!
+	CUDA is available: True
+
+	
