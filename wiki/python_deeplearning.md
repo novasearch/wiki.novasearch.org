@@ -1,6 +1,6 @@
 ---
-title: Configuring your home (Libraries and Frameworks)
-permalink: wiki/Software_Libraries/
+title: Python + Deep Learning Environment Setup
+Permalink: wiki/python_deeplearning/
 layout: wiki
 ---
 
