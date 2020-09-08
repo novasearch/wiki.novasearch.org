@@ -45,10 +45,12 @@ named slot<number>@<machine>.novasearch.org.
 
 ### Important information
 
-Each user has a **48GB memory limit** on each machine; each slot has a
+* To use condor, you must be connected to the head node (zarco). Compute nodes are just workers.
+
+* Each user has a **48GB memory limit** on each machine; each slot has a
 **5GB memory limit**.
 
-You must take these limits into account, so that your jobs don't get
+* You must take these limits into account, so that your jobs don't get
 killed as you reach the limit.
 
 Usage
