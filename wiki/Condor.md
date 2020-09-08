@@ -173,21 +173,21 @@ Edit a .submit file:
 It should look like this:
 
 	Universe            = vanilla
-	Executable          = /home/my_username/.conda/envs/env_name/bin/python
+	Executable          = /home/myusername/.conda/envs/myenv/bin/python
 	Arguments           = your_script.py
 	getenv              = True
 	Transfer_executable = False
-	Initialdir          = /home/my_username/             # Point to the base folder of your code (i.e. the your_script.py file)
-	Log                 = /home/my_username/condor_test.log.$(PROCESS)
-	Output              = /home/my_username/condor_test.out.$(PROCESS)
-	Error               = /home/my_username/condor_test.err.$(PROCESS)
+	Initialdir          = /home/myusername/             # Point to the base folder of your code (i.e. the your_script.py file)
+	Log                 = /home/myusername/condor_test.log.$(PROCESS)
+	Output              = /home/myusername/condor_test.out.$(PROCESS)
+	Error               = /home/myusername/condor_test.err.$(PROCESS)
 
 	request_GPUs = 1      # If you need a GPU, you must specify it
 
 	Queue 1
 
 The important parts are:
-* Executable: It must be the python executable from the environment that you created. If your username is *my_username*, and your environment name is *env_name*, then the path should be */home/my_username/.conda/envs/env_name/bin/python*
+* Executable: It must be the python executable from the environment that you created. If your username is *myusername*, and your environment name is *myenv*, then the path should be */home/myusername/.conda/envs/myenv/bin/python*
 * Initialdir: Set this to the path where your code is. It will be your *working directory*.
 
 
@@ -210,7 +210,7 @@ Then create a condor .submit file using the one above as example (use your own e
 
 	$ condor_submit example.submit
 	
-Your job is then submitted and the output is now available in the Log file (*/home/my_username/condor_test.out.0*). It should look like this:
+Your job is then submitted and the output is now available in the Log file (*/home/myusername/condor_test.out.0*). It should look like this:
 
 	$ cat condor_test.out.0
 	My python script is running!
