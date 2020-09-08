@@ -1,6 +1,6 @@
 ---
 title: Python + Deep Learning Environment Setup
-Permalink: wiki/python_deeplearning/
+Permalink: wiki/Python_DeepLearning/
 layout: wiki
 ---
 
