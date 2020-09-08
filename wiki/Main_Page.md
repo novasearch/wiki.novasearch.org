@@ -15,7 +15,8 @@ How-to instructions for Cluster
 --------------------
 
 - [Overview](/wiki/Cluster "wikilink")
-- [Configuring your home](/wiki/Software_Libraries "wikilink")
+- [Python + Deep Learning Environment](/wiki/python_deeplearning "wikilink")
+- [Libraries](/wiki/Software_Libraries "wikilink")
 - [FAQ](/wiki/Cluster/FAQ "wikilink")
 - [Using Condor](/wiki/Condor "wikilink")
 - [Admin and Setup](/wiki/Cluster/Admin "wikilink")
