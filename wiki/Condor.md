@@ -166,6 +166,8 @@ To check the status of Condor slots and check how many GPUs are in available/in 
 
 You can adapt the following example of a .submit file, to use your Python environment.
 
+#### Option #1 - Directly call Python
+
 Edit a .submit file:
 
 	$ vi example.submit
@@ -190,8 +192,46 @@ The important parts are:
 * Executable: It must be the python executable from the environment that you created. If your username is *myusername* ($USER), and your environment name is *myenv*, then the path should be */home/myusername/.conda/envs/myenv/bin/python*
 * Initialdir: Set this to the path where your code is. It will be your *working directory*.
 
+#### Option #2 - Execute a bash script that will call Python
 
-#### Testing your condor + Python Env setup
+Some users may have problems using option #1. Alternatively, we can define a bash script that will call Python. This option provides more flexibility since you can run any command before and after executing your Python script (e.g. copying output files to a given folder).
+
+First create a bash script that will invoke Python:
+
+	$ touch example.sh   # Note the .sh extension
+
+Add the following lines to the .sh file:
+
+	#!/bin/bash  
+	
+	# Setup anaconda
+	. /share/apps/anaconda3/2019.10/etc/profile.d/conda.sh   
+	  
+	conda activate myenv
+	  
+	python your_script.py
+
+Next, create the  .submit file:
+
+	$ vi example_bash.submit
+
+It should look like this:
+
+	Universe            = vanilla
+	Executable          = /bin/bash
+	Arguments           = example.sh
+	getenv              = True
+	Transfer_executable = False
+	Initialdir          = /home/myusername/             # Point to the base folder of your code (i.e. the your_script.py file)
+	Log                 = /home/myusername/condor_test.log.$(PROCESS)
+	Output              = /home/myusername/condor_test.out.$(PROCESS)
+	Error               = /home/myusername/condor_test.err.$(PROCESS)
+
+	request_GPUs = 1      # If you need a GPU, you must specify it
+
+	Queue 1
+	
+#### Testing the submission of Python jobs
 
 Before starting submitting jobs, it is advisable to do a quick test to confirm that everything is working correctly. To do so, create a simple Python script:
 
@@ -206,14 +246,19 @@ Add the following code to the script:
 	import torch
 	print("CUDA is available:", torch.cuda.is_available())
 
-Then create a condor .submit file using the one above as example (use your own environment and set each path), and submit it:
+Then create a condor .submit file using one of the options above as example (use your own environment and set each path accordingly), and submit it:
 
+	# For option #1
 	$ condor_submit example.submit
+	
+	OR
+	
+	#For option #2
+	$ condor_submit example_bash.submit
+	
 	
 Your job is then submitted and the output is now available in the Log file (*/home/myusername/condor_test.out.0*). It should look like this:
 
 	$ cat condor_test.out.0
 	My python script is running!
 	CUDA is available: True
-
-	
