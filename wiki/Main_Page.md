@@ -21,6 +21,16 @@ How-to instructions for Cluster
 - [Using Condor](/wiki/Condor "wikilink")
 - [Admin and Setup](/wiki/Cluster/Admin "wikilink")
 
+
+Courses and Tutorials
+--------------------
+Course: [IR and NLP](/wiki/IR_NLP)
+Course: [Web Search and Data Mining ] (/wiki/WSDM)
+Tutorial: [ElasticSearch](/wiki/...)
+Tutorial: [Transformer](/wiki/...)
+Tutorial: [Named Entity Extraction with BINK](/wiki/...)
+Tutorial: [Multimodal Conversation AI with M-HRED](/wiki/...)
+
 OS general info
 ---------------
 
@@ -32,6 +42,7 @@ Handling Accepted Papers
 - [Funding](/wiki/Funding "wikilink")
 - [Acknowledgements](/wiki/Acknowledgements "wikilink")
 - [Reimbursement](/wiki/Reimbursement "wikilink")
+
 
 Old stuff
 -----------------------
