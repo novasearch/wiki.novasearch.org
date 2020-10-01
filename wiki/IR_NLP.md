@@ -27,15 +27,14 @@ A discussion forum (Discord) is set up to let students and lecturers discuss cou
 When registering for the discussion forum, please follow the username schema: "FirstName Surname-StudentNr" e.g.: "Gustavo Gonçalves-40000"
 
 ## Slides
-- [Introduction]()
-- [Basic Techniques]()
-- [Language Models]()
+- [Introduction](/files/a01 Introduction.pdf)
+- [Basic Techniques](/files/a02 Basic techniques.pdf)
+- [Language Models](/files/a03 Language Models.pdf)
 
 ## Exercises
-[Exercises Sheet]()
+[Exercises Sheet](/files/Exercises.pdf)
 
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x's to mail us)
 
-Gustavo Gonçalves (ggoncalv<img src="/assets/images/at_sign.png" alt=" "
-	 display="inline" margin="0px" border-radius="0px" />cs.cmu.edu)
+Gustavo Gonçalves (ggoncalv<img src="/assets/images/at_sign.png" alt=" " style="display:inline;margin:0;border-radius:0"/>cs.cmu.edu)
