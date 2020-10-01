@@ -32,9 +32,9 @@ A discussion forum (Discord) is set up to let students and lecturers discuss cou
 When registering for the discussion forum, please follow the username schema: "FirstName Surname-StudentNr" e.g.: "Gustavo Gonçalves-40000"
 
 ## Slides
-- [Introduction](/assets/files/a01 Introduction.pdf)
-- [Basic Techniques](/assets/files/a02 Basic techniques.pdf)
-- [Language Models](/assets/files/a03 Language Models.pdf)
+1. [Introduction](/assets/files/a01 Introduction.pdf)
+2. [Basic Techniques](/assets/files/a02 Basic techniques.pdf)
+3. [Language Models](/assets/files/a03 Language Models.pdf)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
