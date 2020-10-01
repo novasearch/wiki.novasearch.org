@@ -1,4 +1,8 @@
-# Information Retrieval and Natural Language Processing
+---
+title: Information Retrieval and Natural Language Processing
+layout: wiki
+---
+
 ## Course Description
 
 Information Retrieval (IR) is an area that aims at answering user information needs with the most relevant information. In this course we shall study how search applications, e.g. Google, compute relevant search results from a repository of Web information.
