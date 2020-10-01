@@ -24,12 +24,12 @@ How-to instructions for Cluster
 
 Courses and Tutorials
 --------------------
-Course: [IR and NLP](/wiki/IR_NLP)
-Course: [Web Search and Data Mining ] (/wiki/WSDM)
-Tutorial: [ElasticSearch](/wiki/...)
-Tutorial: [Transformer](/wiki/...)
-Tutorial: [Named Entity Extraction with BINK](/wiki/...)
-Tutorial: [Multimodal Conversation AI with M-HRED](/wiki/...)
+- Course: [IR and NLP](/wiki/IR_NLP)
+- Course: [Web Search and Data Mining ] (/wiki/WSDM)
+- Tutorial: [ElasticSearch](/wiki/...)
+- Tutorial: [Transformer](/wiki/...)
+- Tutorial: [Named Entity Extraction with BINK](/wiki/...)
+- Tutorial: [Multimodal Conversation AI with M-HRED](/wiki/...)
 
 OS general info
 ---------------
