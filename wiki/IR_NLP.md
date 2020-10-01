@@ -21,9 +21,20 @@ Exam (40%) + Lab work (60% with three submissions)
 
 All lectures and labs are thaught by Zoom. Please, contact instructors to access the meeting ID and password.
 
-A discussion forum is set up to let students and lecturer discuss course and project issues.
+A discussion forum (Discord) is set up to let students and lecturers discuss course and project issues. Please ask the intructors to join.
+
+### Discussion Forum Rules
+When registering for the discussion forum, please follow the username schema: "FirstName Surname-StudentNr" e.g.: "Gustavo Gonçalves-40000"
+
+## Slides
+- [Introduction]()
+- [Basic Techniques]()
+- [Language Models]()
+
+## Exercises
+[Exercises Sheet]()
 
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x's to mail us)
 
-Gustavo Gonçalves (ggoncalv ![ ](/assets/images/at.png) cs.cmu.edu)
+Gustavo Gonçalves (ggoncalv ![ ](/assets/images/at.gif) cs.cmu.edu)
