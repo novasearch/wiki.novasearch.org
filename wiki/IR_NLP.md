@@ -37,4 +37,5 @@ When registering for the discussion forum, please follow the username schema: "F
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x's to mail us)
 
-Gustavo Gonçalves (ggoncalv ![ ](/assets/images/at.gif) cs.cmu.edu)
+Gustavo Gonçalves (ggoncalv<img src="/assets/images/at_sign.png" alt=" "
+	 display="inline" margin="0px" border-radius="0px" />cs.cmu.edu)
