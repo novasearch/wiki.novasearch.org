@@ -26,4 +26,4 @@ A discussion forum is set up to let students and lecturer discuss course and pro
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x's to mail us)
 
-Gustavo Gonçalves (ggoncalv ![at_png](/assets/images/at_sign.png) cs.cmu.edu)
+Gustavo Gonçalves (ggoncalv ![ ](/assets/images/at.png) cs.cmu.edu)
