@@ -31,10 +31,21 @@ A discussion forum (Discord) is set up to let students and lecturers discuss cou
 ### Discussion Forum Rules
 When registering for the discussion forum, please follow the username schema: "FirstName Surname-StudentNr" e.g.: "Gustavo Gonçalves-40000"
 
-## Slides
-1. [Introduction](/assets/files/a01 Introduction.pdf)
-2. [Basic Techniques](/assets/files/a02 Basic techniques.pdf)
-3. [Language Models](/assets/files/a03 Language Models.pdf)
+## Schedule and Syllabus
+- 16/set/20	[Introduction](/assets/files/a01 Introduction.pdf)
+- 23/set/20	[Text processing, NGRAMS, cosine distance](/assets/files/a02 Basic techniques.pdf)
+- 30/set/20	[Language models](/assets/files/a03 Language Models.pdf)
+- 07/out/20	Evaluation
+- 14/out/20	Classification tasks: sentiment, category, spam
+- 21/out/20	Pseudo relevance models
+- 28/out/20	Learning to rank
+- 04/nov/20	Word embeddings
+- 11/nov/20	Information extraction
+- 18/nov/20	Question answering
+- 25/nov/20	Conversational search
+- 02/dez/20	Conversational recommendation
+- 09/dez/20 Project support
+- 16/dez/20 Project support
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
