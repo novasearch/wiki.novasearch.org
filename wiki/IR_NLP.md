@@ -37,8 +37,8 @@ When registering for the discussion forum, please follow the username schema: "F
 - 30/set/20	[Language models](/assets/files/a03 Language Models.pdf)
 - 07/out/20	Evaluation
 - 14/out/20	Classification tasks: sentiment, category, spam
-- 21/out/20	Pseudo relevance models
-- 28/out/20	Learning to rank
+- 21/out/20	Learning to rank
+- 28/out/20	Pseudo relevance models
 - 04/nov/20	Word embeddings
 - 11/nov/20	Information extraction
 - 18/nov/20	Question answering
