@@ -31,11 +31,11 @@ A discussion forum (Discord) is set up to let students and lecturers discuss cou
 ### Discussion Forum Rules
 When registering for the discussion forum, please follow the username schema: "FirstName Surname-StudentNr" e.g.: "Gustavo Gonçalves-40000"
 
-## Schedule and Syllabus
-- 16/set/20	[Introduction](/assets/files/a01 Introduction.pdf)
-- 23/set/20	[Text processing, NGRAMS, cosine distance](/assets/files/a02 Basic techniques.pdf)
-- 30/set/20	[Language models](/assets/files/a03 Language Models.pdf)
-- 07/out/20	Evaluation
+## Schedule
+- 16/set/20	[Introduction](/assets/files/a01 Introduction.pdf) [video](https://youtu.be/Eak1ymcSIXs)
+- 23/set/20	[Text processing, NGRAMS, cosine distance](/assets/files/a02 Basic techniques.pdf) [video](https://youtu.be/Eak1ymcSIXs)
+- 30/set/20	[Language models](/assets/files/a03 Language Models.pdf) [video](https://youtu.be/hyijYuoZ0pA)
+- 07/out/20	[Evaluation](/assets/files/a04 Evaluation.pdf) [video](https://youtu.be/fkjqwZUPMGw)
 - 14/out/20	Classification tasks: sentiment, category, spam
 - 21/out/20	Learning to rank
 - 28/out/20	Pseudo relevance models
