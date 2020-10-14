@@ -35,7 +35,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 23/set/20	[Introduction](/assets/files/a01 Introduction.pdf) and [Text processing, NGRAMS, cosine distance](/assets/files/a02 Basic techniques.pdf) ([video](https://youtu.be/Eak1ymcSIXs))
 - 30/set/20	[Language models](/assets/files/a03 Language Models.pdf) ([video](https://youtu.be/hyijYuoZ0pA))
 - 07/out/20	[Evaluation](/assets/files/a04 Evaluation.pdf) ([video](https://youtu.be/fkjqwZUPMGw))
-- 14/out/20	Pseudo relevance models
+- 14/out/20	[Relevance-based Language Models](/assets/files/05 Relevance LM.pdf)
 - 21/out/20	Classification tasks: sentiment, category, spam
 - 28/out/20	Learning to rank
 - 04/nov/20	Word embeddings
