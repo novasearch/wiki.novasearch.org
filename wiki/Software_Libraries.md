@@ -373,3 +373,41 @@ Compiling boost with support for python 3.5 (Just update the paths and version f
     $ ./b2 install  --prefix=<install_folder> --enable-unicode=ucs4 -j12
 
 Add the <install_folder>/lib and <install_folder>/include to your PATH.
+
+CUDA
+------------
+
+If you ever need a certain version of CUDA to compile a certain package e.g. [NVIDIA Apex](https://nvidia.github.io/apex/). You can install it in your home:
+
+Log in to a compute node so that the GPUs are visile.
+Load the gnu and gnutools modules. e.g. module load gnu
+Download CUDA package from the [NVIDIA toolkit archive](https://developer.nvidia.com/cuda-toolkit-archive).
+You will need to select the correct server architecture. At the time of writing of this tutorial it was:
+Linux -> x86_64 -> CentOS -> 6 -> runfile (local)
+
+After selecting the right config you should create the dir for your CUDA installation and use the wget command to download the run file.
+
+For example:    
+
+    $ cd ~ && mkdir -p lib/cuda/10.2 && cd lib/cuda/10.2
+    $ wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_rhel6.run
+    
+Run the downloaded file using the following flags to avoid installing to the default dir (/usr/local/cuda), to which you most likely do not have access.
+
+    $ sh cuda_10.2.89_440.33.01_rhel6.run --toolkit --toolkitpath=$HOME/lib/cuda/10.2
+    
+The --toolkit flag signals that you are only interested in the toolkit itself, so it will not install drivers, nor samples.
+The --toolkit flag specifies the path where the CUDA installation will be in your home.
+
+You should do the same for patches that have been released for that CUDA installation, for example:
+
+    $ wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/patches/1/cuda_10.2.1_linux.run
+    $ sh cuda_10.2.1_linux.run --toolkit --toolkitpath=$HOME/lib/cuda/10.2
+
+After the installation is complete you should update the necessary environment variables:
+
+    $ export CUDA_HOME=$HOME/lib/cuda/10.2
+    $ PATH=${CUDA_HOME}/bin:${PATH}
+    $ LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+    
+If you want to make this your default CUDA installation you should add it to your $HOME/.bashrc file. Or create a script to easily add the env variables on demand, for a more temporary solution.
