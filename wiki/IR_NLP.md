@@ -37,7 +37,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 30/set/20	[Language models](/assets/files/a03 Language Models.pdf) ([video](https://youtu.be/hyijYuoZ0pA))
 - 07/out/20	[Evaluation](/assets/files/a04 Evaluation.pdf) ([video](https://youtu.be/fkjqwZUPMGw))
 - 14/out/20	[Relevance-based Language Models](/assets/files/a05 Relevance LM.pdf)
-- 21/out/20	[Document Categorization](/assets/files/a06 Document categorization.pdf)
+- 21/out/20	[Document categorization](/assets/files/a06 Document categorization.pdf)
 - 28/out/20	[Learning to rank](/assets/files/a07 Learning to rank.pdf)
 - 04/nov/20	[Word embeddings](/assets/files/a08 Word embeddings.pdf)
 - 11/nov/20	Information extraction
