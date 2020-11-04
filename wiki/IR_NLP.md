@@ -38,11 +38,11 @@ When registering for the discussion forum, please follow the username schema: "F
 - 07/out/20	[Evaluation](/assets/files/a04 Evaluation.pdf) ([video](https://youtu.be/fkjqwZUPMGw))
 - 14/out/20	[Relevance-based Language Models](/assets/files/a05 Relevance LM.pdf)
 - 21/out/20	[Document Categorization](/assets/files/a06 Document categorization.pdf)
-- 28/out/20	Learning to rank
-- 04/nov/20	Word embeddings
+- 28/out/20	[Learning to rank](/assets/files/a07 Learning to rank.pdf)
+- 04/nov/20	[Word embeddings](/assets/files/a08 Word embeddings.pdf)
 - 11/nov/20	Information extraction
 - 18/nov/20	Question answering
-- 25/nov/20	Conversational search
+- 25/nov/20	[Conversational search](/assets/files/a11 Conversational search.pdf)
 - 02/dez/20	Conversational recommendation
 - 09/dez/20 Project support
 - 16/dez/20 Project support
