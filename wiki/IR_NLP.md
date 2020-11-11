@@ -49,9 +49,9 @@ When registering for the discussion forum, please follow the username schema: "F
 
 ## Labs
  - Project starting point [Colab Notebook](/assets/files/Project-Colab.zip) or [Jupyter Notebook](/assets/files/Project-Jupyter.zip)
- - Sentiment classification [Colab Notebook](/assets/files/SentimentClassification-Colab.ipynb) or [Jupyter Notebook](/assets/files/SentimentClassification-Jupyter.ipynb)
- - Word and Sentence embeddings [Colab Notebook](/assets/files/Embeddings-Colab.ipynb) or [Jupyter Notebook](/assets/files/Embeddings-Jupyter.ipynb)
- 
+ - Sentiment classification [with Scikit Learn](/assets/files/Sentiment_classification_scikit_learn.ipynb) or [with PyTorch](/assets/files/SentimentClassification-Colab.ipynb)
+ - Word and Sentence embeddings [Part 1](https://colab.research.google.com/drive/1CAjsUFwK--3366jotyOr6Jxe__bMmyhi?usp=sharing) or [Part 2](https://colab.research.google.com/drive/19dXRLvO_FrtOLyvaX1JAaPmOX8XGPCgy?usp=sharin)
+
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
