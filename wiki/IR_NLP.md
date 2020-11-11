@@ -48,7 +48,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 16/dez/20 Project support
 
 ## Labs
- - Project starting point [Colab Notebook](/assets/files/Project-Colab.ipynb) or [Jupyter Notebook](/assets/files/Project-Jupyter.ipynb)
+ - Project starting point [Colab Notebook](/assets/files/Project-Colab.zip) or [Jupyter Notebook](/assets/files/Project-Jupyter.zip)
  - Sentiment classification [Colab Notebook](/assets/files/SentimentClassification-Colab.ipynb) or [Jupyter Notebook](/assets/files/SentimentClassification-Jupyter.ipynb)
  - Word and Sentence embeddings [Colab Notebook](/assets/files/Embeddings-Colab.ipynb) or [Jupyter Notebook](/assets/files/Embeddings-Jupyter.ipynb)
  
