@@ -52,6 +52,19 @@ When registering for the discussion forum, please follow the username schema: "F
  - Sentiment classification [with Scikit Learn](/assets/files/Sentiment_classification_scikit_learn.ipynb) or [with PyTorch](/assets/files/SentimentClassification-Colab.ipynb)
  - Word and Sentence embeddings [Part 1](https://colab.research.google.com/drive/1CAjsUFwK--3366jotyOr6Jxe__bMmyhi?usp=sharing) or [Part 2](https://colab.research.google.com/drive/19dXRLvO_FrtOLyvaX1JAaPmOX8XGPCgy?usp=sharin)
 
+## Project guidelines for milestone 2:
+ - Model training:
+     - Build triplets (topic_turn, passage, relevance judgment) - Use only annotated ones;
+     - Convert relevance labels to 0-1;
+     - Feed all the pairs (topic_turn, passage) to BERT and get its embeddings;
+     - Train classifier with the embeddings and use the relevance judgments as labels to separate relevant from non-relevant pairs (use the provided classifier)
+
+ - Answer retrieval:
+     - Retrieval w/ LMD + Re-ranking with Trained Classifier:
+     - Get top-1000 documents;
+     - Feed <topic_turn, passage> and extract CLS embedding;
+     - Feed 1000 CLS embeddings to Classifier and extract scores;
+     - Sort by pairs by scores.
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
