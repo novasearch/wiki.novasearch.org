@@ -49,7 +49,7 @@ When registering for the discussion forum, please follow the username schema: "F
 
 ## Labs
  - Project starting point [Colab Notebook](/assets/files/Project-Colab.zip) or [Jupyter Notebook](/assets/files/Project-Jupyter.zip)
- - Sentiment classification [with Scikit Learn](/assets/files/Sentiment_classification_scikit_learn.ipynb) \[[Colab Link] (https://colab.research.google.com/drive/1zV24gqXke5eJXNkbWNLpfQCxUfcemx-T?usp=sharing)\] or [with PyTorch](/assets/files/SentimentClassification-Colab.ipynb) \[[Colab Link](https://colab.research.google.com/drive/1UQ43GXaI_4bsu79wY4CQ5af3kNQ2Lqa3?usp=sharing)\]
+ - Sentiment classification [with Scikit Learn](/assets/files/Sentiment_classification_scikit_learn.ipynb) \[[Colab Link](https://colab.research.google.com/drive/1zV24gqXke5eJXNkbWNLpfQCxUfcemx-T?usp=sharing)\] or [with PyTorch](/assets/files/SentimentClassification-Colab.ipynb) \[[Colab Link](https://colab.research.google.com/drive/1UQ43GXaI_4bsu79wY4CQ5af3kNQ2Lqa3?usp=sharing)\]
  - Word and Sentence embeddings [Part 1](https://colab.research.google.com/drive/1CAjsUFwK--3366jotyOr6Jxe__bMmyhi?usp=sharing) or [Part 2](https://colab.research.google.com/drive/19dXRLvO_FrtOLyvaX1JAaPmOX8XGPCgy?usp=sharin)
 
 ### Project guidelines for milestone 2:
