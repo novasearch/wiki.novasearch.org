@@ -40,7 +40,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 21/out/20	[Document categorization](/assets/files/a06 Document categorization.pdf) ([video](https://youtu.be/fO1X1wdw6FQ))
 - 28/out/20	[Learning to rank](/assets/files/a07 Learning to rank.pdf) ([video](https://youtu.be/w48z48CrZYc))
 - 04/nov/20	[Word embeddings](/assets/files/a08 Word embeddings.pdf)
-- 11/nov/20	Information extraction
+- 11/nov/20	[Information extraction](/assets/files/a09 Information Extraction 2020.pdf)
 - 18/nov/20	Question answering
 - 25/nov/20	[Conversational search](/assets/files/a11 Conversational search.pdf)
 - 02/dez/20	Conversational recommendation
