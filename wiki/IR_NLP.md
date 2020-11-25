@@ -41,7 +41,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 28/out/20	[Learning to rank](/assets/files/a07 Learning to rank.pdf) ([video](https://youtu.be/w48z48CrZYc))
 - 04/nov/20	[Word embeddings](/assets/files/a08 Word embeddings.pdf) ([video](https://youtu.be/-D_6RjWzc_c))
 - 11/nov/20	[Information extraction](/assets/files/a09 Information Extraction 2020.pdf) ([video](https://youtu.be/qzl4XYPjmck))
-- 18/nov/20	[Question answering](/assets/files/a10 Question-Answering.pdf) ([video](https://))
+- 18/nov/20	[Question answering](/assets/files/a10 Question Answering.pdf) ([video](https://))
 - 25/nov/20	[Conversational search](/assets/files/a11 Conversational search.pdf) ([video](https://))
 - 02/dez/20	[Conversational recommendation](/assets/files/a12 Conversational Recommendation.pdf) ([video](https://))
 - 09/dez/20 Project support
