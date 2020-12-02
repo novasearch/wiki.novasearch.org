@@ -52,6 +52,7 @@ When registering for the discussion forum, please follow the username schema: "F
  - Sentiment classification [with Scikit Learn](/assets/files/Sentiment_classification_scikit_learn.ipynb) \[[Colab Link](https://colab.research.google.com/drive/1zV24gqXke5eJXNkbWNLpfQCxUfcemx-T?usp=sharing)\] or [with PyTorch](/assets/files/SentimentClassification-Colab.ipynb) \[[Colab Link](https://colab.research.google.com/drive/1UQ43GXaI_4bsu79wY4CQ5af3kNQ2Lqa3?usp=sharing)\]
  - Word and Sentence embeddings [Part 1](https://colab.research.google.com/drive/1CAjsUFwK--3366jotyOr6Jxe__bMmyhi?usp=sharing) or [Part 2](https://colab.research.google.com/drive/19dXRLvO_FrtOLyvaX1JAaPmOX8XGPCgy?usp=sharin)
  - Named Entities \[[Colab Link](https://colab.research.google.com/drive/1SxajcE0YPz-qq6HGUiDlkYs2P2MPaTEx#scrollTo=PTDAyspiTL1-)\]
+ - Query Re-Writing with T5 \[[Colab Link](https://colab.research.google.com/drive/14cV06j431JebnxqpZBPy2He7n7_55YIF#scrollTo=YxMDXF-Wl1__)\]
 
 ### Project guidelines for milestone 2:
  - Model training:
