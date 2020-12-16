@@ -43,7 +43,7 @@ When registering for the discussion forum, please follow the username schema: "F
 - 11/nov/20	[Information extraction](/assets/files/a09 Information Extraction 2020.pdf) ([video](https://youtu.be/qzl4XYPjmck))
 - 18/nov/20	[Question answering](/assets/files/a10 Question Answering.pdf) ([video](https://youtu.be/w58k1bJC2e0))
 - 25/nov/20	[Conversational search](/assets/files/a11 Conversational search.pdf) ([video](https://youtu.be/2Rbg-6gS7fs))
-- 02/dez/20	[To be defined](/assets/files/a12.pdf) ([video](https://))
+- 02/dez/20	[Computational Ethics for NLP and IR](/assets/files/a12 Computational Ethics.pdf) ([video](https://))
 - 09/dez/20 Project support
 - 16/dez/20 Project support
 
