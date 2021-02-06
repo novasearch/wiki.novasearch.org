@@ -149,3 +149,5 @@ Pyserini Environment
     $ conda install faiss-cpu -c pytorch
     $ pip install pyserini
     $ python -m ipykernel install --user --name pyserini --display-name "Python (pyserini)"
+    
+Enter this in the first cell of your notebook `%env JAVA_HOME=/share/apps/jdk/jdk-11`
