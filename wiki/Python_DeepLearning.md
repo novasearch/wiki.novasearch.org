@@ -139,3 +139,13 @@ Note that the name above can be different from the current environment name.
 Now you should deactivate the conda environment to avoid changing its configuration:
 
     $ conda deactivate
+
+
+Pyserini Environment
+--------------------
+
+    $ conda create -n pyserini python=3.8 ipykernel cython numpy scipy scikit-learn pandas tqdm tensorflow
+    $ conda activate pyserini
+    $ conda install faiss-cpu -c pytorch
+    $ pip install pyserini
+    $ python -m ipykernel install --user --name pyserini --display-name "Python (pyserini)"
