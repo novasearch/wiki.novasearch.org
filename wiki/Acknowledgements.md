@@ -15,7 +15,7 @@ The camera-ready version should make the necessary acknowledgments:
     project NOVA LINCS Ref. UID/CEC/04516/2013.
 -   This work has been partially funded by the CMU Portugal research
     project GoLocal Ref. CMUP-ERI/TIC/0046/2014 and by the
-    project NOVA LINCS Ref. UID/CEC/04516/2013.
+    project NOVA LINCS Ref. UIDP/04516/2020.
 -   To your own scholarship if appropriate.
 
 Here is an example for the acmart template:
@@ -24,4 +24,4 @@ Here is an example for the acmart template:
     Portugal}{} research project GoLocal Ref.
     \\grantnum{CMUP}{CMUP-ERI/TIC/0046/2014} and by the
     \\grantsponsor{FCT}{FCT}{} project NOVA LINCS Ref.
-    \\grantnum{FCT}{UID/CEC/04516/2013}.
+    \\grantnum{FCT}{UIDP/04516/2020}.
