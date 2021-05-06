@@ -70,6 +70,21 @@ This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
 
+**Step 6: Check python version from inside JupyterHub**
+
+ Check version runing on Jupyter notebook
+ 
+    from platform import python_version
+    print(python_version())
+
+ Check version inside your Python program
+
+    import sys
+    print(sys.version)
+
+ Check version in command line or shell
+    python --version
+
 
 TensorFlow Environment
 ------------
