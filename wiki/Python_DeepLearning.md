@@ -65,7 +65,7 @@ Choose Linux, Conda and choose the latest CUDA release (10.2 at the moment of wr
 Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel **from `myenv`**:
 
 1. ```$ conda activate myenv```
-2. ```$ python -m ipykernel install --user --name myenv --display-name "Python (myenv) ```
+2. ```$ python -m ipykernel install --user --name myenv --display-name "Python (myenv)" ```
 
 This creates a new IPython kernel for your env and stores a kernel spec file in:
         
