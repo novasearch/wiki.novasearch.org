@@ -33,7 +33,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.8 ipykernel
+    $ conda create -n myenv python=3.8 ipykernel numpy scipy scikit-learn pandas tqdm
 
 Note that we specified python=3.8 but other python versions are availble to install.
 
