@@ -5,11 +5,9 @@ layout: wiki
 
 ## Course Description
 
-Information Retrieval (IR) is an area that aims at answering user information needs with the most relevant information. In this course we shall study how search applications, e.g. Google, compute relevant search results from a repository of Web information.
+Information Retrieval (IR) is an area that aims at answering user information needs with the most relevant information. In this course we shall study how process text and natural language data and extract information from it to support multiple text related tasks.
 
-This course starts by dissecting a search engine, and discusses the fundamental techniques currently used in information retrieval. Afterwards, the most relevant algorithms and retrieval models are discussed in detail.
-
-The current demand for intuitive search processes and language comprehension have been alligning Natural Language Processing (NLP) and IR. In this course you will learn fundamental techniques, that are used to encode syntax, grammar, and semantics in machines. 
+This course starts by dissecting a text processing pipeline, and discusses the fundamental techniques currently used in information retrieval and NLP. Afterwards, the most relevant retrieval models, ranking and categorization methods and question answering techniques are discussed in detail.
 
 This course includes extensive hands-on laboratories where key retrieval and NLP algorithms are examined. The goal is to strengthen students’ experimental analysis and critical thinking skills concerning search performance metrics and experimental results.
 
@@ -28,8 +26,9 @@ Exam (40%) + Lab work (60% with three submissions)
 - 16/oct/21	[Vector Space Model and Language Models]() 
 
 ## Labs
- - Lab setup [setup instructions](/assets/files/)
- - Project starting point [Colab Notebook](/assets/files/Project-Colab.zip) or [Jupyter Notebook](/assets/files/Project-Jupyter.zip)
+ - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
+ - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021_lab1.zip)
+ - Lab 2 - Vector Space Model and Language Models [Jupyter Notebook](/assets/files/2021_lab2.zip)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
