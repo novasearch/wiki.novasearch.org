@@ -22,14 +22,14 @@ This course includes extensive hands-on laboratories where key retrieval and NLP
 Exam (40%) + Lab work (60% with three submissions)
 
 ## Schedule
-- 29/set/21	[Introduction]() 
-- 13/oct/21	[Text processing, Words normalization, Types of Words]()
-- 16/oct/21	[Vector Space Model and Language Models]() 
+- 29/set/21	Introduction
+- 13/oct/21	Text processing, Words normalization, Types of Words
+- 16/oct/21	Vector Space Model and Language Models
 
 ## Labs
  - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
  - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
- - Lab 2 - Vector Space Model and Language Models [Jupyter Notebook](/assets/files/2021labs/)
+ - Lab 2 - Vector Space Model and Language Models
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
