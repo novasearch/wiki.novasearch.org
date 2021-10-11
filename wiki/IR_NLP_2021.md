@@ -27,8 +27,8 @@ Exam (40%) + Lab work (60% with three submissions)
 
 ## Labs
  - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
- - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021_lab1.zip)
- - Lab 2 - Vector Space Model and Language Models [Jupyter Notebook](/assets/files/2021_lab2.zip)
+ - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
+ - Lab 2 - Vector Space Model and Language Models [Jupyter Notebook](/assets/files/2021labs/)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
