@@ -14,7 +14,8 @@ This course includes extensive hands-on laboratories where key retrieval and NLP
 ## Objectives
 - Learn the concept of information relevance.
 - Learn how to parse and analyze text data.
-- Learn how to rank information by relevance.
+- Learn how to answer user queries and questions
+- Learn how to extract actionable information from text sources.
 - Analysis of experimental results.
 
 ## Grading
