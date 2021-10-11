@@ -24,8 +24,9 @@ How-to instructions for Cluster
 
 Courses and Tutorials
 --------------------
-- Course: [IR and NLP](/wiki/IR_NLP)
-- Course: [Web Search and Data Mining ](/wiki/WSDM)
+- Course: [IR and NLP (2021)](/wiki/IR_NLP_2021)
+- Course: [IR and NLP (2020)](/wiki/IR_NLP)
+- Course: [Web Search and Data Mining](/wiki/WSDM)
 - Tutorial: [ElasticSearch](/wiki/...)
 - Tutorial: [Transformer](/wiki/...)
 - Tutorial: [Named Entity Extraction with BINK](/wiki/...)
