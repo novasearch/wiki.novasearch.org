@@ -9,7 +9,16 @@ Install Anaconda
 
 **Step 1: Install Anaconda**
 
+Simply follow the instructions according to your case:
 
+    https://docs.anaconda.com/anaconda/install/
+
+
+All of the following steps requires you to open the command line interface (CLI) and execute the outlined instructions. To open the terminal to access the command line interface as follows:
+
+ - Linux: press "window key + s", type "terminal", select the terminal application.
+ - Windows: press "window key + s", type "Anaconda prompt" (usually "cmd" also works), select the "Anaconda Prompt".
+ - Mac:
 
 Conda Environments
 ------------
@@ -54,7 +63,40 @@ Spacy
 
 **Step 5: Install Spacy and its models**
 
+    $ conda install -c conda-forge spacy
+    $ python -m spacy download en_core_web_sm
 
+To install the BPE and WPE tokenizers run this command:
+
+    $ pip install tokenizers
+
+For the BERT tokenizers you need to download these files and store it in your working directory:
+
+    'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt"
+
+    'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt"
+
+    'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt"
+
+    'bert-large-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-vocab.txt"
+
+    'bert-base-multilingual-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt"
+
+    'bert-base-multilingual-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt"
+
+    'bert-base-chinese': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt"
+
+    'bert-base-german-cased': "https://int-deepset-models-bert.s3.eu-central-1.amazonaws.com/pytorch/bert-base-german-cased-vocab.txt"
+
+    'bert-large-uncased-whole-word-masking': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-whole-word-masking-vocab.txt"
+
+    'bert-large-cased-whole-word-masking': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-whole-word-masking-vocab.txt"
+
+    'bert-large-uncased-whole-word-masking-finetuned-squad': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-whole-word-masking-finetuned-squad-vocab.txt"
+
+    'bert-large-cased-whole-word-masking-finetuned-squad': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-whole-word-masking-finetuned-squad-vocab.txt"
+
+    'bert-base-cased-finetuned-mrpc': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-finetuned-mrpc-vocab.txt"
 
 Pyserini Environment
 --------------------
