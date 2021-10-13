@@ -70,7 +70,7 @@ To install the BPE and WPE tokenizers run this command:
 
     $ pip install tokenizers
 
-For the BERT tokenizers you need to download these files and store it in your working directory:
+For the BERT tokenizers you need to download one these files and store it in your working directory:
 
     'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt"
 
