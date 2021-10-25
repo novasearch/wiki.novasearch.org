@@ -30,7 +30,7 @@ Exam (40%) + Lab work (60% with three submissions)
  - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
  - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
  - Lab 2 - Project guide available on CLIP.
- - Lab 3 - Evaluation methods
+ - Lab 3 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
