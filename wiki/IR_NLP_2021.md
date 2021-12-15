@@ -32,6 +32,7 @@ Exam (40%) + Lab work (60% with three submissions)
  - Lab 2 - Project guide available on CLIP.
  - Lab 3 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
  - Lab 4 - Document classification [code here](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
+ - Lab 5 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
