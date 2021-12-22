@@ -33,6 +33,7 @@ Exam (40%) + Lab work (60% with three submissions)
  - Lab 3 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
  - Lab 4 - Document classification [code here](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
  - Lab 5 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
+ - Lab 6 - BERT embeddings [code here](/assets/files/2021labs/bert_tutorial.ipynb)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
