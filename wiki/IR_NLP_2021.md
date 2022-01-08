@@ -29,12 +29,12 @@ Exam (40%) + Lab work (60% with three submissions)
 ## Labs
  - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
  - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
- - Lab 2 - Project guide available on CLIP.
- - Lab 3 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
- - Lab 4 - Document classification [code here](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
- - Lab 5 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
- - Lab 6 - BERT embeddings [code here](/assets/files/2021labs/bert_tutorial.ipynb)
-
+ - Lab 2 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
+ - Lab 3 - Document classification [code here](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
+ - Lab 4 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
+ - Lab 5 - BERT tutorial [code here](/assets/files/2021labs/bert_tutorial.ipynb)
+ - Lab 6 - Reranking with BERT [code here](/assets/files/2021labs/bert_reranking.ipynb)
+ - 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
 
