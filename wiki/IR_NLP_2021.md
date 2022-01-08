@@ -27,13 +27,13 @@ Exam (40%) + Lab work (60% with three submissions)
 - 16/oct/21	Vector Space Model and Language Models
 
 ## Labs
- - [Lab setup instructions](/wiki/IR_NLP_lab_setup)
+ - Lab 0 - [Environment setup instructions](/wiki/IR_NLP_lab_setup)
  - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
  - Lab 2 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
- - Lab 3 - Document classification [code here](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
- - Lab 4 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
- - Lab 5 - BERT tutorial [code here](/assets/files/2021labs/bert_tutorial.ipynb)
- - Lab 6 - Reranking with BERT [code here](/assets/files/2021labs/bert_reranking.ipynb)
+ - Lab 3 - Document classification [Jupyter Notebook](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
+ - Lab 4 - Word embeddings [Jupyter Notebook](/assets/files/2021labs/word_embeddings.ipynb)
+ - Lab 5 - BERT tutorial [Jupyter Notebook](/assets/files/2021labs/bert_tutorial.ipynb)
+ - Lab 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
