@@ -34,7 +34,7 @@ Exam (40%) + Lab work (60% with three submissions)
  - Lab 4 - Word embeddings [code here](/assets/files/2021labs/word_embeddings.ipynb)
  - Lab 5 - BERT tutorial [code here](/assets/files/2021labs/bert_tutorial.ipynb)
  - Lab 6 - Reranking with BERT [code here](/assets/files/2021labs/bert_reranking.ipynb)
- - 
+
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
 
