@@ -4,7 +4,7 @@ Permalink: wiki/Lab_setup/
 layout: wiki
 ---
 
-Install Anaconda
+Anaconda
 ------------
 
 **Step 1: Install Anaconda**
@@ -44,7 +44,7 @@ Since you may have multiple conda environemnts, you need to activate the environ
     $ conda activate myenv
 
 
-Language and Vision Algorithms
+PyTorch+HuggingFace+Spacy
 ------------
 
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
