@@ -22,15 +22,16 @@ How-to instructions for Cluster
 - [Admin and Setup](/wiki/Cluster/Admin "wikilink")
 
 
-Courses and Tutorials
+Courses
 --------------------
 - Course: [IR and NLP (2021)](/wiki/IR_NLP_2021)
 - Course: [IR and NLP (2020)](/wiki/IR_NLP)
 - Course: [Web Search and Data Mining (2022)](/wiki/WSDM)
-- Tutorial: [ElasticSearch](/wiki/...)
-- Tutorial: [Transformer](/wiki/...)
-- Tutorial: [Named Entity Extraction with BINK](/wiki/...)
-- Tutorial: [Multimodal Conversation AI with M-HRED](/wiki/...)
+
+Tutorials
+--------------------
+- Tutorial: [OpenSearch](/wiki/OpenSearch)
+
 
 OS general info
 ---------------
