@@ -44,26 +44,35 @@ Since you may have multiple conda environemnts, you need to activate the environ
     $ conda activate myenv
 
 
-PyTorch Environment
+Language and Vision Algorithms
 ------------
 
 The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, first you should create a conda environment (check the latest version of Python supported by PyTorch) and **activate** it.
 
 
-**Step 4: Install PyTorch**
+**Step 1: Install PyTorch**
 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
 Choose Linux, Conda and choose the latest CUDA release (11.1 at the moment of writing). Then copy and execute the command. It should look like:
 
     $ conda install pytorch torchvision cudatoolkit=11.1 -c pytorch -c nvidia
 
-Spacy
---------------------
 
-**Step 5: Install Spacy and its models**
+
+**Step 2: Install HuggingFace**
+
+First you need to install the following libraries:
+
+    $ pip install transformers
+    $ pip install ipywidgets
+    $ pip install bertviz
+
+**Step 3: Install Spacy**
 
     $ conda install -c conda-forge spacy
     $ python -m spacy download en_core_web_sm
+
+**Step 4: Tokenizers**
 
 To install the BPE and WPE tokenizers run this command:
 
@@ -97,11 +106,9 @@ For the BERT tokenizers you need to download one these files and store it in you
 
     'bert-base-cased-finetuned-mrpc': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-finetuned-mrpc-vocab.txt"
 
+
 Pyserini Environment
 --------------------
-
-**Step 6: Install Pyserini**
-
 
     $ conda create -n pyserini python=3.8 ipykernel cython numpy scipy scikit-learn pandas tqdm tensorflow
     $ conda activate pyserini
@@ -112,10 +119,10 @@ Pyserini Environment
 Enter this in the first cell of your notebook `%env JAVA_HOME=/share/apps/jdk/jdk-11`
 
 
-JupyterHub and PyTorch
+JupyterHub and Conda Environments
 ------------
 
-**Step 7: JupyterHub and PyTorch**
+**Step 1: JupyterHub**
 
 Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel **from `myenv`**:
 
@@ -126,7 +133,7 @@ This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
 
-**Step 8: Check python version from inside JupyterHub**
+**Step 2: Check python version from inside JupyterHub**
 
  Check version runing on Jupyter notebook
  
