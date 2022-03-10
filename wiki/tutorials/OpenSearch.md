@@ -9,7 +9,7 @@ Instaling OpenSearch
 
 https://opensearch.org/docs/latest/opensearch/install/docker/
 
-The configuration YAML file that is used in the NOVASearch cluster is available here.
+The configuration YAML file that is used in the NOVASearch cluster is available [here](/wiki/tutorials/docker-compose-opensearch.yml).
 
 
 Text-based Search
