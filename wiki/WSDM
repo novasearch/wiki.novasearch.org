@@ -1,0 +1,44 @@
+---
+title: Web Search and Data Mining
+layout: wiki
+---
+
+## Course Description
+
+Web Search and Data Mining (WiSDoM) is an area that aims at answering user information needs with the most relevant information. In this course we shall study how process text and natural language data and extract information from it to support multiple text related tasks.
+
+This course starts by dissecting a text processing pipeline, and discusses the fundamental techniques currently used in information retrieval and NLP. Afterwards, the most relevant retrieval models, ranking and categorization methods and question answering techniques are discussed in detail.
+
+This course includes extensive hands-on laboratories where key retrieval and NLP algorithms are examined. The goal is to strengthen students’ experimental analysis and critical thinking skills concerning search performance metrics and experimental results.
+
+## Objectives
+- Learn the concept of information relevance.
+- Learn how to parse and analyze text data.
+- Learn how to answer user queries and questions
+- Learn how to extract actionable information from text sources.
+- Analysis of experimental results.
+
+## Grading
+Exam (40%) + Project (45%) + Open project part (15%)
+
+## Schedule
+ - 09/mar/21	1	Introduction
+ - 16/mar/21	2	Word embeddings
+ - 23/mar/21	3	Indexing
+ - 30/mar/21	4	Web document categorization
+ - 06/abr/21	5	Transformer (encoder)
+ - 13/abr/21	6	Visual search
+ - 20/abr/21	7	Joint vision-and-language models
+ - 27/abr/21		ExpoFCT
+ - 04/mai/21	8	Multimodal conversational assistants
+ - 11/mai/21	9	Pre-trained models
+ - 18/mai/21	10	Summarization (decoder)
+ - 25/mai/21	11	Recommender systems
+ - 01/jun/21	12	Invited lecture
+ - 08/jun/21	13	Project discussion / Test
+
+## Labs
+ - Lab 0 - [Environment setup instructions](/wiki/lab_setup)
+
+## Lecturers
+Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x' character to send an email)
