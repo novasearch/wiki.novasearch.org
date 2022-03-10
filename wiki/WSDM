@@ -5,18 +5,23 @@ layout: wiki
 
 ## Course Description
 
-Web Search and Data Mining (WiSDoM) is an area that aims at answering user information needs with the most relevant information. In this course we shall study how process text and natural language data and extract information from it to support multiple text related tasks.
+Web Search and Data Mining (WiSDoM) is an area that aims at extracting knowledge from the largest source of information created by humans: The Web! 
+Throughout this course we will see how this extracted knowledge can solve complex tasks with advanced Computer Vision, Natural Language and Information Retrieval algorithms. The main topics of this course are:
 
-This course starts by dissecting a text processing pipeline, and discusses the fundamental techniques currently used in information retrieval and NLP. Afterwards, the most relevant retrieval models, ranking and categorization methods and question answering techniques are discussed in detail.
+ - Text and visual data representation
+ - Billion scale text and image search
+ - Visual question answering
+ - Multimodal conversational assistants
+ - Recommender systems
 
-This course includes extensive hands-on laboratories where key retrieval and NLP algorithms are examined. The goal is to strengthen students’ experimental analysis and critical thinking skills concerning search performance metrics and experimental results.
+This course includes intensive hands-on laboratories where key CV, NLP and IR algorithms are examined. 
 
 ## Objectives
-- Learn the concept of information relevance.
-- Learn how to parse and analyze text data.
-- Learn how to answer user queries and questions
-- Learn how to extract actionable information from text sources.
-- Analysis of experimental results.
+ - Learn what is an information embedding.
+ - Learn the semantic associations between visual data, natural language data and user data.
+ - Learn how to relate user information needs to actionable data.
+ - Learn how to do a critical analysis of experimental results.
+ - Develop autonomous and creative problem solving skills.
 
 ## Grading
 Exam (40%) + Project (45%) + Open project part (15%)
@@ -38,7 +43,19 @@ Exam (40%) + Project (45%) + Open project part (15%)
  - 08/jun/21	13	Project discussion / Test
 
 ## Labs
+We suggest you to use the account in the lab cluster. However, if you would like to have your own setup, you can follow this guide:
+ 
  - Lab 0 - [Environment setup instructions](/wiki/lab_setup)
+ 
+For project phase 1, you will use the OpenSearch server to index and search your data:
+ - Lab 1 - [OpenSearch](/wiki/tutorials/OpenSearch)
+ - Lab 2 - [Dual-encoders](/wiki/tutorials/dual-encoders)
+
+For project phase 2, you will use Visual-Natural Language Transformers to enrich you data:
+ - Lab 3 - [Visual Models of Natural Language](/wiki/tutorials/clip)
+
+For project phase 3, you will implement your own Intent detector to leverage your own Dialog Manager:
+ - Lab 4 - [Intent detection and slot filling](/wiki/tutorials/intent-detector)
 
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x' character to send an email)
