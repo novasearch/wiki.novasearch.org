@@ -18,7 +18,6 @@ How-to instructions for Cluster
 - [Python + Deep Learning Environment](/wiki/Python_DeepLearning "wikilink")
 - [Libraries](/wiki/Software_Libraries "wikilink")
 - [FAQ](/wiki/Cluster/FAQ "wikilink")
-- [Using Condor](/wiki/Condor "wikilink")
 - [Admin and Setup](/wiki/Cluster/Admin "wikilink")
 
 
@@ -49,6 +48,7 @@ Handling Accepted Papers
 Old stuff
 -----------------------
 
+- [Using Condor](/wiki/Condor "wikilink")
 - [Search Services](/wiki/Search_Services "wikilink")
 - [Audio Synchronization](/wiki/Audio_Synchronization "wikilink")
 - [Image Annotation](/wiki/Image_Annotation "wikilink")
