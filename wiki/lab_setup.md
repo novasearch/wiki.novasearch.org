@@ -1,5 +1,5 @@
 ---
-title: IR + NLP lab setup
+title: Lab setup
 Permalink: wiki/Lab_setup/
 layout: wiki
 ---
