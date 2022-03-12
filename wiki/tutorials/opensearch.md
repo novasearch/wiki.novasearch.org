@@ -1,6 +1,6 @@
 ---
 title: OpenSearch / ElasticSearch
-permalink: wiki/OpenSearch/
+permalink: wiki/opensearch/
 layout: wiki
 ---
 
