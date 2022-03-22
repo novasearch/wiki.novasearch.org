@@ -36,9 +36,9 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.8 ipykernel
+    $ conda create --name myenv python=3.8 ipykernel
 
-Note that we specified python=3.8 but other python versions are availble to install.
+Note that we specified python=3.8 but other python versions are available to install. Also, we named our environment as `myenv`.
 
 **Step 3: Activate conda environments**
 
@@ -56,9 +56,9 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 **Step 4: Install PyTorch**
 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
-Choose Linux, Conda and choose the latest CUDA release (10.2 at the moment of writing). Then copy and execute the command. It should look like:
+Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. It should look like:
 
-    $ conda install pytorch torchvision cudatoolkit=11.2 -c pytorch
+    $ conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
     
 **Step 5: JupyterHub and PyTorch**
 
