@@ -4,10 +4,12 @@ Permalink: wiki/Lab_setup/
 layout: wiki
 ---
 
-Anaconda
+Anaconda in your laptop/cluster
 ------------
 
 **Step 1: Install Anaconda**
+
+Anaconda is already installed in the cluster. You should install Anaconda in your laptop for programming your models and minimal test. For large-scale testing and training you can use the cluster.
 
 Simply follow the instructions according to your case:
 
