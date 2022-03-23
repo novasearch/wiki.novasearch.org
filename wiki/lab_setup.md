@@ -4,7 +4,7 @@ Permalink: wiki/Lab_setup/
 layout: wiki
 ---
 
-Anaconda in your laptop/cluster
+Anaconda (laptop/cluster)
 ------------
 
 **Step 1: Install Anaconda**
