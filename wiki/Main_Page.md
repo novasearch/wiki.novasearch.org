@@ -24,6 +24,7 @@ How-to instructions for Cluster
 Courses
 --------------------
 - Course: [Web Search and Data Mining (2022)](/wiki/courses/WSDM_2022)
+- Course: [IR and NLP (2022)](/wiki/IR_NLP_2022)
 - Course: [IR and NLP (2021)](/wiki/IR_NLP_2021)
 - Course: [IR and NLP (2020)](/wiki/IR_NLP)
 
