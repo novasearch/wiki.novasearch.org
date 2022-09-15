@@ -35,7 +35,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter
+    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib
 
 Note that we specified python=3.9 but other python versions are availble to install.
 
@@ -158,6 +158,6 @@ This creates a new IPython kernel for your env and stores a kernel spec file in:
     print(sys.version)
 
  Check version in command line or shell
- 
+
     python --version
 
