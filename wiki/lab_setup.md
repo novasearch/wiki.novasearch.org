@@ -20,7 +20,7 @@ All of the following steps requires you to open the command line interface (CLI)
 
  - Linux: press "window key + s", type "terminal", select the terminal application.
  - Windows: press "window key + s", type "Anaconda prompt" (usually "cmd" also works), select the "Anaconda Prompt".
- - Mac:
+ - Mac: press "command keyh + space", type "terminal", select the terminal application.
 
 Conda Environments
 ------------
@@ -35,13 +35,13 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.8 ipykernel numpy scipy scikit-learn pandas tqdm
+    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter
 
-Note that we specified python=3.8 but other python versions are availble to install.
+Note that we specified python=3.9 but other python versions are availble to install.
 
 **Step 3: Activate conda environments**
 
-Since you may have multiple conda environemnts, you need to activate the environment in your current shell:
+Since you may have multiple conda environemnts, you need to activate the environment in your current shell/terminal:
 
     $ conda activate myenv
 
@@ -57,13 +57,21 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
 Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. It should look like:
 
-    $ conda install pytorch torchvision cudatoolkit=11.3 -c pytorch -c nvidia
+    $ conda install pytorch torchvision cudatoolkit=11.6 -c pytorch -c nvidia
 
+**NOTE**: If you do not have an NVIDIA GPU, install the CPU version instead.
+For Windows/Linux users:
+
+    $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+CPU-version for Mac users:
+
+    $  conda install pytorch torchvision torchaudio -c pytorch
 
 
 **Step 2: Install HuggingFace**
 
-First you need to install the following libraries:
+You need to install the following libraries:
 
     $ pip install transformers
     $ pip install ipywidgets
@@ -131,13 +139,15 @@ Let's say you have an Anaconda environment called `myenv`. To run things on Jupy
 1. ```$ conda activate myenv```
 2. ```$ python -m ipykernel install --user --name myenv --display-name "Python (myenv)" ```
 
+On the command above, you should change the name and display name to the name of your environment.
+
 This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
 
-**Step 2: Check python version from inside JupyterHub**
+**Step 2: Check python version from inside Jupyter/JupyterHub**
 
- Check version runing on Jupyter notebook
+ Check which version is running on Jupyter notebook
  
     from platform import python_version
     print(python_version())
@@ -148,5 +158,6 @@ This creates a new IPython kernel for your env and stores a kernel spec file in:
     print(sys.version)
 
  Check version in command line or shell
+ 
     python --version
 

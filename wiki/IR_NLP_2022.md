@@ -34,5 +34,5 @@ Exam (40%) + Lab work (60% with three submissions)
 [Exercises Sheet](/assets/files/Exercises.pdf)
 
 ## Lecturers
-Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x' character to send an email)
+Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x' character to send an email) <br>
 David Semedo  (df.semedo@xfct.unlx.pt - remove the 'x' character to send an email)
