@@ -35,7 +35,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim
+    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim ipywidgets ipympl -c defaults -c conda-forge 
 
 Note that we specified python=3.9 but other python versions are availble to install.
 
@@ -145,7 +145,15 @@ This creates a new IPython kernel for your env and stores a kernel spec file in:
         
     ~/.local/share/jupyter/kernels/myenv/kernel.json
 
-**Step 2: Check python version from inside Jupyter/JupyterHub**
+**Step 2: Start Jupyter Lab locally**
+
+With your environment activated, start jupyter lab in a terminal with the command:
+
+    jupyter lab
+
+For more information about Jupyter Lab visit this [link](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html).
+
+**Step 3: Check python version from inside Jupyter/JupyterHub**
 
  Check which version is running on Jupyter notebook
  
