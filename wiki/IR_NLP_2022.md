@@ -22,7 +22,7 @@ This course includes extensive hands-on laboratories where key retrieval and NLP
 Exam (40%) + Lab work (60% with three submissions)
 
 ## Labs
- - Lab 0 - [Environment setup instructions](/wiki/lab_setup)
+ - Lab 0 - [Environment setup instructions](/wiki/lab_setup) + [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab0.ipynb) + [Lab 0 Data](/assets/files/2022labs/words_clusters_w2v.pickle) 
  - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2021labs/basic_text_processing.ipynb)
  - Lab 2 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
  - Lab 3 - Document classification [Jupyter Notebook](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
