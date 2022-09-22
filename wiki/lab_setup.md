@@ -79,7 +79,7 @@ You need to install the following libraries:
 
 **Step 3: Install Spacy**
 
-    $ conda install -c conda-forge spacy
+    $ conda install spacy
     $ python -m spacy download en_core_web_sm
 
 **Step 4: Tokenizers**
