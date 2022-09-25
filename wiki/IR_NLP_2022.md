@@ -1,5 +1,5 @@
 ---
-title: Information Retrieval and Natural Language Processing
+title: Natural Language Information Processing and Retrieval
 layout: wiki
 ---
 
