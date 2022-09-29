@@ -33,9 +33,7 @@ Exam (40%) + Lab work (60% with three submissions)
  - Nov 11 - Lab guide 4 - Word embeddings [Jupyter Notebook](/assets/files/2021labs/word_embeddings.ipynb)
  - Nov 18 - Lab guide 5 - BERT tutorial [Jupyter Notebook](/assets/files/2021labs/bert_tutorial.ipynb)
  - Nov 25 - Project
-----
-- Nov 25 - Lab guide 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb)
----
+<!--- Nov 25 - Lab guide 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb) -->
 - Dec 2 - Project
 
 ## Exercises
