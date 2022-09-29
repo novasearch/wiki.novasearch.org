@@ -21,14 +21,22 @@ This course includes extensive hands-on laboratories where key retrieval and NLP
 ## Grading
 Exam (40%) + Lab work (60% with three submissions)
 
-## Labs
- - Lab 0 - [Environment setup instructions](/wiki/lab_setup) + [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab0.ipynb) + [Lab 0 Data](/assets/files/2022labs/words_clusters_w2v.pickle) 
- - Lab 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab1.ipynb)
- - Lab 2 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
- - Lab 3 - Document classification [Jupyter Notebook](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
- - Lab 4 - Word embeddings [Jupyter Notebook](/assets/files/2021labs/word_embeddings.ipynb)
- - Lab 5 - BERT tutorial [Jupyter Notebook](/assets/files/2021labs/bert_tutorial.ipynb)
- - Lab 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb)
+## Lab classes
+ - Sept 16 - Lab guide 0 - [Environment setup instructions](/wiki/lab_setup) + [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab0.ipynb) + [Lab 0 Data](/assets/files/2022labs/words_clusters_w2v.pickle) 
+ - Sept 23 - Lab guide 1 - Text processing, Words normalization, Types of Words [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab1.ipynb)
+ - Oct 30 - Project
+ - Oct 7 - Lab guide 2 - Evaluation methods [code here](/assets/files/2021labs/eval.zip)
+ - Oct 14 - Project
+ - Oct 21 - Lab guide 3 - Document classification [Jupyter Notebook](/assets/files/2021labs/Sentiment_classification_scikit_learn.ipynb)
+ - Oct 28 - Project
+ - Nov 4 - Project
+ - Nov 11 - Lab guide 4 - Word embeddings [Jupyter Notebook](/assets/files/2021labs/word_embeddings.ipynb)
+ - Nov 18 - Lab guide 5 - BERT tutorial [Jupyter Notebook](/assets/files/2021labs/bert_tutorial.ipynb)
+ - Nov 25 - Project
+----
+- Nov 25 - Lab guide 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb)
+---
+- Dec 2 - Project
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
