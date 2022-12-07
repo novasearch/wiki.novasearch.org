@@ -31,10 +31,14 @@ Exam (40%) + Lab work (60% with three submissions)
  - Oct 28 - Project
  - Nov 4 - Project
  - Nov 11 - Project
- - Nov 18 - Lab guide 4 and 5 - Word embeddings [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab4.ipynb)and BERT tutorial [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab5.ipynb)
+ - Nov 18 - Lab guide 4 and 5 - Word embeddings [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab4.ipynb) and BERT tutorial [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_Lab5.ipynb)
  - Nov 25 - Project
  - Dec 2 - Project
 <!--- Nov 25 - Lab guide 6 - Reranking with BERT [Jupyter Notebook](/assets/files/2021labs/bert_reranking.ipynb) -->
+
+## Project support
+
+ - Batch CLS Embedding Extractor: [Jupyter Notebook](/assets/files/2022labs/RI2022-2023_BERT_Batch_CLS_Extractor.ipynb)
 
 ## Exercises
 [Exercises Sheet](/assets/files/Exercises.pdf)
