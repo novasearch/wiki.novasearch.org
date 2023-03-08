@@ -4,7 +4,7 @@ Permalink: wiki/Lab_setup/
 layout: wiki
 ---
 
-Lab Setup
+Introduction
 ------------
 This guide helps you setting up the required enviroment
 - Anaconda
@@ -129,7 +129,7 @@ For the BERT tokenizers you need to download one these files and store it in you
 
 
 
-JupyterHub and Conda Environments
+JupyterLab
 ------------
 
 **Step 1: JupyterHub**
