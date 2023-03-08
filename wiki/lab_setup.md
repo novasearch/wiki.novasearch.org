@@ -169,3 +169,12 @@ For more information about Jupyter Lab visit this [link](https://jupyterlab.read
 
     python --version
 
+Anaconda + Pycharm or VSCode
+------------
+
+Once you created your Python Environment as described above, you may use PyCharm or VSCode as your development environment. Both IDE are perfectly fine offering different advantages. VSCode is lighter while PyCharm is better for teams. Use your favourite one:
+
+[Anaconda + PyCharm](https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/)
+
+[Anaconda+VSCode](https://code.visualstudio.com/docs/python/environments)
+
