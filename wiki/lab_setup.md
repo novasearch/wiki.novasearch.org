@@ -4,6 +4,17 @@ Permalink: wiki/Lab_setup/
 layout: wiki
 ---
 
+Lab Setup
+------------
+This guide helps you setting up the required enviroment
+- Anaconda
+- Conda Environments
+- PyTorch + HuggingFace + Spacy
+- JupyterLab
+- VSCode or PyCharm
+- Final advice
+
+
 Anaconda (laptop/cluster)
 ------------
 
@@ -169,14 +180,17 @@ For more information about Jupyter Lab visit this [link](https://jupyterlab.read
 
     python --version
 
-Anaconda + Pycharm or VSCode + JupyterLab
+Pycharm or VSCode
 ------------
 
 Once you have created your Python Environment as described above, you can set up your favourite development environment. PyCharm and VSCode are popular choices offering  different advantages. VSCode is lighter while PyCharm is better for teams. Use your favourite one:
  - [Anaconda + PyCharm](https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/)
  - [Anaconda + VSCode](https://code.visualstudio.com/docs/python/environments)
 
-An advice is to use VSCode or PyCharm as your main **programming enviroment** and use Jupyter Lab as your main **data and results interactive analysis environment**.
-
-
-
+Final advice
+------------
+The main advices to ensure everything runs smoothly are the following:
+ - Use VSCode or PyCharm as your main **programming enviroment**.
+ - Use Jupyter Lab as your main **data and results interactive analysis environment**. Do not program lengthy methods in JupyterLab.
+ - Use GIT.
+ - Create different environments if you want to "test" some other libraries. Do not damage your main environment.
