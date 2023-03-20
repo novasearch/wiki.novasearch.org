@@ -96,7 +96,11 @@ You need to install the following libraries:
     $ conda install spacy
     $ python -m spacy download en_core_web_sm
 
-**Step 4: Tokenizers**
+**Step 4: Install Opensearch client**
+
+    $ pip install opensearch-py
+
+**Step 5: Tokenizers**
 
 To install the BPE and WPE tokenizers run this command:
 
