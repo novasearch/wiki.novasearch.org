@@ -66,12 +66,15 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 **Step 1: Install PyTorch**
 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
-Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. It should look like:
+Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. 
 
-    $ conda install pytorch torchvision cudatoolkit=11.8 -c pytorch -c nvidia
+For Linux/Windows:
 
-**NOTE**: If you do not have an NVIDIA GPU, install the CPU version instead.
-For Windows/Linux users:
+    $ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+**NOTE**: If it didn't work, you should check PyTorch guide https://pytorch.org/get-started/locally/ or if you do not have an NVIDIA GPU, install the CPU version instead.
+
+For Linux/Windows users:
 
     $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 
