@@ -46,7 +46,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim ipywidgets ipympl -c defaults -c conda-forge 
+    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim flask flask_cors ipympl -c defaults -c conda-forge 
 
 Note that we specified python=3.9 but other python versions are availble to install.
 
@@ -68,7 +68,7 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
 Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. It should look like:
 
-    $ conda install pytorch torchvision cudatoolkit=11.6 -c pytorch -c nvidia
+    $ conda install pytorch torchvision cudatoolkit=11.8 -c pytorch -c nvidia
 
 **NOTE**: If you do not have an NVIDIA GPU, install the CPU version instead.
 For Windows/Linux users:
@@ -137,7 +137,7 @@ JupyterLab
 Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel **from `myenv`**:
 
 1. ```$ conda activate myenv```
-2. ```$ python -m ipykernel install --user --name myenv --display-name "Python (myenv)" ```
+2. ```$ python -m ipykernel install --user --name myenv --display-name "myenv" ```
 
 On the command above, you should change the name and display name to the name of your environment.
 
