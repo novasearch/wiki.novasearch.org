@@ -9,7 +9,7 @@ Introduction
 This guide helps you setting up the required enviroment
 - Anaconda
 - Conda Environments
-- PyTorch + HuggingFace + Spacy
+- PyTorch + HuggingFace + Spacy + OpenSearch
 - JupyterLab
 - VSCode or PyCharm
 - Final advice
