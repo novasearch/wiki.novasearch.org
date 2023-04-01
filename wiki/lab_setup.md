@@ -68,28 +68,29 @@ The easiest and cleanest way to install PyTorch is through Anaconda. Therefore, 
 Go to the [PyTorch website](https://pytorch.org/) and scroll-down to find some sliders that can be used to generated the conda install command.
 Choose Linux, Conda and choose the latest CUDA release (11.3 at the moment of writing). Then copy and execute the command. 
 
-For Linux/Windows:
+Installing on Linux/Windows without GPU:
+
+    $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+Installing on Linux/Windows with GPU:
 
     $ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
 **NOTE**: If it didn't work, you should check PyTorch guide https://pytorch.org/get-started/locally/ or if you do not have an NVIDIA GPU, install the CPU version instead.
 
-For Linux/Windows users:
-
-    $ conda install pytorch torchvision torchaudio cpuonly -c pytorch
-
-CPU-version for Mac users:
+Installing on Mac with CPU-version:
 
     $  conda install pytorch torchvision torchaudio -c pytorch
-
 
 **Step 2: Install HuggingFace**
 
 You need to install the following libraries:
 
     $ pip install transformers
+    $ pip install accelerate
     $ pip install ipywidgets
     $ pip install bertviz
+    
 
 **Step 3: Install Spacy**
 
