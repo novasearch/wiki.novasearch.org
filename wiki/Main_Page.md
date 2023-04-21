@@ -29,10 +29,6 @@ Courses
 - Course: [Natural Language Information Processing and Retrieval (21/22)](/wiki/IR_NLP_2021)
 - Course: [Natural Language Information Processing and Retrieval (20/21)](/wiki/IR_NLP)
 
-Tutorials
---------------------
-- Tutorial: [OpenSearch](/wiki/OpenSearch)
-
 
 OS general info
 ---------------
