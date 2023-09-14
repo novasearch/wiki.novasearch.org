@@ -20,7 +20,7 @@ Anaconda (laptop/cluster)
 
 **Step 1: Install Anaconda**
 
-Anaconda is already installed in the cluster. You should install Anaconda in your laptop for programming your models and minimal test. For large-scale testing and training you can use the cluster.
+You should install Anaconda in your laptop for programming your models and minimal test. For large-scale testing and training you can use the cluster.
 
 Simply follow the instructions according to your case:
 
@@ -46,7 +46,7 @@ PS: Great cheat sheet, covering possible operations for manipulating conda envir
 
 Run the following command to create a conda env:
 
-    $ conda create -n myenv python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim flask flask_cors ipympl -c defaults -c conda-forge 
+    $ conda create -n nlp-cv-ir python=3.9 ipykernel numpy scipy scikit-learn pandas tqdm jupyter matplotlib gensim flask flask_cors ipympl -c defaults -c conda-forge 
 
 Note that we specified python=3.9 but other python versions are availble to install.
 
@@ -54,7 +54,7 @@ Note that we specified python=3.9 but other python versions are availble to inst
 
 Since you may have multiple conda environemnts, you need to activate the environment in your current shell/terminal:
 
-    $ conda activate myenv
+    $ conda activate nlp-cv-ir
 
 
 PyTorch+HuggingFace+Spacy
@@ -142,16 +142,16 @@ JupyterLab
 
 **Step 1: JupyterHub**
 
-Let's say you have an Anaconda environment called `myenv`. To run things on JupyterHub, you need to install the ipykernel **from `myenv`**:
+Let's say you have an Anaconda environment called `nlp-cv-ir`. To run things on JupyterHub, you need to install the ipykernel **from `nlp-cv-ir`**:
 
-1. ```$ conda activate myenv```
-2. ```$ python -m ipykernel install --user --name myenv --display-name "myenv" ```
+1. ```$ conda activate nlp-cv-ir```
+2. ```$ python -m ipykernel install --user --name nlp-cv-ir --display-name "nlp-cv-ir" ```
 
 On the command above, you should change the name and display name to the name of your environment.
 
 This creates a new IPython kernel for your env and stores a kernel spec file in:
         
-    ~/.local/share/jupyter/kernels/myenv/kernel.json
+    ~/.local/share/jupyter/kernels/nlp-cv-ir/kernel.json
 
 **Step 2: Start Jupyter Lab locally**
 
