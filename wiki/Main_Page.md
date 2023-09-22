@@ -23,7 +23,7 @@ How-to instructions for Cluster
 
 Courses
 --------------------
-- Course: [Natural Language Information Processing and Retrieval (22/23)](wiki/courses/NLP-IR_2023)
+- Course: [Natural Language Information Processing and Retrieval (23/24)](wiki/courses/NLP-IR_2023)
 - Course: [Web Search and Data Mining (22/23)](/wiki/courses/WSDM_2023)
 - Course: [Natural Language Information Processing and Retrieval (22/23)](/wiki/courses/NLIPR_2022)
 - Course: [Web Search and Data Mining (21/22)](/wiki/courses/WSDM_2022)
