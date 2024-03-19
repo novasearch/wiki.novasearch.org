@@ -94,7 +94,7 @@ You need to install the following libraries:
 
 **Step 3: Install Spacy**
 
-    $ conda install spacy
+    $ conda install -c conda-forge spacy
     $ python -m spacy download en_core_web_sm
 
 **Step 4: Install Opensearch client**
@@ -109,21 +109,21 @@ To install the BPE and WPE tokenizers run this command:
 
 For the BERT tokenizers you need to download one these files and store it in your working directory:
 
-    'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt"
+    'bert-base-uncased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt
 
-    'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt"
+    'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt
 
-    'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt"
+    'bert-base-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt
 
-    'bert-large-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-vocab.txt"
+    'bert-large-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-vocab.txt
 
-    'bert-base-multilingual-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt"
+    'bert-base-multilingual-uncased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt
 
-    'bert-base-multilingual-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt"
+    'bert-base-multilingual-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt
 
-    'bert-base-chinese': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt"
+    'bert-base-chinese': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt
 
-    'bert-base-german-cased': "https://int-deepset-models-bert.s3.eu-central-1.amazonaws.com/pytorch/bert-base-german-cased-vocab.txt"
+    'bert-base-german-cased': https://int-deepset-models-bert.s3.eu-central-1.amazonaws.com/pytorch/bert-base-german-cased-vocab.txt
 
     'bert-large-uncased-whole-word-masking': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-whole-word-masking-vocab.txt"
 
