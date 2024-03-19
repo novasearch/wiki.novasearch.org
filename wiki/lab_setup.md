@@ -74,7 +74,7 @@ Installing on Linux/Windows without GPU:
 
 Installing on Linux/Windows with GPU:
 
-    $ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+    $ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
 **NOTE**: If it didn't work, you should check PyTorch guide https://pytorch.org/get-started/locally/ or if you do not have an NVIDIA GPU, install the CPU version instead.
 
