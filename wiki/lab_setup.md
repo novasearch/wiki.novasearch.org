@@ -107,35 +107,6 @@ To install the BPE and WPE tokenizers run this command:
 
     $ pip install tokenizers
 
-For the BERT tokenizers you need to download one these files and store it in your working directory:
-
-    'bert-base-uncased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt
-
-    'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt
-
-    'bert-base-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt
-
-    'bert-large-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-vocab.txt
-
-    'bert-base-multilingual-uncased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-vocab.txt
-
-    'bert-base-multilingual-cased': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt
-
-    'bert-base-chinese': https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt
-
-    'bert-base-german-cased': https://int-deepset-models-bert.s3.eu-central-1.amazonaws.com/pytorch/bert-base-german-cased-vocab.txt
-
-    'bert-large-uncased-whole-word-masking': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-whole-word-masking-vocab.txt"
-
-    'bert-large-cased-whole-word-masking': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-whole-word-masking-vocab.txt"
-
-    'bert-large-uncased-whole-word-masking-finetuned-squad': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-whole-word-masking-finetuned-squad-vocab.txt"
-
-    'bert-large-cased-whole-word-masking-finetuned-squad': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-whole-word-masking-finetuned-squad-vocab.txt"
-
-    'bert-base-cased-finetuned-mrpc': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-finetuned-mrpc-vocab.txt"
-
-
 
 JupyterLab
 ------------
@@ -191,15 +162,4 @@ The main advices to ensure everything runs smoothly are the following:
  - Use Jupyter Lab as your main **data and results interactive analysis environment**. Do not program lengthy methods in JupyterLab.
  - Use GIT.
  - Create different environments if you want to "test" some other libraries. Do not damage your main environment.
-
-Optional: Pyserini Environment
---------------------
-
-    $ conda create -n pyserini python=3.8 ipykernel cython numpy scipy scikit-learn pandas tqdm tensorflow
-    $ conda activate pyserini
-    $ conda install faiss-cpu -c pytorch
-    $ pip install pyserini
-    $ python -m ipykernel install --user --name pyserini --display-name "Python (pyserini)"
-    
-Enter this in the first cell of your notebook `%env JAVA_HOME=/share/apps/jdk/jdk-11`
 
