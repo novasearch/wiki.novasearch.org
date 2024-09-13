@@ -113,7 +113,7 @@ JupyterLab
 
 **Step 1: JupyterHub**
 
-Let's say you have an Anaconda environment called `nlp-cv-ir`. To run things on JupyterHub, you need to install the ipykernel **from `nlp-cv-ir`**:
+Let's say you have an Anaconda environment called `nlp-cv-ir`. To run things on JupyterHub, you need to install the ipykernel from `nlp-cv-ir`:
 
 1. ```$ conda activate nlp-cv-ir```
 2. ```$ python -m ipykernel install --user --name nlp-cv-ir --display-name "nlp-cv-ir" ```
