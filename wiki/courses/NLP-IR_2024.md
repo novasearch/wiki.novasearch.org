@@ -40,7 +40,6 @@ Exam (40%) + Lab work (60% with three submissions)
 
 ## Exercises (updated)
  - [List of exercises for 2022](/assets/files/Exercises2022.pdf)
- - [List of exercises pre-covid](/assets/files/Exercises.pdf)
 
 ## Lecturers
 Joao Magalhaes (jmag@xfct.unlx.pt - remove the 'x' character to send an email) <br>
