@@ -5,7 +5,7 @@ layout: wiki
 
 [Bootcamp Slides](/assets/files/CMU_Bootcamp/slides.pdf)
 
-[Programing environment setup](/wiki/lab_setup.md)
+[Programing environment setup](/wiki/lab_setup)
 
 [Lab 1: Introduction](/assets/files/CMU_Bootcamp/Intro.ipynb)
 
