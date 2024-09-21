@@ -23,6 +23,7 @@ How-to instructions for Cluster
 
 Courses
 --------------------
+- Course: [CMU|Portugal Bootcamp](/wiki/courses/Bootcamp)
 - Course: [Natural Language Information Processing and Retrieval (24/25)](/wiki/courses/NLP-IR_2024)
 - Course: [Natural Language Information Processing and Retrieval (23/24)](/wiki/courses/NLP-IR_2023)
 - Course: [Web Search and Data Mining (22/23)](/wiki/courses/WSDM_2023)
