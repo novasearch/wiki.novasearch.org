@@ -1,5 +1,5 @@
 ---
-title: CMU|Portugal Bootcamp
+title: CMU Portugal Bootcamp
 layout: wiki
 ---
 
