@@ -5,8 +5,8 @@ layout: wiki
 ---
 
 The camera-ready version should make the necessary acknowledgments:
--   This work is supported by UID/04516/NOVA Laboratory for Computer Science and Informatics (NOVA LINCS) with the financial support of FCT.IP".
--   This research is part of the AMALIA project, funded by FCT in the context of measure RE-C05-i08 of the Recovery and Resilience Program.
+-   This work is supported by UID/04516/NOVA Laboratory for Computer Science and Informatics (NOVA LINCS) with the financial support of FCT/IP.
+-   This research is part of the AMALIA project, funded by FCT/IP in the context of measure RE-C05-i08 of the Recovery and Resilience Program.
 -   This work has been partially funded by the Amazon NOVA AI - Trusted AI Challenge.
 
 Old acknowledgments:
