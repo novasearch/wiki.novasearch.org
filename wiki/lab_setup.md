@@ -57,6 +57,14 @@ Since you may have multiple conda environemnts, you need to activate the environ
     $ conda activate nlp-cv-ir
 
 
+Pycharm or VSCode
+------------
+
+Once you have created your Python Environment as described above, you can set up your favourite development environment. PyCharm and VSCode are popular choices offering  different advantages. VSCode is lighter while PyCharm is better for teams. Use your favourite one:
+ - [Anaconda + PyCharm](https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/)
+ - [Anaconda + VSCode](https://code.visualstudio.com/docs/python/environments)
+
+
 PyTorch+HuggingFace+Spacy
 ------------
 
@@ -147,13 +155,6 @@ For more information about Jupyter Lab visit this [link](https://jupyterlab.read
  Check version in command line or shell
 
     python --version
-
-Pycharm or VSCode
-------------
-
-Once you have created your Python Environment as described above, you can set up your favourite development environment. PyCharm and VSCode are popular choices offering  different advantages. VSCode is lighter while PyCharm is better for teams. Use your favourite one:
- - [Anaconda + PyCharm](https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/)
- - [Anaconda + VSCode](https://code.visualstudio.com/docs/python/environments)
 
 Final advice
 ------------
