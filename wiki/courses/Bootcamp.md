@@ -3,7 +3,7 @@ title: CMU Portugal Bootcamp
 layout: wiki
 ---
 
-[Bootcamp Slides](/assets/files/CMU_Bootcamp/slides.pdf)
+[Bootcamp Slides](/assets/files/CMU_Bootcamp/Bootcamp-Y2.pdf)
 
 [Programing environment setup](/wiki/lab_setup)
 
